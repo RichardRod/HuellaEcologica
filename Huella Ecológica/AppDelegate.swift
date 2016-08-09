@@ -15,7 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let navBackgroundImage:UIImage! = UIImage(named: "barra")
+        UINavigationBar.appearance().setBackgroundImage(navBackgroundImage, forBarMetrics: .Default)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : UIFont(name: "Arial Rounded MT Bold", size: 20)!]
+        
+        let attr = NSDictionary(object: UIFont(name: "Arial Rounded MT Bold", size: 17)!, forKey: NSFontAttributeName)
+        UISegmentedControl.appearance().setTitleTextAttributes(attr as [NSObject : AnyObject], forState: .Normal)
+        
+        let pageController = UIPageControl.appearance()
+        pageController.pageIndicatorTintColor = UIColor.redColor()
+        pageController.currentPageIndicatorTintColor = UIColor.blackColor()
+        pageController.backgroundColor = UIColor.whiteColor()
         return true
     }
 

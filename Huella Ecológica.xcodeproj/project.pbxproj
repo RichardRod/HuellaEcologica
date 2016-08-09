@@ -14,6 +14,17 @@
 		8C0A41731D4AAA4100AE6F7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0A41711D4AAA4100AE6F7E /* LaunchScreen.storyboard */; };
 		8C0A417E1D4AAA4100AE6F7E /* Huella_Ecolo_gicaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0A417D1D4AAA4100AE6F7E /* Huella_Ecolo_gicaTests.swift */; };
 		8C0A41891D4AAA4100AE6F7E /* Huella_Ecolo_gicaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0A41881D4AAA4100AE6F7E /* Huella_Ecolo_gicaUITests.swift */; };
+		8C0A41971D4AB1EF00AE6F7E /* CarbonoLigera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0A41961D4AB1EF00AE6F7E /* CarbonoLigera.storyboard */; };
+		8C0A41A01D4AB5B200AE6F7E /* CarbonoInicioLigeraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0A419F1D4AB5B200AE6F7E /* CarbonoInicioLigeraController.swift */; };
+		8C355E7D1D4C22BC000C25EF /* ADPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C355E7C1D4C22BC000C25EF /* ADPageControl.m */; };
+		8C355E821D4C3155000C25EF /* ADPageControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C355E811D4C3155000C25EF /* ADPageControl.xib */; };
+		8C355E841D4C463B000C25EF /* HidricaLigera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C355E831D4C463B000C25EF /* HidricaLigera.storyboard */; };
+		8C355E871D4C467B000C25EF /* HidricaInicioLigeraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C355E861D4C467B000C25EF /* HidricaInicioLigeraController.swift */; };
+		8C355E891D4C4C4D000C25EF /* CarbonoCompleta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C355E881D4C4C4D000C25EF /* CarbonoCompleta.storyboard */; };
+		8C355E8B1D4C4C64000C25EF /* HidricaCompleta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C355E8A1D4C4C64000C25EF /* HidricaCompleta.storyboard */; };
+		8C444CEE1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C444CED1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift */; };
+		8CA456FA1D4D4586003614DE /* InformacionCarbonoLigeraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA456F91D4D4586003614DE /* InformacionCarbonoLigeraViewController.swift */; };
+		8CA456FD1D4D4766003614DE /* CombustibleLigeraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA456FC1D4D4766003614DE /* CombustibleLigeraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +58,19 @@
 		8C0A41841D4AAA4100AE6F7E /* Huella EcológicaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Huella EcológicaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C0A41881D4AAA4100AE6F7E /* Huella_Ecolo_gicaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huella_Ecolo_gicaUITests.swift; sourceTree = "<group>"; };
 		8C0A418A1D4AAA4100AE6F7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C0A41961D4AB1EF00AE6F7E /* CarbonoLigera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CarbonoLigera.storyboard; path = ../CarbonoLigera.storyboard; sourceTree = "<group>"; };
+		8C0A419F1D4AB5B200AE6F7E /* CarbonoInicioLigeraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbonoInicioLigeraController.swift; sourceTree = "<group>"; };
+		8C355E791D4C2287000C25EF /* Huella Ecológica-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Huella Ecológica-Bridging-Header.h"; sourceTree = "<group>"; };
+		8C355E7B1D4C22BC000C25EF /* ADPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPageControl.h; sourceTree = "<group>"; };
+		8C355E7C1D4C22BC000C25EF /* ADPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPageControl.m; sourceTree = "<group>"; };
+		8C355E811D4C3155000C25EF /* ADPageControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADPageControl.xib; sourceTree = "<group>"; };
+		8C355E831D4C463B000C25EF /* HidricaLigera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = HidricaLigera.storyboard; path = ../HidricaLigera.storyboard; sourceTree = "<group>"; };
+		8C355E861D4C467B000C25EF /* HidricaInicioLigeraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HidricaInicioLigeraController.swift; sourceTree = "<group>"; };
+		8C355E881D4C4C4D000C25EF /* CarbonoCompleta.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CarbonoCompleta.storyboard; sourceTree = "<group>"; };
+		8C355E8A1D4C4C64000C25EF /* HidricaCompleta.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HidricaCompleta.storyboard; sourceTree = "<group>"; };
+		8C444CED1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectricidadLigeraViewController.swift; sourceTree = "<group>"; };
+		8CA456F91D4D4586003614DE /* InformacionCarbonoLigeraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacionCarbonoLigeraViewController.swift; sourceTree = "<group>"; };
+		8CA456FC1D4D4766003614DE /* CombustibleLigeraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombustibleLigeraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +121,15 @@
 		8C0A41671D4AAA4100AE6F7E /* Huella Ecológica */ = {
 			isa = PBXGroup;
 			children = (
+				8C355E701D4C20DC000C25EF /* TabController */,
 				8C0A41681D4AAA4100AE6F7E /* AppDelegate.swift */,
 				8C0A416A1D4AAA4100AE6F7E /* ViewController.swift */,
 				8C0A416C1D4AAA4100AE6F7E /* Main.storyboard */,
+				8C0A41961D4AB1EF00AE6F7E /* CarbonoLigera.storyboard */,
+				8C355E831D4C463B000C25EF /* HidricaLigera.storyboard */,
+				8C355E881D4C4C4D000C25EF /* CarbonoCompleta.storyboard */,
+				8C355E8A1D4C4C64000C25EF /* HidricaCompleta.storyboard */,
+				8C0A419D1D4AB57B00AE6F7E /* VersionLigera */,
 				8C0A416F1D4AAA4100AE6F7E /* Assets.xcassets */,
 				8C0A41711D4AAA4100AE6F7E /* LaunchScreen.storyboard */,
 				8C0A41741D4AAA4100AE6F7E /* Info.plist */,
@@ -123,6 +153,69 @@
 				8C0A418A1D4AAA4100AE6F7E /* Info.plist */,
 			);
 			path = "Huella EcológicaUITests";
+			sourceTree = "<group>";
+		};
+		8C0A419D1D4AB57B00AE6F7E /* VersionLigera */ = {
+			isa = PBXGroup;
+			children = (
+				8C0A419E1D4AB58E00AE6F7E /* Carbono */,
+				8C355E851D4C464B000C25EF /* Hidrica */,
+			);
+			name = VersionLigera;
+			sourceTree = "<group>";
+		};
+		8C0A419E1D4AB58E00AE6F7E /* Carbono */ = {
+			isa = PBXGroup;
+			children = (
+				8CA456F81D4D455B003614DE /* Informacion */,
+				8CA456FB1D4D4743003614DE /* Combustible */,
+				8C444CEC1D4D4C0C00BB5E37 /* Electricidad */,
+				8C0A419F1D4AB5B200AE6F7E /* CarbonoInicioLigeraController.swift */,
+			);
+			name = Carbono;
+			sourceTree = "<group>";
+		};
+		8C355E701D4C20DC000C25EF /* TabController */ = {
+			isa = PBXGroup;
+			children = (
+				8C355E811D4C3155000C25EF /* ADPageControl.xib */,
+				8C355E7B1D4C22BC000C25EF /* ADPageControl.h */,
+				8C355E7C1D4C22BC000C25EF /* ADPageControl.m */,
+				8C355E791D4C2287000C25EF /* Huella Ecológica-Bridging-Header.h */,
+			);
+			name = TabController;
+			sourceTree = "<group>";
+		};
+		8C355E851D4C464B000C25EF /* Hidrica */ = {
+			isa = PBXGroup;
+			children = (
+				8C355E861D4C467B000C25EF /* HidricaInicioLigeraController.swift */,
+			);
+			name = Hidrica;
+			sourceTree = "<group>";
+		};
+		8C444CEC1D4D4C0C00BB5E37 /* Electricidad */ = {
+			isa = PBXGroup;
+			children = (
+				8C444CED1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift */,
+			);
+			name = Electricidad;
+			sourceTree = "<group>";
+		};
+		8CA456F81D4D455B003614DE /* Informacion */ = {
+			isa = PBXGroup;
+			children = (
+				8CA456F91D4D4586003614DE /* InformacionCarbonoLigeraViewController.swift */,
+			);
+			name = Informacion;
+			sourceTree = "<group>";
+		};
+		8CA456FB1D4D4743003614DE /* Combustible */ = {
+			isa = PBXGroup;
+			children = (
+				8CA456FC1D4D4766003614DE /* CombustibleLigeraViewController.swift */,
+			);
+			name = Combustible;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +286,7 @@
 				TargetAttributes = {
 					8C0A41641D4AAA4100AE6F7E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KQW9PQ8LNW;
 					};
 					8C0A41781D4AAA4100AE6F7E = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -229,8 +323,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C355E891D4C4C4D000C25EF /* CarbonoCompleta.storyboard in Resources */,
 				8C0A41731D4AAA4100AE6F7E /* LaunchScreen.storyboard in Resources */,
+				8C355E8B1D4C4C64000C25EF /* HidricaCompleta.storyboard in Resources */,
+				8C355E841D4C463B000C25EF /* HidricaLigera.storyboard in Resources */,
 				8C0A41701D4AAA4100AE6F7E /* Assets.xcassets in Resources */,
+				8C355E821D4C3155000C25EF /* ADPageControl.xib in Resources */,
+				8C0A41971D4AB1EF00AE6F7E /* CarbonoLigera.storyboard in Resources */,
 				8C0A416E1D4AAA4100AE6F7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +355,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C355E7D1D4C22BC000C25EF /* ADPageControl.m in Sources */,
+				8C444CEE1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift in Sources */,
+				8CA456FA1D4D4586003614DE /* InformacionCarbonoLigeraViewController.swift in Sources */,
+				8C0A41A01D4AB5B200AE6F7E /* CarbonoInicioLigeraController.swift in Sources */,
+				8CA456FD1D4D4766003614DE /* CombustibleLigeraViewController.swift in Sources */,
+				8C355E871D4C467B000C25EF /* HidricaInicioLigeraController.swift in Sources */,
 				8C0A416B1D4AAA4100AE6F7E /* ViewController.swift in Sources */,
 				8C0A41691D4AAA4100AE6F7E /* AppDelegate.swift in Sources */,
 			);
@@ -401,10 +506,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Huella Ecológica/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "udg.mx.cucei.Huella-Ecolo-gica";
+				PRODUCT_BUNDLE_IDENTIFIER = udg.mx.cucei.HuellaEcologica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Huella Ecológica/Huella Ecológica-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -412,10 +523,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Huella Ecológica/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "udg.mx.cucei.Huella-Ecolo-gica";
+				PRODUCT_BUNDLE_IDENTIFIER = udg.mx.cucei.HuellaEcologica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Huella Ecológica/Huella Ecológica-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -484,6 +600,7 @@
 				8C0A418F1D4AAA4100AE6F7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C0A41901D4AAA4100AE6F7E /* Build configuration list for PBXNativeTarget "Huella EcológicaTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +609,7 @@
 				8C0A41921D4AAA4100AE6F7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C0A41931D4AAA4100AE6F7E /* Build configuration list for PBXNativeTarget "Huella EcológicaUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +618,7 @@
 				8C0A41951D4AAA4100AE6F7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
