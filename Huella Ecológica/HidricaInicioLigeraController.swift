@@ -119,9 +119,4 @@ class HidricaInicioLigeraController: UIViewController, ADPageControlDelegate {
         
         return nil
     }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
-
 }

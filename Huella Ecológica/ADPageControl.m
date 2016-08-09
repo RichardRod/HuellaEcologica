@@ -1,40 +1,22 @@
-//    The MIT License (MIT)
 //
-//    Copyright (c) 2015 Aditya Deshmane
+//  ADPageControl.m
+//  Huella Ecológica
 //
-//    Permission is hereby granted, free of charge, to any person obtaining a copy
-//    of this software and associated documentation files (the "Software"), to deal
-//    in the Software without restriction, including without limitation the rights
-//    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//    copies of the Software, and to permit persons to whom the Software is
-//    furnished to do so, subject to the following conditions:
+//  Created by Ricardo Rodriguez Haro on 7/30/16.
+//  Copyright © 2016 Ricardo Rodriguez Haro. All rights reserved.
 //
-//    The above copyright notice and this permission notice shall be included in all
-//    copies or substantial portions of the Software.
-//
-//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-//    SOFTWARE.
-
 
 #import "ADPageControl.h"
 
-//Constants
 #define DEFAULT_TAB_TEXT_FONT           [UIFont fontWithName:@"Helvetica" size:15]
 #define DEFAULT_PAGE_INDICATOR_HEIGHT   3
 #define DEFAULT_TITLE_VIEW_HEIGHT       35
 
-//Default colors
 #define DEFAULT_COLOR_TITLE_BAR_BACKGROUND          [UIColor colorWithRed:51.0/255 green:0 blue:102.0/255 alpha:1.0]
 #define DEFAULT_COLOR_TAB_TEXT                      [UIColor redColor]
 #define DEFAULT_COLOR_PAGE_INDICATOR                [UIColor redColor]
 #define DEFAULT_COLOR_PAGE_OVERSCROLL_BACKGROUND    [UIColor colorWithRed:45.0/255 green:2.0/255 blue:89.0/255 alpha:1.0]
 
-//Tab button tag offset ( starting with tag zero will not work to check subview with tag, as default tag values are 0)
 #define TAB_BTN_TAG_OFFSET      300
 #define HUGE_WIDTH_VALUE        1500
 
@@ -51,7 +33,6 @@
     UIScrollView            *_scrollViewPageController;
 }
 
-//Outlets
 @property (strong, nonatomic) IBOutlet UIView               *viewContainer;
 @property (strong, nonatomic) IBOutlet UIScrollView         *scrollViewTitle;
 @property (strong, nonatomic) IBOutlet UIView               *viewPageIndicator;
@@ -65,15 +46,9 @@
 @property (weak, nonatomic) IBOutlet UIView                 *viewShadow;
 
 
-
-//Many apps nowadays use drawer control,
-//this 4 pixel width dummy views at both edges disables touches on edges in order to open drawer on edge swipe
-//Hide them, if you want this control to respond to touches at end as well..
-//To hide, add lines _viewLeftDummy.hidden = YES; _viewRightDummy.hidden = YES; in viewDidLoad
 @property (strong, nonatomic) IBOutlet UIView               *viewLeftDummy;
 @property (strong, nonatomic) IBOutlet UIView               *viewRightDummy;
 
-//Private methods
 -(void)validateFirstVisiblePageNumber;
 -(void)setupIndicatorViewMoreTitleToLeftRight;
 -(void)initializeTitleViewParameters;
@@ -92,7 +67,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
     [self validateFirstVisiblePageNumber];
     [self initializeTitleViewParameters];
@@ -143,7 +117,6 @@
 
 -(void)setupTitleView
 {
-    //Adding buttons to scrollview
     for(int index = 0; index < _arrPageModel.count; index++ )
     {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -166,21 +139,18 @@
     int parentScrollViewHeight = _constraintTitleViewHeight.constant;
     int numberOfTabs = (int)_arrPageModel.count;
 
-    //WIDTH
     NSString *strWidth = [NSString stringWithFormat:@"H:[button(==%f)]",[[_arrTabWidth objectAtIndex:index] floatValue]];
     [button addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:strWidth
                                                                    options:0
                                                                    metrics:nil
                                                                      views:NSDictionaryOfVariableBindings(button)]];
     
-    //HEIGHT
     NSString *strHeight = [NSString stringWithFormat:@"V:[button(==%d)]",parentScrollViewHeight];
     [button addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:strHeight
                                                                    options:0
                                                                    metrics:nil
                                                                      views:NSDictionaryOfVariableBindings(button)]];
     
-    //TOP SPACE
     NSLayoutConstraint *constraintTopSpace = [NSLayoutConstraint constraintWithItem:button
                                                                           attribute:NSLayoutAttributeTop
                                                                           relatedBy:NSLayoutRelationEqual
@@ -190,9 +160,8 @@
                                                                            constant:0.0f];
     [_scrollViewTitle addConstraint:constraintTopSpace];
     
-    if(index == 0)//first tab
+    if(index == 0)
     {
-        //LEADING SPACE
         NSLayoutConstraint *constraintLeadingSpace = [NSLayoutConstraint constraintWithItem:button
                                                                                   attribute:NSLayoutAttributeLeading
                                                                                   relatedBy:NSLayoutRelationEqual
@@ -202,9 +171,8 @@
                                                                                    constant:0.0f];
         [_scrollViewTitle addConstraint:constraintLeadingSpace];
     }
-    else//middle tabs
+    else
     {
-        //HORIZONTAL SPACING
         UIButton *previousButton = (UIButton*)[_scrollViewTitle viewWithTag:TAB_BTN_TAG_OFFSET + (index -1)];
         
         NSLayoutConstraint *constraintHorizontalSpace = [NSLayoutConstraint constraintWithItem:previousButton
@@ -216,9 +184,8 @@
                                                                                       constant:0.0f];
         [_scrollViewTitle addConstraint:constraintHorizontalSpace];
         
-        if(index == (numberOfTabs-1))//last tab
+        if(index == (numberOfTabs-1))
         {
-            //TRAILING SPACE
             NSLayoutConstraint *constraintTrailingSpace = [NSLayoutConstraint constraintWithItem:button
                                                                                        attribute:NSLayoutAttributeTrailing
                                                                                        relatedBy:NSLayoutRelationEqual
@@ -235,17 +202,16 @@
 {
     _arrTabWidth = [[NSMutableArray alloc] init];
     
-    //button width calculation
     float expectedLabelWidth = 0;
     float requiredHeight = _scrollViewTitle.frame.size.height -20;
     
     for (int index = 0; index < _arrPageModel.count ; index++)
     {
-        if(_iCustomFixedTabWidth > 0)//Use custom tab width
+        if(_iCustomFixedTabWidth > 0)
         {
             [_arrTabWidth addObject:[NSNumber numberWithFloat:_iCustomFixedTabWidth]];
         }
-        else//Calculate tab width based on text
+        else
         {
             ADPageModel *pageModel = [_arrPageModel objectAtIndex:index];
             NSString *textString = pageModel.strPageTitle;
@@ -257,9 +223,8 @@
                                                           attributes:@{NSFontAttributeName:_fontTitleTabText}
                                                              context:nil].size.width;
             }
-            else//iOS 6 and below
+            else
             {
-                //Dont worry about warnings, this code will execute only for iOS 6 & below
                 CGSize constraintSize = CGSizeMake(HUGE_WIDTH_VALUE, requiredHeight);
                 expectedLabelWidth = [textString sizeWithFont:_fontTitleTabText
                                             constrainedToSize:constraintSize
@@ -281,7 +246,6 @@
         [self.view bringSubviewToFront:_viewIndicatorMoreTitlesToLeft];
         [self.view bringSubviewToFront:_viewIndicatorMoreTitlesToRight];
         
-        //Gradient colors, 1st 3 ouside view, last 3 visible with corner radius
         NSArray *arrGradientColor = [NSArray arrayWithObjects:
                                      (id)[UIColor blackColor].CGColor,
                                      (id)[UIColor blackColor].CGColor,
@@ -292,7 +256,6 @@
         CGPoint darkPoint = CGPointMake(0.0, 0.5);
         CGPoint lightPoint = CGPointMake(1.0, 0.5);
         
-        //Left view
         [_viewIndicatorMoreTitlesToLeft layoutIfNeeded];
         CAGradientLayer *gradientLeft = [CAGradientLayer layer];
         gradientLeft.frame = _viewIndicatorMoreTitlesToLeft.bounds;
@@ -303,7 +266,6 @@
         [_viewIndicatorMoreTitlesToLeft.layer insertSublayer:gradientLeft atIndex:0];
         [_viewIndicatorMoreTitlesToLeft layoutIfNeeded];
         
-        //Right view
         [_viewIndicatorMoreTitlesToRight layoutIfNeeded];
         CAGradientLayer *gradientRight = [CAGradientLayer layer];
         gradientRight.frame = _viewIndicatorMoreTitlesToRight.bounds;
@@ -381,7 +343,6 @@
         fLeading = fLeading + [[_arrTabWidth objectAtIndex:index] floatValue];
     }
 
-    //Works similar to scrollRectToVisible:
     [UIView animateWithDuration:0.3
      animations:
      ^{
@@ -408,7 +369,7 @@
      }];
     
     
-    if(bShouldHighlight)//Set page as current visible page
+    if(bShouldHighlight)
     {
         _iCurrentVisiblePage = pageNumber;
         
@@ -547,7 +508,7 @@
     dispatch_async(dispatch_get_main_queue(),
    ^{
        ADPageModel *pageModel = [_arrPageModel objectAtIndex:iPageNumber];
-       //animate to next page
+       
        [_pageViewController setViewControllers:@[[self getViewControllerForPageModel:pageModel]]
                                      direction: (_iCurrentVisiblePage < iPageNumber) ? UIPageViewControllerNavigationDirectionForward : UIPageViewControllerNavigationDirectionReverse
                                       animated:NO
@@ -565,7 +526,7 @@
     int pageNumber = [self getPageNumberForViewController:viewController];
     int previousPageNumber = pageNumber - 1;
     
-    if (pageNumber == 0)//no pages before page 0
+    if (pageNumber == 0)
         return nil;
     
     ADPageModel *pageModel = [_arrPageModel objectAtIndex:previousPageNumber];
@@ -578,7 +539,7 @@
     int pageNumber = [self getPageNumberForViewController:viewController];
     int nextPageNumber = pageNumber + 1;
     
-    if (nextPageNumber == [_arrPageModel count])//no pages after last page
+    if (nextPageNumber == [_arrPageModel count])
         return nil;
     
     ADPageModel *pageModel = [_arrPageModel objectAtIndex:nextPageNumber];

@@ -82,7 +82,7 @@ class CarbonoInicioLigeraController: UIViewController, ADPageControlDelegate {
         self.view!.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[subview]-0-|", options: [], metrics: nil, views: views))
         
         //Top margin 20 for status bar, Bottom margin 0
-        self.view!.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-44-[subview]-0-|", options: [], metrics: nil, views: views))
+        self.view!.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-64-[subview]-0-|", options: [], metrics: nil, views: views))
         
         
     }
@@ -123,8 +123,8 @@ class CarbonoInicioLigeraController: UIViewController, ADPageControlDelegate {
         return nil
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
 }
