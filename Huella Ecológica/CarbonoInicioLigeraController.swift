@@ -66,8 +66,8 @@ class CarbonoInicioLigeraController: UIViewController, ADPageControlDelegate {
         pageControl.colorPageIndicator = UIColor(red: 83/255, green: 83/255, blue: 83/255, alpha: 1.0)
         pageControl.colorPageOverscrollBackground = UIColor(red: 83/255, green: 83/255, blue: 83/255, alpha: 1.0)
         
-        pageControl.bEnablePagesEndBounceEffect = false
-        pageControl.bEnableTitlesEndBounceEffect = false
+        pageControl.bEnablePagesEndBounceEffect = true
+        pageControl.bEnableTitlesEndBounceEffect = true
         pageControl.bShowMoreTabAvailableIndicator = true
         pageControl.bHideShadow = true
         
