@@ -16,6 +16,7 @@
 		8C0A41891D4AAA4100AE6F7E /* Huella_Ecolo_gicaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0A41881D4AAA4100AE6F7E /* Huella_Ecolo_gicaUITests.swift */; };
 		8C0A41971D4AB1EF00AE6F7E /* CarbonoLigera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0A41961D4AB1EF00AE6F7E /* CarbonoLigera.storyboard */; };
 		8C0A41A01D4AB5B200AE6F7E /* CarbonoInicioLigeraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0A419F1D4AB5B200AE6F7E /* CarbonoInicioLigeraController.swift */; };
+		8C2EE7D61D62DAE0000A7DC2 /* CarbonoCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EE7D51D62DAE0000A7DC2 /* CarbonoCompletaController.swift */; };
 		8C355E7D1D4C22BC000C25EF /* ADPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C355E7C1D4C22BC000C25EF /* ADPageControl.m */; };
 		8C355E821D4C3155000C25EF /* ADPageControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C355E811D4C3155000C25EF /* ADPageControl.xib */; };
 		8C355E841D4C463B000C25EF /* HidricaLigera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C355E831D4C463B000C25EF /* HidricaLigera.storyboard */; };
@@ -23,8 +24,43 @@
 		8C355E891D4C4C4D000C25EF /* CarbonoCompleta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C355E881D4C4C4D000C25EF /* CarbonoCompleta.storyboard */; };
 		8C355E8B1D4C4C64000C25EF /* HidricaCompleta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C355E8A1D4C4C64000C25EF /* HidricaCompleta.storyboard */; };
 		8C444CEE1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C444CED1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift */; };
+		8C812BFC1D7D454F0044C660 /* InformacionHidricaLigera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812BFB1D7D454F0044C660 /* InformacionHidricaLigera.swift */; };
+		8C812BFE1D7D47970044C660 /* RegaderaHidricaLigeraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812BFD1D7D47970044C660 /* RegaderaHidricaLigeraController.swift */; };
+		8C812C001D7D48AD0044C660 /* AseoPersonalLigeraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812BFF1D7D48AD0044C660 /* AseoPersonalLigeraController.swift */; };
+		8C812C021D7D4A2A0044C660 /* SanitarioLigeraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812C011D7D4A2A0044C660 /* SanitarioLigeraController.swift */; };
+		8C812C041D7D4AFE0044C660 /* LavadoRopaLigeraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812C031D7D4AFE0044C660 /* LavadoRopaLigeraController.swift */; };
+		8C812C061D7D4C320044C660 /* AlimentacionLigeraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812C051D7D4C320044C660 /* AlimentacionLigeraController.swift */; };
+		8C812C091D7D4F6B0044C660 /* ResumenHidricaLigera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812C081D7D4F6B0044C660 /* ResumenHidricaLigera.swift */; };
+		8C812C0C1D7D5F410044C660 /* HLInformacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812C0B1D7D5F410044C660 /* HLInformacion.swift */; };
+		8C812C0E1D7D5FC00044C660 /* HLRegadera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812C0D1D7D5FC00044C660 /* HLRegadera.swift */; };
+		8C812C101D7D600E0044C660 /* HLAseoPersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812C0F1D7D600E0044C660 /* HLAseoPersonal.swift */; };
+		8C812C121D7D606D0044C660 /* HLSanitario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812C111D7D606D0044C660 /* HLSanitario.swift */; };
+		8C812C141D7D61510044C660 /* HLLavadoRopa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812C131D7D61510044C660 /* HLLavadoRopa.swift */; };
+		8C812C161D7D61900044C660 /* HLAlimentacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812C151D7D61900044C660 /* HLAlimentacion.swift */; };
+		8C812C181D7D621F0044C660 /* DatosHidricaLigera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812C171D7D621F0044C660 /* DatosHidricaLigera.swift */; };
 		8CA456FA1D4D4586003614DE /* InformacionCarbonoLigeraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA456F91D4D4586003614DE /* InformacionCarbonoLigeraViewController.swift */; };
 		8CA456FD1D4D4766003614DE /* CombustibleLigeraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA456FC1D4D4766003614DE /* CombustibleLigeraViewController.swift */; };
+		8CAD3C6E1D66AD050091FDC0 /* HidricaCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3C6D1D66AD050091FDC0 /* HidricaCompletaController.swift */; };
+		8CAD3C7B1D69B2E30091FDC0 /* TransporteLigeraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3C7A1D69B2E30091FDC0 /* TransporteLigeraController.swift */; };
+		8CAD3C7D1D69B6FF0091FDC0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3C7C1D69B6FF0091FDC0 /* Extensions.swift */; };
+		8CAD3C821D69BBDC0091FDC0 /* ViajesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3C811D69BBDC0091FDC0 /* ViajesController.swift */; };
+		8CAD3C851D69C5180091FDC0 /* Ingreso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3C841D69C5180091FDC0 /* Ingreso.swift */; };
+		8CAD3C881D6B92D30091FDC0 /* InformacionCarbonoCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3C871D6B92D30091FDC0 /* InformacionCarbonoCompletaController.swift */; };
+		8CAD3C8B1D6B96070091FDC0 /* EmisionesCarbonoCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3C8A1D6B96070091FDC0 /* EmisionesCarbonoCompletaController.swift */; };
+		8CAD3C8E1D6B9D390091FDC0 /* ElectricidadCarbonoCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3C8D1D6B9D390091FDC0 /* ElectricidadCarbonoCompletaController.swift */; };
+		8CAD3C911D6B9F4A0091FDC0 /* AguaCarbonoCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3C901D6B9F4A0091FDC0 /* AguaCarbonoCompletaController.swift */; };
+		8CAD3C941D6BA1230091FDC0 /* ViajesEstadoCarbonoCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3C931D6BA1230091FDC0 /* ViajesEstadoCarbonoCompletaController.swift */; };
+		8CAD3CD31D6E219C0091FDC0 /* ViajesPaisCarbonoCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3CD21D6E219C0091FDC0 /* ViajesPaisCarbonoCompletaController.swift */; };
+		8CAD3CD61D6E27200091FDC0 /* TransporteCarbonoCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3CD51D6E27200091FDC0 /* TransporteCarbonoCompletaController.swift */; };
+		8CAD3CD91D6E2B800091FDC0 /* ViajesFueraPaisCarbonoCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3CD81D6E2B800091FDC0 /* ViajesFueraPaisCarbonoCompletaController.swift */; };
+		8CAD3CDC1D6E2D840091FDC0 /* ViajesAereosNacionalesCarbonoCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3CDB1D6E2D840091FDC0 /* ViajesAereosNacionalesCarbonoCompletaController.swift */; };
+		8CAD3CDF1D6E2E840091FDC0 /* ViajesAereosInternacionalesCarbonoCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3CDE1D6E2E840091FDC0 /* ViajesAereosInternacionalesCarbonoCompletaController.swift */; };
+		8CAD3CE21D6E2FB80091FDC0 /* AlimentacionCarbonoCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3CE11D6E2FB80091FDC0 /* AlimentacionCarbonoCompletaController.swift */; };
+		8CAD3CE51D6E30D70091FDC0 /* IngresoCarbonoCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3CE41D6E30D70091FDC0 /* IngresoCarbonoCompletaController.swift */; };
+		8CAD3CE81D6E32EE0091FDC0 /* AguaResidual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3CE71D6E32EE0091FDC0 /* AguaResidual.swift */; };
+		8CAD3CEB1D6E3DA10091FDC0 /* Carbono.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3CEA1D6E3DA10091FDC0 /* Carbono.swift */; };
+		8CAD3CEE1D6E3F750091FDC0 /* Residuos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3CED1D6E3F750091FDC0 /* Residuos.swift */; };
+		8CAD3CF11D6E42BA0091FDC0 /* Mitigacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3CF01D6E42BA0091FDC0 /* Mitigacion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +96,7 @@
 		8C0A418A1D4AAA4100AE6F7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C0A41961D4AB1EF00AE6F7E /* CarbonoLigera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CarbonoLigera.storyboard; path = ../CarbonoLigera.storyboard; sourceTree = "<group>"; };
 		8C0A419F1D4AB5B200AE6F7E /* CarbonoInicioLigeraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbonoInicioLigeraController.swift; sourceTree = "<group>"; };
+		8C2EE7D51D62DAE0000A7DC2 /* CarbonoCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbonoCompletaController.swift; sourceTree = "<group>"; };
 		8C355E791D4C2287000C25EF /* Huella Ecológica-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Huella Ecológica-Bridging-Header.h"; sourceTree = "<group>"; };
 		8C355E7B1D4C22BC000C25EF /* ADPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPageControl.h; sourceTree = "<group>"; };
 		8C355E7C1D4C22BC000C25EF /* ADPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPageControl.m; sourceTree = "<group>"; };
@@ -69,8 +106,43 @@
 		8C355E881D4C4C4D000C25EF /* CarbonoCompleta.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CarbonoCompleta.storyboard; sourceTree = "<group>"; };
 		8C355E8A1D4C4C64000C25EF /* HidricaCompleta.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HidricaCompleta.storyboard; sourceTree = "<group>"; };
 		8C444CED1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectricidadLigeraViewController.swift; sourceTree = "<group>"; };
+		8C812BFB1D7D454F0044C660 /* InformacionHidricaLigera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacionHidricaLigera.swift; sourceTree = "<group>"; };
+		8C812BFD1D7D47970044C660 /* RegaderaHidricaLigeraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegaderaHidricaLigeraController.swift; sourceTree = "<group>"; };
+		8C812BFF1D7D48AD0044C660 /* AseoPersonalLigeraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AseoPersonalLigeraController.swift; sourceTree = "<group>"; };
+		8C812C011D7D4A2A0044C660 /* SanitarioLigeraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SanitarioLigeraController.swift; sourceTree = "<group>"; };
+		8C812C031D7D4AFE0044C660 /* LavadoRopaLigeraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LavadoRopaLigeraController.swift; sourceTree = "<group>"; };
+		8C812C051D7D4C320044C660 /* AlimentacionLigeraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlimentacionLigeraController.swift; sourceTree = "<group>"; };
+		8C812C081D7D4F6B0044C660 /* ResumenHidricaLigera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumenHidricaLigera.swift; sourceTree = "<group>"; };
+		8C812C0B1D7D5F410044C660 /* HLInformacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLInformacion.swift; sourceTree = "<group>"; };
+		8C812C0D1D7D5FC00044C660 /* HLRegadera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLRegadera.swift; sourceTree = "<group>"; };
+		8C812C0F1D7D600E0044C660 /* HLAseoPersonal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLAseoPersonal.swift; sourceTree = "<group>"; };
+		8C812C111D7D606D0044C660 /* HLSanitario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLSanitario.swift; sourceTree = "<group>"; };
+		8C812C131D7D61510044C660 /* HLLavadoRopa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLLavadoRopa.swift; sourceTree = "<group>"; };
+		8C812C151D7D61900044C660 /* HLAlimentacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLAlimentacion.swift; sourceTree = "<group>"; };
+		8C812C171D7D621F0044C660 /* DatosHidricaLigera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatosHidricaLigera.swift; sourceTree = "<group>"; };
 		8CA456F91D4D4586003614DE /* InformacionCarbonoLigeraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacionCarbonoLigeraViewController.swift; sourceTree = "<group>"; };
 		8CA456FC1D4D4766003614DE /* CombustibleLigeraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombustibleLigeraViewController.swift; sourceTree = "<group>"; };
+		8CAD3C6D1D66AD050091FDC0 /* HidricaCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HidricaCompletaController.swift; sourceTree = "<group>"; };
+		8CAD3C7A1D69B2E30091FDC0 /* TransporteLigeraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransporteLigeraController.swift; sourceTree = "<group>"; };
+		8CAD3C7C1D69B6FF0091FDC0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8CAD3C811D69BBDC0091FDC0 /* ViajesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViajesController.swift; sourceTree = "<group>"; };
+		8CAD3C841D69C5180091FDC0 /* Ingreso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingreso.swift; sourceTree = "<group>"; };
+		8CAD3C871D6B92D30091FDC0 /* InformacionCarbonoCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacionCarbonoCompletaController.swift; sourceTree = "<group>"; };
+		8CAD3C8A1D6B96070091FDC0 /* EmisionesCarbonoCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmisionesCarbonoCompletaController.swift; sourceTree = "<group>"; };
+		8CAD3C8D1D6B9D390091FDC0 /* ElectricidadCarbonoCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectricidadCarbonoCompletaController.swift; sourceTree = "<group>"; };
+		8CAD3C901D6B9F4A0091FDC0 /* AguaCarbonoCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AguaCarbonoCompletaController.swift; sourceTree = "<group>"; };
+		8CAD3C931D6BA1230091FDC0 /* ViajesEstadoCarbonoCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViajesEstadoCarbonoCompletaController.swift; sourceTree = "<group>"; };
+		8CAD3CD21D6E219C0091FDC0 /* ViajesPaisCarbonoCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViajesPaisCarbonoCompletaController.swift; sourceTree = "<group>"; };
+		8CAD3CD51D6E27200091FDC0 /* TransporteCarbonoCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransporteCarbonoCompletaController.swift; sourceTree = "<group>"; };
+		8CAD3CD81D6E2B800091FDC0 /* ViajesFueraPaisCarbonoCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViajesFueraPaisCarbonoCompletaController.swift; sourceTree = "<group>"; };
+		8CAD3CDB1D6E2D840091FDC0 /* ViajesAereosNacionalesCarbonoCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViajesAereosNacionalesCarbonoCompletaController.swift; sourceTree = "<group>"; };
+		8CAD3CDE1D6E2E840091FDC0 /* ViajesAereosInternacionalesCarbonoCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViajesAereosInternacionalesCarbonoCompletaController.swift; sourceTree = "<group>"; };
+		8CAD3CE11D6E2FB80091FDC0 /* AlimentacionCarbonoCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlimentacionCarbonoCompletaController.swift; sourceTree = "<group>"; };
+		8CAD3CE41D6E30D70091FDC0 /* IngresoCarbonoCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngresoCarbonoCompletaController.swift; sourceTree = "<group>"; };
+		8CAD3CE71D6E32EE0091FDC0 /* AguaResidual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AguaResidual.swift; sourceTree = "<group>"; };
+		8CAD3CEA1D6E3DA10091FDC0 /* Carbono.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carbono.swift; sourceTree = "<group>"; };
+		8CAD3CED1D6E3F750091FDC0 /* Residuos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Residuos.swift; sourceTree = "<group>"; };
+		8CAD3CF01D6E42BA0091FDC0 /* Mitigacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mitigacion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +202,11 @@
 				8C355E881D4C4C4D000C25EF /* CarbonoCompleta.storyboard */,
 				8C355E8A1D4C4C64000C25EF /* HidricaCompleta.storyboard */,
 				8C0A419D1D4AB57B00AE6F7E /* VersionLigera */,
+				8C2EE7D21D62DA9A000A7DC2 /* VersionCompleta */,
 				8C0A416F1D4AAA4100AE6F7E /* Assets.xcassets */,
 				8C0A41711D4AAA4100AE6F7E /* LaunchScreen.storyboard */,
 				8C0A41741D4AAA4100AE6F7E /* Info.plist */,
+				8CAD3C7C1D69B6FF0091FDC0 /* Extensions.swift */,
 			);
 			path = "Huella Ecológica";
 			sourceTree = "<group>";
@@ -170,9 +244,53 @@
 				8CA456F81D4D455B003614DE /* Informacion */,
 				8CA456FB1D4D4743003614DE /* Combustible */,
 				8C444CEC1D4D4C0C00BB5E37 /* Electricidad */,
+				8CAD3C791D69B2C30091FDC0 /* Transporte */,
+				8CAD3C7E1D69BA8B0091FDC0 /* Viajes */,
+				8CAD3C831D69C4F50091FDC0 /* Ingreso */,
 				8C0A419F1D4AB5B200AE6F7E /* CarbonoInicioLigeraController.swift */,
 			);
 			name = Carbono;
+			sourceTree = "<group>";
+		};
+		8C2EE7D21D62DA9A000A7DC2 /* VersionCompleta */ = {
+			isa = PBXGroup;
+			children = (
+				8C2EE7D31D62DAB3000A7DC2 /* Carbono */,
+				8C2EE7D41D62DAB9000A7DC2 /* Hidrica */,
+			);
+			name = VersionCompleta;
+			sourceTree = "<group>";
+		};
+		8C2EE7D31D62DAB3000A7DC2 /* Carbono */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3C861D6B92B50091FDC0 /* Informacion */,
+				8CAD3C891D6B95EA0091FDC0 /* Emisiones */,
+				8CAD3C8C1D6B9D210091FDC0 /* Electricidad */,
+				8CAD3C8F1D6B9F330091FDC0 /* Agua */,
+				8CAD3C921D6BA1070091FDC0 /* ViajesEstado */,
+				8CAD3CD11D6E216C0091FDC0 /* ViajesPais */,
+				8CAD3CD41D6E27030091FDC0 /* Transporte */,
+				8CAD3CD71D6E2B640091FDC0 /* ViajesFueraPais */,
+				8CAD3CDA1D6E2D5B0091FDC0 /* ViajesAereosNacionales */,
+				8CAD3CDD1D6E2E580091FDC0 /* ViajesAereosInternacionales */,
+				8CAD3CE01D6E2FA30091FDC0 /* Alimentacion */,
+				8CAD3CE31D6E30B40091FDC0 /* Ingreso */,
+				8CAD3CE61D6E32630091FDC0 /* AguaResidual */,
+				8CAD3CE91D6E3D740091FDC0 /* Carbono */,
+				8CAD3CEC1D6E3F620091FDC0 /* Residuos */,
+				8CAD3CEF1D6E42A80091FDC0 /* Mitigacion */,
+				8C2EE7D51D62DAE0000A7DC2 /* CarbonoCompletaController.swift */,
+			);
+			name = Carbono;
+			sourceTree = "<group>";
+		};
+		8C2EE7D41D62DAB9000A7DC2 /* Hidrica */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3C6D1D66AD050091FDC0 /* HidricaCompletaController.swift */,
+			);
+			name = Hidrica;
 			sourceTree = "<group>";
 		};
 		8C355E701D4C20DC000C25EF /* TabController */ = {
@@ -189,6 +307,14 @@
 		8C355E851D4C464B000C25EF /* Hidrica */ = {
 			isa = PBXGroup;
 			children = (
+				8C812C0A1D7D5F2A0044C660 /* Datos */,
+				8C812BF51D7D45070044C660 /* Informacion */,
+				8C812BF61D7D450E0044C660 /* Regadera */,
+				8C812BF71D7D45150044C660 /* AseoPersonal */,
+				8C812BF81D7D45200044C660 /* Sanitario */,
+				8C812BF91D7D452D0044C660 /* LavadoRopa */,
+				8C812BFA1D7D45360044C660 /* Alimentacion */,
+				8C812C071D7D4F5A0044C660 /* Resumen */,
 				8C355E861D4C467B000C25EF /* HidricaInicioLigeraController.swift */,
 			);
 			name = Hidrica;
@@ -200,6 +326,76 @@
 				8C444CED1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift */,
 			);
 			name = Electricidad;
+			sourceTree = "<group>";
+		};
+		8C812BF51D7D45070044C660 /* Informacion */ = {
+			isa = PBXGroup;
+			children = (
+				8C812BFB1D7D454F0044C660 /* InformacionHidricaLigera.swift */,
+			);
+			name = Informacion;
+			sourceTree = "<group>";
+		};
+		8C812BF61D7D450E0044C660 /* Regadera */ = {
+			isa = PBXGroup;
+			children = (
+				8C812BFD1D7D47970044C660 /* RegaderaHidricaLigeraController.swift */,
+			);
+			name = Regadera;
+			sourceTree = "<group>";
+		};
+		8C812BF71D7D45150044C660 /* AseoPersonal */ = {
+			isa = PBXGroup;
+			children = (
+				8C812BFF1D7D48AD0044C660 /* AseoPersonalLigeraController.swift */,
+			);
+			name = AseoPersonal;
+			sourceTree = "<group>";
+		};
+		8C812BF81D7D45200044C660 /* Sanitario */ = {
+			isa = PBXGroup;
+			children = (
+				8C812C011D7D4A2A0044C660 /* SanitarioLigeraController.swift */,
+			);
+			name = Sanitario;
+			sourceTree = "<group>";
+		};
+		8C812BF91D7D452D0044C660 /* LavadoRopa */ = {
+			isa = PBXGroup;
+			children = (
+				8C812C031D7D4AFE0044C660 /* LavadoRopaLigeraController.swift */,
+			);
+			name = LavadoRopa;
+			sourceTree = "<group>";
+		};
+		8C812BFA1D7D45360044C660 /* Alimentacion */ = {
+			isa = PBXGroup;
+			children = (
+				8C812C051D7D4C320044C660 /* AlimentacionLigeraController.swift */,
+			);
+			name = Alimentacion;
+			sourceTree = "<group>";
+		};
+		8C812C071D7D4F5A0044C660 /* Resumen */ = {
+			isa = PBXGroup;
+			children = (
+				8C812C081D7D4F6B0044C660 /* ResumenHidricaLigera.swift */,
+			);
+			name = Resumen;
+			sourceTree = "<group>";
+		};
+		8C812C0A1D7D5F2A0044C660 /* Datos */ = {
+			isa = PBXGroup;
+			children = (
+				8C812C0B1D7D5F410044C660 /* HLInformacion.swift */,
+				8C812C0D1D7D5FC00044C660 /* HLRegadera.swift */,
+				8C812C0F1D7D600E0044C660 /* HLAseoPersonal.swift */,
+				8C812C111D7D606D0044C660 /* HLSanitario.swift */,
+				8C812C131D7D61510044C660 /* HLLavadoRopa.swift */,
+				8C812C151D7D61900044C660 /* HLAlimentacion.swift */,
+				8C812C171D7D621F0044C660 /* DatosHidricaLigera.swift */,
+			);
+			name = Datos;
 			sourceTree = "<group>";
 		};
 		8CA456F81D4D455B003614DE /* Informacion */ = {
@@ -216,6 +412,158 @@
 				8CA456FC1D4D4766003614DE /* CombustibleLigeraViewController.swift */,
 			);
 			name = Combustible;
+			sourceTree = "<group>";
+		};
+		8CAD3C791D69B2C30091FDC0 /* Transporte */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3C7A1D69B2E30091FDC0 /* TransporteLigeraController.swift */,
+			);
+			name = Transporte;
+			sourceTree = "<group>";
+		};
+		8CAD3C7E1D69BA8B0091FDC0 /* Viajes */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3C811D69BBDC0091FDC0 /* ViajesController.swift */,
+			);
+			name = Viajes;
+			sourceTree = "<group>";
+		};
+		8CAD3C831D69C4F50091FDC0 /* Ingreso */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3C841D69C5180091FDC0 /* Ingreso.swift */,
+			);
+			name = Ingreso;
+			sourceTree = "<group>";
+		};
+		8CAD3C861D6B92B50091FDC0 /* Informacion */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3C871D6B92D30091FDC0 /* InformacionCarbonoCompletaController.swift */,
+			);
+			name = Informacion;
+			sourceTree = "<group>";
+		};
+		8CAD3C891D6B95EA0091FDC0 /* Emisiones */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3C8A1D6B96070091FDC0 /* EmisionesCarbonoCompletaController.swift */,
+			);
+			name = Emisiones;
+			sourceTree = "<group>";
+		};
+		8CAD3C8C1D6B9D210091FDC0 /* Electricidad */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3C8D1D6B9D390091FDC0 /* ElectricidadCarbonoCompletaController.swift */,
+			);
+			name = Electricidad;
+			sourceTree = "<group>";
+		};
+		8CAD3C8F1D6B9F330091FDC0 /* Agua */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3C901D6B9F4A0091FDC0 /* AguaCarbonoCompletaController.swift */,
+			);
+			name = Agua;
+			sourceTree = "<group>";
+		};
+		8CAD3C921D6BA1070091FDC0 /* ViajesEstado */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3C931D6BA1230091FDC0 /* ViajesEstadoCarbonoCompletaController.swift */,
+			);
+			name = ViajesEstado;
+			sourceTree = "<group>";
+		};
+		8CAD3CD11D6E216C0091FDC0 /* ViajesPais */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3CD21D6E219C0091FDC0 /* ViajesPaisCarbonoCompletaController.swift */,
+			);
+			name = ViajesPais;
+			sourceTree = "<group>";
+		};
+		8CAD3CD41D6E27030091FDC0 /* Transporte */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3CD51D6E27200091FDC0 /* TransporteCarbonoCompletaController.swift */,
+			);
+			name = Transporte;
+			sourceTree = "<group>";
+		};
+		8CAD3CD71D6E2B640091FDC0 /* ViajesFueraPais */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3CD81D6E2B800091FDC0 /* ViajesFueraPaisCarbonoCompletaController.swift */,
+			);
+			name = ViajesFueraPais;
+			sourceTree = "<group>";
+		};
+		8CAD3CDA1D6E2D5B0091FDC0 /* ViajesAereosNacionales */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3CDB1D6E2D840091FDC0 /* ViajesAereosNacionalesCarbonoCompletaController.swift */,
+			);
+			name = ViajesAereosNacionales;
+			sourceTree = "<group>";
+		};
+		8CAD3CDD1D6E2E580091FDC0 /* ViajesAereosInternacionales */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3CDE1D6E2E840091FDC0 /* ViajesAereosInternacionalesCarbonoCompletaController.swift */,
+			);
+			name = ViajesAereosInternacionales;
+			sourceTree = "<group>";
+		};
+		8CAD3CE01D6E2FA30091FDC0 /* Alimentacion */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3CE11D6E2FB80091FDC0 /* AlimentacionCarbonoCompletaController.swift */,
+			);
+			name = Alimentacion;
+			sourceTree = "<group>";
+		};
+		8CAD3CE31D6E30B40091FDC0 /* Ingreso */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3CE41D6E30D70091FDC0 /* IngresoCarbonoCompletaController.swift */,
+			);
+			name = Ingreso;
+			sourceTree = "<group>";
+		};
+		8CAD3CE61D6E32630091FDC0 /* AguaResidual */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3CE71D6E32EE0091FDC0 /* AguaResidual.swift */,
+			);
+			name = AguaResidual;
+			sourceTree = "<group>";
+		};
+		8CAD3CE91D6E3D740091FDC0 /* Carbono */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3CEA1D6E3DA10091FDC0 /* Carbono.swift */,
+			);
+			name = Carbono;
+			sourceTree = "<group>";
+		};
+		8CAD3CEC1D6E3F620091FDC0 /* Residuos */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3CED1D6E3F750091FDC0 /* Residuos.swift */,
+			);
+			name = Residuos;
+			sourceTree = "<group>";
+		};
+		8CAD3CEF1D6E42A80091FDC0 /* Mitigacion */ = {
+			isa = PBXGroup;
+			children = (
+				8CAD3CF01D6E42BA0091FDC0 /* Mitigacion.swift */,
+			);
+			name = Mitigacion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,14 +703,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAD3CD31D6E219C0091FDC0 /* ViajesPaisCarbonoCompletaController.swift in Sources */,
+				8C812C061D7D4C320044C660 /* AlimentacionLigeraController.swift in Sources */,
 				8C355E7D1D4C22BC000C25EF /* ADPageControl.m in Sources */,
+				8C812C121D7D606D0044C660 /* HLSanitario.swift in Sources */,
+				8C812C001D7D48AD0044C660 /* AseoPersonalLigeraController.swift in Sources */,
+				8C2EE7D61D62DAE0000A7DC2 /* CarbonoCompletaController.swift in Sources */,
 				8C444CEE1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift in Sources */,
+				8CAD3C851D69C5180091FDC0 /* Ingreso.swift in Sources */,
+				8CAD3CD61D6E27200091FDC0 /* TransporteCarbonoCompletaController.swift in Sources */,
+				8C812C041D7D4AFE0044C660 /* LavadoRopaLigeraController.swift in Sources */,
+				8C812C091D7D4F6B0044C660 /* ResumenHidricaLigera.swift in Sources */,
+				8CAD3CD91D6E2B800091FDC0 /* ViajesFueraPaisCarbonoCompletaController.swift in Sources */,
+				8C812BFE1D7D47970044C660 /* RegaderaHidricaLigeraController.swift in Sources */,
+				8CAD3CE51D6E30D70091FDC0 /* IngresoCarbonoCompletaController.swift in Sources */,
 				8CA456FA1D4D4586003614DE /* InformacionCarbonoLigeraViewController.swift in Sources */,
+				8C812BFC1D7D454F0044C660 /* InformacionHidricaLigera.swift in Sources */,
+				8CAD3CDC1D6E2D840091FDC0 /* ViajesAereosNacionalesCarbonoCompletaController.swift in Sources */,
+				8CAD3C911D6B9F4A0091FDC0 /* AguaCarbonoCompletaController.swift in Sources */,
+				8C812C0C1D7D5F410044C660 /* HLInformacion.swift in Sources */,
+				8CAD3CE21D6E2FB80091FDC0 /* AlimentacionCarbonoCompletaController.swift in Sources */,
+				8CAD3CDF1D6E2E840091FDC0 /* ViajesAereosInternacionalesCarbonoCompletaController.swift in Sources */,
 				8C0A41A01D4AB5B200AE6F7E /* CarbonoInicioLigeraController.swift in Sources */,
+				8C812C181D7D621F0044C660 /* DatosHidricaLigera.swift in Sources */,
 				8CA456FD1D4D4766003614DE /* CombustibleLigeraViewController.swift in Sources */,
+				8CAD3C941D6BA1230091FDC0 /* ViajesEstadoCarbonoCompletaController.swift in Sources */,
+				8CAD3C8E1D6B9D390091FDC0 /* ElectricidadCarbonoCompletaController.swift in Sources */,
+				8C812C021D7D4A2A0044C660 /* SanitarioLigeraController.swift in Sources */,
 				8C355E871D4C467B000C25EF /* HidricaInicioLigeraController.swift in Sources */,
+				8CAD3C881D6B92D30091FDC0 /* InformacionCarbonoCompletaController.swift in Sources */,
+				8CAD3CF11D6E42BA0091FDC0 /* Mitigacion.swift in Sources */,
+				8CAD3C7D1D69B6FF0091FDC0 /* Extensions.swift in Sources */,
+				8C812C161D7D61900044C660 /* HLAlimentacion.swift in Sources */,
+				8CAD3CEB1D6E3DA10091FDC0 /* Carbono.swift in Sources */,
+				8C812C0E1D7D5FC00044C660 /* HLRegadera.swift in Sources */,
+				8C812C101D7D600E0044C660 /* HLAseoPersonal.swift in Sources */,
+				8CAD3C6E1D66AD050091FDC0 /* HidricaCompletaController.swift in Sources */,
 				8C0A416B1D4AAA4100AE6F7E /* ViewController.swift in Sources */,
+				8CAD3CE81D6E32EE0091FDC0 /* AguaResidual.swift in Sources */,
+				8CAD3C8B1D6B96070091FDC0 /* EmisionesCarbonoCompletaController.swift in Sources */,
+				8CAD3C821D69BBDC0091FDC0 /* ViajesController.swift in Sources */,
+				8C812C141D7D61510044C660 /* HLLavadoRopa.swift in Sources */,
 				8C0A41691D4AAA4100AE6F7E /* AppDelegate.swift in Sources */,
+				8CAD3C7B1D69B2E30091FDC0 /* TransporteLigeraController.swift in Sources */,
+				8CAD3CEE1D6E3F750091FDC0 /* Residuos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

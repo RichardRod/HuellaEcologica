@@ -1,21 +1,23 @@
 //
-//  InformacionCarbonoLigeraViewController.swift
+//  InformacionCarbonoCompletaController.swift
 //  Huella Ecológica
 //
-//  Created by Ricardo Rodriguez Haro on 7/30/16.
+//  Created by Ricardo Rodriguez Haro on 8/22/16.
 //  Copyright © 2016 Ricardo Rodriguez Haro. All rights reserved.
 //
 
 import UIKit
 
-class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
-    
-    let pickerMunicipio = UIPickerView()
-    let pickerSexo = UIPickerView()
+class InformacionCarbonoCompletaController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var txtMunicipio: UITextField!
+    let pickerMunicipio = UIPickerView()
+    
     @IBOutlet weak var txtPersonas: UITextField!
+    
     @IBOutlet weak var txtSexo: UITextField!
+    let pickerSexo = UIPickerView()
+    
     @IBOutlet weak var txtEdad: UITextField!
     
     var opcionesMunicipio = ["", "Acatic", "Acatlán de Juárez", "Ahualulco de Mercado", "Amacueca", "Amatitán", "Ameca", "San Juanito de Escobedo", "Arandas", "El Arenal", "Atemajac de Brizuela", "Atengo", "Atenguillo", "Atotonilco el Alto", "Atoyac", "Autlán de Navarro", "Ayotlán", "Ayutla", "La Barca", "Bolaños", "Cabo Corrientes", "Cañadas de Obregón", "Casimiro Castillo", "Cihuatlán", "Zapotlán el Grande", "Cocula", "Colotlán", "Concepción de Buenos Aires", "Cuautitlán de García Barragán", "Cuautla", "Cuquío", "Chapala", "Chimaltitán", "Chiquilistlán", "De gollado", "Ejutla", "Encarnación de Díaz", "Etzatlán", "El Grullo", "El Limón", "Guachinango", "Guadalajara", "Hostotipaquillo", "Huejúcar", "Huejuquilla el Alto", "La Huerta", "Ixtlahuacán de los Membrillos", "Ixtlahuacán del Río", "Jalostotitlán", "Jamay", "Jesús María", "Jilotlán de los Dolores", "Jocotepec", "Juanacatlán", "Juchitlán", "Lagos de Moreno", "Magdalena", "Santa María del Oro", "La Manzanilla de la Paz", "Mascota", "Mazamitla", "Mexticacán", "Mezquitic", "Mixtlán", "Ocotlán", "Ojuelos de Jalisco", "Pihuamo", "Poncitlán", "Puerto Vallarta", "Villa Purificación", "Quitupan", "El Salto", "San Cristóbal de la Barranca", "San Diego de Alejandría", "San Juan de los Lagos", "San Julián", "San Marcos", "San Martín de Bolaños", "San Martín Hidalgo", "San Miguel el Alto", "Gómez Farías", "San Sebastián del Oeste", "Santa María de los Ángeles", "Sayula", "Tala", "Talpa de Allende", "Tamazula de Gordiano", "Tapalpa", "Tecalitlán", "Tecolotlán", "Techaluta de Montenegro", "Tenamaxtlán", "Teocaltiche", "Teocuitatlán de Corona", "Tepatitlán de Morelos", "Tepatitlán de Morelos", "Teuchitlán", "Tizapán el Alto", "Tlajomulco de Zúñiga", "Tlaquepaque", "Tolimán", "Tomatlán", "Tonalá", "Tonaya", "Tonila", "Totatiche", "Tototlán", "Tuxcacuesco", "Tuxcueca", "Tuxpan", "Unión de San Antonio", "Unión de Tula", "Valle de Guadalupe", "Valle de Juárez", "San Gabriel", "Villa Corona", "Villa Guerrero", "Villa Hidalgo", "Yahualica de González Gallo", "Zacoalco de Torres", "Zapopan", "Zapotiltic", "Zapotitlán de Vadillo", "Zapotlán del Rey", "Zapotlanejo", "San Ignacio Cerro Gordo"]
@@ -24,41 +26,24 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.hideKeyboardWhenTappedAround()
-
+        
         crearPickerMunicipio()
         crearPickerSexo()
         
         txtPersonas.delegate = self
         txtPersonas.keyboardType = .NumberPad
-        txtPersonas.addTarget(self, action: #selector(self.obtenerTextoPersonas(_:)), forControlEvents: UIControlEvents.EditingChanged)
+        //txtPersonas.addTarget(self, action: #selector(self.obtenerTextoPersonas(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtEdad.delegate = self
         txtEdad.keyboardType = .NumberPad
-        txtEdad.addTarget(self, action: #selector(self.obtenerTextoEdad(_:)), forControlEvents: UIControlEvents.EditingChanged)
-    }
+        //txtEdad.addTarget(self, action: #selector(self.obtenerTextoEdad(_:)), forControlEvents: UIControlEvents.EditingChanged)
 
-
-    func obtenerTextoPersonas(textField: UITextField) {
-        
-        if textField.text?.characters.count > 0 {
-            //DatosCarbonoLigera.informacion.numeroPersonas = Int(txtPersonas.text!)!
-        } else {
-            //DatosCarbonoLigera.informacion.numeroPersonas = 0
-        }
-    }
-    
-    func obtenerTextoEdad(textField: UITextField) {
-        
-        if textField.text?.characters.count > 0 {
-            //DatosCarbonoLigera.informacion.edad = Int(txtEdad.text!)!
-        } else {
-            //DatosCarbonoLigera.informacion.edad = 0
-        }
     }
     
     private func crearPickerMunicipio() {
+        
         pickerMunicipio.tag = 0
         pickerMunicipio.delegate  = self
         pickerMunicipio.backgroundColor = .lightGrayColor()
@@ -72,7 +57,7 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
         
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         
-        let botonListo = UIBarButtonItem(title: "Seleccionar", style: UIBarButtonItemStyle.Done, target: self, action: #selector(InformacionCarbonoLigeraViewController.doneMunicipio))
+        let botonListo = UIBarButtonItem(title: "Seleccionar", style: UIBarButtonItemStyle.Done, target: self, action: #selector(InformacionCarbonoCompletaController.doneMunicipio))
         
         toolbar.setItems([flexibleSpace, botonListo], animated: true)
         toolbar.userInteractionEnabled = true
@@ -80,7 +65,12 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
         txtMunicipio.inputAccessoryView = toolbar
     }
     
-    private func crearPickerSexo() {
+    internal func doneMunicipio() {
+        txtMunicipio.resignFirstResponder()
+    }
+    
+    func crearPickerSexo() {
+        
         pickerSexo.tag = 1
         pickerSexo.delegate  = self
         pickerSexo.backgroundColor = .lightGrayColor()
@@ -94,22 +84,17 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
         
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         
-        let botonListo = UIBarButtonItem(title: "Seleccionar", style: UIBarButtonItemStyle.Done, target: self, action: #selector(InformacionCarbonoLigeraViewController.doneSexo))
+        let botonListo = UIBarButtonItem(title: "Seleccionar", style: UIBarButtonItemStyle.Done, target: self, action: #selector(InformacionCarbonoCompletaController.doneSexo))
         
         toolbar.setItems([flexibleSpace, botonListo], animated: true)
         toolbar.userInteractionEnabled = true
         
         txtSexo.inputAccessoryView = toolbar
+
     }
     
-    internal func doneMunicipio() {
-        txtMunicipio.resignFirstResponder()
-        //DatosCarbonoLigera.informacion.municipio = txtMunicipio.text!
-    }
-    
-    internal func doneSexo() {
+    func doneSexo() {
         txtSexo.resignFirstResponder()
-        //DatosCarbonoLigera.informacion.sexo = txtSexo.text!
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -140,8 +125,10 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 0 {
             txtMunicipio.text = opcionesMunicipio[row]
+            //DatosCarbono.Informacion_Municipio = txtMunicipio.text!
         } else if pickerView.tag == 1 {
             txtSexo.text = opcionesSexo[row]
+            //DatosCarbono.Informacion_Sexo = txtSexo.text!
         }
     }
     
@@ -165,4 +152,5 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
         let invalidCharacters = NSCharacterSet(charactersInString: "0123456789").invertedSet
         return string.rangeOfCharacterFromSet(invalidCharacters, options: [], range: string.startIndex ..< string.endIndex) == nil
     }
+
 }

@@ -1,33 +1,37 @@
 //
-//  ElectricidadLigeraViewController.swift
+//  ElectricidadCarbonoCompletaController.swift
 //  Huella Ecológica
 //
-//  Created by Ricardo Rodriguez Haro on 7/30/16.
+//  Created by Ricardo Rodriguez Haro on 8/22/16.
 //  Copyright © 2016 Ricardo Rodriguez Haro. All rights reserved.
 //
 
 import UIKit
 
-class ElectricidadLigeraViewController: UIViewController, UITextFieldDelegate {
+class ElectricidadCarbonoCompletaController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var txtConsumo: UITextField!
-    @IBOutlet weak var segmentPago: UISegmentedControl!
     @IBOutlet weak var txtPago: UITextField!
-    
+    @IBOutlet weak var segmentPago: UISegmentedControl!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.hideKeyboardWhenTappedAround()
-
+        
         txtConsumo.delegate = self
         txtConsumo.keyboardType = .DecimalPad
         
         txtPago.delegate = self
         txtPago.keyboardType = .DecimalPad
+        
     }
     
-    func textField(textField: UITextField,shouldChangeCharactersInRange range: NSRange,replacementString string: String) -> Bool
-    {
+    @IBAction func opcionPago(sender: UISegmentedControl) {
+    }
+    
+    func textField(textField: UITextField,shouldChangeCharactersInRange range: NSRange,replacementString string: String) -> Bool {
+        
         let newCharacters = NSCharacterSet(charactersInString: string)
         let boolIsNumber = NSCharacterSet.decimalDigitCharacterSet().isSupersetOfSet(newCharacters)
         if boolIsNumber == true {
@@ -48,9 +52,6 @@ class ElectricidadLigeraViewController: UIViewController, UITextFieldDelegate {
                 return false
             }
         }
-    }
-    
-    @IBAction func opcionPago(sender: UISegmentedControl) {
     }
 
 }

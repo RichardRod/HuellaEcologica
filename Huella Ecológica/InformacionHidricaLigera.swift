@@ -1,14 +1,14 @@
 //
-//  InformacionCarbonoLigeraViewController.swift
+//  InformacionHidricaLigera.swift
 //  Huella Ecológica
 //
-//  Created by Ricardo Rodriguez Haro on 7/30/16.
+//  Created by Ricardo Rodriguez Haro on 9/5/16.
 //  Copyright © 2016 Ricardo Rodriguez Haro. All rights reserved.
 //
 
 import UIKit
 
-class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+class InformacionHidricaLigera: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     let pickerMunicipio = UIPickerView()
     let pickerSexo = UIPickerView()
@@ -21,12 +21,12 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
     var opcionesMunicipio = ["", "Acatic", "Acatlán de Juárez", "Ahualulco de Mercado", "Amacueca", "Amatitán", "Ameca", "San Juanito de Escobedo", "Arandas", "El Arenal", "Atemajac de Brizuela", "Atengo", "Atenguillo", "Atotonilco el Alto", "Atoyac", "Autlán de Navarro", "Ayotlán", "Ayutla", "La Barca", "Bolaños", "Cabo Corrientes", "Cañadas de Obregón", "Casimiro Castillo", "Cihuatlán", "Zapotlán el Grande", "Cocula", "Colotlán", "Concepción de Buenos Aires", "Cuautitlán de García Barragán", "Cuautla", "Cuquío", "Chapala", "Chimaltitán", "Chiquilistlán", "De gollado", "Ejutla", "Encarnación de Díaz", "Etzatlán", "El Grullo", "El Limón", "Guachinango", "Guadalajara", "Hostotipaquillo", "Huejúcar", "Huejuquilla el Alto", "La Huerta", "Ixtlahuacán de los Membrillos", "Ixtlahuacán del Río", "Jalostotitlán", "Jamay", "Jesús María", "Jilotlán de los Dolores", "Jocotepec", "Juanacatlán", "Juchitlán", "Lagos de Moreno", "Magdalena", "Santa María del Oro", "La Manzanilla de la Paz", "Mascota", "Mazamitla", "Mexticacán", "Mezquitic", "Mixtlán", "Ocotlán", "Ojuelos de Jalisco", "Pihuamo", "Poncitlán", "Puerto Vallarta", "Villa Purificación", "Quitupan", "El Salto", "San Cristóbal de la Barranca", "San Diego de Alejandría", "San Juan de los Lagos", "San Julián", "San Marcos", "San Martín de Bolaños", "San Martín Hidalgo", "San Miguel el Alto", "Gómez Farías", "San Sebastián del Oeste", "Santa María de los Ángeles", "Sayula", "Tala", "Talpa de Allende", "Tamazula de Gordiano", "Tapalpa", "Tecalitlán", "Tecolotlán", "Techaluta de Montenegro", "Tenamaxtlán", "Teocaltiche", "Teocuitatlán de Corona", "Tepatitlán de Morelos", "Tepatitlán de Morelos", "Teuchitlán", "Tizapán el Alto", "Tlajomulco de Zúñiga", "Tlaquepaque", "Tolimán", "Tomatlán", "Tonalá", "Tonaya", "Tonila", "Totatiche", "Tototlán", "Tuxcacuesco", "Tuxcueca", "Tuxpan", "Unión de San Antonio", "Unión de Tula", "Valle de Guadalupe", "Valle de Juárez", "San Gabriel", "Villa Corona", "Villa Guerrero", "Villa Hidalgo", "Yahualica de González Gallo", "Zacoalco de Torres", "Zapopan", "Zapotiltic", "Zapotitlán de Vadillo", "Zapotlán del Rey", "Zapotlanejo", "San Ignacio Cerro Gordo"]
     
     var opcionesSexo = ["", "Hombre", "Mujer"]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.hideKeyboardWhenTappedAround()
-
+        
         crearPickerMunicipio()
         crearPickerSexo()
         
@@ -38,27 +38,25 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
         txtEdad.keyboardType = .NumberPad
         txtEdad.addTarget(self, action: #selector(self.obtenerTextoEdad(_:)), forControlEvents: UIControlEvents.EditingChanged)
     }
-
-
+    
     func obtenerTextoPersonas(textField: UITextField) {
-        
         if textField.text?.characters.count > 0 {
-            //DatosCarbonoLigera.informacion.numeroPersonas = Int(txtPersonas.text!)!
+            DatosHidricaLigera.informacion.numeroPersonas = Int(txtPersonas.text!)!
         } else {
-            //DatosCarbonoLigera.informacion.numeroPersonas = 0
+            DatosHidricaLigera.informacion.numeroPersonas = 0
         }
     }
     
     func obtenerTextoEdad(textField: UITextField) {
         
         if textField.text?.characters.count > 0 {
-            //DatosCarbonoLigera.informacion.edad = Int(txtEdad.text!)!
+            DatosHidricaLigera.informacion.edad = Int(txtEdad.text!)!
         } else {
-            //DatosCarbonoLigera.informacion.edad = 0
+            DatosHidricaLigera.informacion.edad = 0
         }
     }
     
-    private func crearPickerMunicipio() {
+    func crearPickerMunicipio() {
         pickerMunicipio.tag = 0
         pickerMunicipio.delegate  = self
         pickerMunicipio.backgroundColor = .lightGrayColor()
@@ -72,7 +70,7 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
         
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         
-        let botonListo = UIBarButtonItem(title: "Seleccionar", style: UIBarButtonItemStyle.Done, target: self, action: #selector(InformacionCarbonoLigeraViewController.doneMunicipio))
+        let botonListo = UIBarButtonItem(title: "Seleccionar", style: UIBarButtonItemStyle.Done, target: self, action: #selector(InformacionHidricaLigera.doneMunicipio))
         
         toolbar.setItems([flexibleSpace, botonListo], animated: true)
         toolbar.userInteractionEnabled = true
@@ -80,7 +78,12 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
         txtMunicipio.inputAccessoryView = toolbar
     }
     
-    private func crearPickerSexo() {
+    func doneMunicipio() {
+        txtMunicipio.resignFirstResponder()
+        DatosHidricaLigera.informacion.municipio = txtMunicipio.text!
+    }
+    
+    func crearPickerSexo() {
         pickerSexo.tag = 1
         pickerSexo.delegate  = self
         pickerSexo.backgroundColor = .lightGrayColor()
@@ -94,22 +97,18 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
         
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         
-        let botonListo = UIBarButtonItem(title: "Seleccionar", style: UIBarButtonItemStyle.Done, target: self, action: #selector(InformacionCarbonoLigeraViewController.doneSexo))
+        let botonListo = UIBarButtonItem(title: "Seleccionar", style: UIBarButtonItemStyle.Done, target: self, action: #selector(InformacionHidricaLigera.doneSexo))
         
         toolbar.setItems([flexibleSpace, botonListo], animated: true)
         toolbar.userInteractionEnabled = true
         
         txtSexo.inputAccessoryView = toolbar
+
     }
     
-    internal func doneMunicipio() {
-        txtMunicipio.resignFirstResponder()
-        //DatosCarbonoLigera.informacion.municipio = txtMunicipio.text!
-    }
-    
-    internal func doneSexo() {
+    func doneSexo() {
         txtSexo.resignFirstResponder()
-        //DatosCarbonoLigera.informacion.sexo = txtSexo.text!
+        DatosHidricaLigera.informacion.sexo = txtSexo.text!
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -165,4 +164,7 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
         let invalidCharacters = NSCharacterSet(charactersInString: "0123456789").invertedSet
         return string.rangeOfCharacterFromSet(invalidCharacters, options: [], range: string.startIndex ..< string.endIndex) == nil
     }
+    
+    
+    
 }

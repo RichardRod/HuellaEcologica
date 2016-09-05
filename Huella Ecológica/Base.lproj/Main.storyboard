@@ -92,6 +92,22 @@
             </objects>
             <point key="canvasLocation" x="850.5" y="184"/>
         </scene>
+        <!--Inicio-->
+        <scene sceneID="uYg-Nk-3z5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CarbonoCompleta" referencedIdentifier="Inicio" id="cUk-kq-hXJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XhT-Ik-Vfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.5" y="468"/>
+        </scene>
+        <!--Inicio-->
+        <scene sceneID="PTj-5e-BMz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HidricaCompleta" referencedIdentifier="Inicio" id="8h0-VZ-Rsi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ZV-T7-TO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.5" y="814"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="OSe-cR-M08">
             <objects>
@@ -165,7 +181,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qqL-6D-DAn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uj9-BW-IVL" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="InitialView" automaticallyAdjustsScrollViewInsets="NO" id="uj9-BW-IVL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JfG-hs-0hb">
@@ -202,6 +218,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ke-aK-C1D">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="252"/>
                                                 <state key="normal" image="CO2"/>
+                                                <connections>
+                                                    <segue destination="cUk-kq-hXJ" kind="show" id="Cwf-A3-W4y"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -218,6 +237,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdP-Kq-ob3">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="252"/>
                                                 <state key="normal" image="H2O"/>
+                                                <connections>
+                                                    <segue destination="8h0-VZ-Rsi" kind="show" id="DrV-Db-RqL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

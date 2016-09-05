@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Hidrica Inicio Ligera Controller-->
+        <!--Huella hídrica-->
         <scene sceneID="6gf-vR-rYo">
             <objects>
-                <viewController storyboardIdentifier="Inicio" id="b6X-yz-gjf" customClass="HidricaInicioLigeraController" customModule="Huella_Ecolo_gica" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Inicio" title="Huella hídrica" id="b6X-yz-gjf" customClass="HidricaInicioLigeraController" customModule="Huella_Ecolo_gica" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DP0-ZC-eqZ"/>
                         <viewControllerLayoutGuide type="bottom" id="5xf-KM-gVq"/>
@@ -18,17 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GcX-Pa-bxL"/>
+                    <navigationItem key="navigationItem" title="Huella hídrica" id="GcX-Pa-bxL"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOU-uE-DiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="761" y="261"/>
         </scene>
-        <!--View Controller-->
+        <!--Informacion Hidrica Ligera-->
         <scene sceneID="ZWv-Fe-DMD">
             <objects>
-                <viewController storyboardIdentifier="Informacion" id="WKP-M9-vRr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Informacion" id="WKP-M9-vRr" customClass="InformacionHidricaLigera" customModule="Huella_Ecolo_gica" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XHO-mA-SGx"/>
                         <viewControllerLayoutGuide type="bottom" id="U5L-0d-Jr0"/>
@@ -180,15 +180,21 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="txtEdad" destination="zyi-b8-uZQ" id="Mzc-pW-f6H"/>
+                        <outlet property="txtMunicipio" destination="5Bj-X4-4pB" id="8lh-Eg-iCW"/>
+                        <outlet property="txtPersonas" destination="cBX-bU-Oia" id="Qix-z6-KJr"/>
+                        <outlet property="txtSexo" destination="wNE-RW-jlo" id="Cl4-nI-gn8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1iY-WO-BsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1121" y="261"/>
         </scene>
-        <!--View Controller-->
+        <!--Regadera Hidrica Ligera Controller-->
         <scene sceneID="2fP-lm-734">
             <objects>
-                <viewController storyboardIdentifier="Regadera" id="4wQ-IQ-DdL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Regadera" id="4wQ-IQ-DdL" customClass="RegaderaHidricaLigeraController" customModule="Huella_Ecolo_gica" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XRC-28-a5d"/>
                         <viewControllerLayoutGuide type="bottom" id="WAG-Oq-Bsi"/>
@@ -289,15 +295,19 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="txtTiempo" destination="xCI-p5-erE" id="kw7-zB-Hbo"/>
+                        <outlet property="txtVeces" destination="O0e-7t-5zx" id="sTr-cq-Vvg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDn-Wq-rgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1470" y="261"/>
         </scene>
-        <!--View Controller-->
+        <!--Aseo Personal Ligera Controller-->
         <scene sceneID="o9v-TY-NgF">
             <objects>
-                <viewController storyboardIdentifier="Aseo" id="WQb-TY-zQy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Aseo" id="WQb-TY-zQy" customClass="AseoPersonalLigeraController" customModule="Huella_Ecolo_gica" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mHF-Jh-LHB"/>
                         <viewControllerLayoutGuide type="bottom" id="6Uk-MI-0HL"/>
@@ -421,15 +431,20 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="txtDientes" destination="dj7-HM-td5" id="b5a-Jb-Rps"/>
+                        <outlet property="txtManos" destination="7gS-nx-yBj" id="kJw-VW-QeE"/>
+                        <outlet property="txtRasurado" destination="WLw-F1-Iie" id="Nxc-fx-6H7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtb-wx-Y5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1821" y="261"/>
         </scene>
-        <!--View Controller-->
+        <!--Sanitario Ligera Controller-->
         <scene sceneID="rWg-hT-H1y">
             <objects>
-                <viewController storyboardIdentifier="Sanitario" id="ISL-dJ-xFH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Sanitario" id="ISL-dJ-xFH" customClass="SanitarioLigeraController" customModule="Huella_Ecolo_gica" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fuK-oa-0Yy"/>
                         <viewControllerLayoutGuide type="bottom" id="ypO-2z-JEA"/>
@@ -505,15 +520,18 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="txtVeces" destination="8IQ-Zu-A9e" id="HcN-R2-Bwg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiO-uW-Q6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2175" y="261"/>
         </scene>
-        <!--View Controller-->
+        <!--Lavado Ropa Ligera Controller-->
         <scene sceneID="DK2-pc-ivE">
             <objects>
-                <viewController storyboardIdentifier="Lavado" id="wIk-Ic-P1i" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Lavado" id="wIk-Ic-P1i" customClass="LavadoRopaLigeraController" customModule="Huella_Ecolo_gica" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8IY-Mc-NRX"/>
                         <viewControllerLayoutGuide type="bottom" id="FBa-lE-iSQ"/>
@@ -589,15 +607,18 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="txtVeces" destination="krN-9n-GGd" id="fXY-OH-vb3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6N-aF-z8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2525" y="261"/>
         </scene>
-        <!--View Controller-->
+        <!--Alimentacion Ligera Controller-->
         <scene sceneID="GOo-FX-Qx5">
             <objects>
-                <viewController storyboardIdentifier="Alimentacion" id="ATU-ad-QSD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Alimentacion" id="ATU-ad-QSD" customClass="AlimentacionLigeraController" customModule="Huella_Ecolo_gica" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dBT-D2-Nyw"/>
                         <viewControllerLayoutGuide type="bottom" id="oDA-mp-xjQ"/>
@@ -911,7 +932,7 @@
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="finishAction:" destination="ATU-ad-QSD" eventType="touchUpInside" id="t7S-f7-c7f"/>
+                                                    <action selector="finishAction:" destination="ATU-ad-QSD" eventType="touchUpInside" id="JEY-qj-yia"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1039,10 +1060,163 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1302"/>
+                    <connections>
+                        <outlet property="btnFinalizar" destination="8Wm-ON-WFm" id="9JW-Pv-3qp"/>
+                        <outlet property="txtArroz" destination="JWg-Os-xwV" id="KP9-aZ-yrD"/>
+                        <outlet property="txtCafe" destination="MZX-Xw-psd" id="kM8-Tb-kjx"/>
+                        <outlet property="txtCarnePollo" destination="bEy-iP-0VS" id="hO8-qw-6S1"/>
+                        <outlet property="txtCarneRes" destination="cYJ-gd-V95" id="vyP-0C-OfF"/>
+                        <outlet property="txtFrijoles" destination="qwL-lJ-Leb" id="m5B-hb-ocy"/>
+                        <outlet property="txtFruta" destination="qzF-i2-3Xf" id="azk-1e-Uhc"/>
+                        <outlet property="txtHuevo" destination="rFa-6D-JSX" id="Pnn-Fl-SDP"/>
+                        <outlet property="txtLeche" destination="xtu-Vg-1Sc" id="gJ1-h0-Svv"/>
+                        <outlet property="txtPan" destination="Z8r-tP-XVC" id="L67-Ga-u8q"/>
+                        <outlet property="txtPescado" destination="rSX-DP-xNu" id="q1i-K5-tRJ"/>
+                        <outlet property="txtRefresco" destination="gWd-Bf-yP9" id="Nlj-7W-zoe"/>
+                        <outlet property="txtSopa" destination="DSW-gj-snS" id="Z2W-6B-52J"/>
+                        <outlet property="txtTe" destination="GTH-hZ-geX" id="haQ-YH-ROB"/>
+                        <outlet property="txtTortillas" destination="3Hf-v7-NnV" id="hhU-hu-iGR"/>
+                        <outlet property="txtVerdura" destination="8rb-No-fs3" id="Beh-bB-Q1X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvH-hG-zJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2876" y="261"/>
+        </scene>
+        <!--Resumen Hidrica Ligera-->
+        <scene sceneID="Ngi-6T-W6l">
+            <objects>
+                <viewController id="JoG-dY-yoJ" customClass="ResumenHidricaLigera" customModule="Huella_Ecolo_gica" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tcf-5R-MsA"/>
+                        <viewControllerLayoutGuide type="bottom" id="asm-YP-TGQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H8T-z0-3yi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feK-rp-RWu">
+                                <rect key="frame" x="20" y="518" width="280" height="30"/>
+                                <state key="normal" title="Continuar"/>
+                                <connections>
+                                    <action selector="continuarAction:" destination="JoG-dY-yoJ" eventType="touchUpInside" id="ycq-lY-tRv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resultados" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTC-LU-ail">
+                                <rect key="frame" x="20" y="72" width="280" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.33725490196078434" green="0.45490196078431372" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Regadera" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMa-2t-09E">
+                                <rect key="frame" x="20" y="101" width="140" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.4549019608" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Higiene personal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYX-ki-rme">
+                                <rect key="frame" x="20" y="130" width="140" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.4549019608" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sanitario" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thy-T1-wbz">
+                                <rect key="frame" x="20" y="159" width="140" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.4549019608" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lavado de ropa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMs-2C-rhN">
+                                <rect key="frame" x="20" y="188" width="140" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.4549019608" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alimentación" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJa-nF-oCC">
+                                <rect key="frame" x="20" y="217" width="140" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.4549019608" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qU-Gj-XUU">
+                                <rect key="frame" x="200" y="101" width="100" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.4549019608" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N04-6F-1gg">
+                                <rect key="frame" x="200" y="130" width="100" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.4549019608" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x15-JD-WTE">
+                                <rect key="frame" x="200" y="159" width="100" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.4549019608" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yod-kz-Q1B">
+                                <rect key="frame" x="200" y="188" width="100" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.4549019608" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMp-LN-7j0">
+                                <rect key="frame" x="200" y="217" width="100" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.4549019608" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQh-S5-Wer">
+                                <rect key="frame" x="20" y="262" width="140" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.4549019608" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEf-c0-an7">
+                                <rect key="frame" x="200" y="262" width="100" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.4549019608" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BKz-mP-ClS"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="btnContinuar" destination="feK-rp-RWu" id="8cQ-kk-yva"/>
+                        <outlet property="lblAlimentacion" destination="MMp-LN-7j0" id="rVk-6D-Hsv"/>
+                        <outlet property="lblHigiene" destination="N04-6F-1gg" id="QLz-Op-8R7"/>
+                        <outlet property="lblRegadera" destination="8qU-Gj-XUU" id="AFH-v4-ONL"/>
+                        <outlet property="lblRopa" destination="Yod-kz-Q1B" id="0Ft-SF-p2m"/>
+                        <outlet property="lblSanitario" destination="x15-JD-WTE" id="zYJ-Nr-P4g"/>
+                        <outlet property="lblTotal" destination="iEf-c0-an7" id="X1j-3W-NgZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RgX-eI-YXm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3807" y="261"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jIu-xk-XiB">
+            <objects>
+                <navigationController storyboardIdentifier="Resumen" automaticallyAdjustsScrollViewInsets="NO" id="lC7-6h-Ctq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aSu-XU-q0I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JoG-dY-yoJ" kind="relationship" relationship="rootViewController" id="WgY-5Y-dC4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4tD-eI-74y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3338" y="261"/>
         </scene>
     </scenes>
 </document>

@@ -53,6 +53,9 @@
                                                     <segment title="Bimestral"/>
                                                 </segments>
                                                 <color key="tintColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="opcionPago:" destination="aOF-xp-VEA" eventType="valueChanged" id="Oxy-Jz-Bqf"/>
+                                                </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pago de acuerdo a tu último recibo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwn-wL-ViU">
                                                 <rect key="frame" x="8" y="292" width="304" height="30"/>
@@ -156,15 +159,20 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="526"/>
+                    <connections>
+                        <outlet property="segmentPago" destination="iXp-hX-GVZ" id="ohU-Bl-LcJ"/>
+                        <outlet property="txtConsumo" destination="xef-3t-Pgc" id="0Zt-v9-vGK"/>
+                        <outlet property="txtPago" destination="16J-Hz-zP7" id="iTK-BX-Bz9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7z-rN-MOk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1878" y="-65"/>
         </scene>
-        <!--View Controller-->
+        <!--Transporte Ligera Controller-->
         <scene sceneID="kHX-Va-A3O">
             <objects>
-                <viewController storyboardIdentifier="Transporte" id="bnh-cz-SzI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Transporte" id="bnh-cz-SzI" customClass="TransporteLigeraController" customModule="Huella_Ecolo_gica" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F0Q-qJ-6zu"/>
                         <viewControllerLayoutGuide type="bottom" id="orT-u7-B6u"/>
@@ -198,6 +206,9 @@
                                                     <segment title="No"/>
                                                 </segments>
                                                 <color key="tintColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="opcionAutoPropio:" destination="bnh-cz-SzI" eventType="valueChanged" id="UQx-yu-Qjv"/>
+                                                </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5ds-Pq-HSI">
                                                 <rect key="frame" x="162" y="418" width="150" height="29"/>
@@ -210,6 +221,9 @@
                                                     <segment title="No"/>
                                                 </segments>
                                                 <color key="tintColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="opcionGasolina:" destination="bnh-cz-SzI" eventType="valueChanged" id="1pk-2r-8Ei"/>
+                                                </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uJF-C9-TNr">
                                                 <rect key="frame" x="162" y="454" width="150" height="29"/>
@@ -222,6 +236,9 @@
                                                     <segment title="No"/>
                                                 </segments>
                                                 <color key="tintColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="opcionDiesel:" destination="bnh-cz-SzI" eventType="valueChanged" id="gTE-Mh-OOb"/>
+                                                </connections>
                                             </segmentedControl>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UQV-Hv-Uxy">
                                                 <rect key="frame" x="162" y="490" width="150" height="29"/>
@@ -234,6 +251,9 @@
                                                     <segment title="No"/>
                                                 </segments>
                                                 <color key="tintColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="opcionGas:" destination="bnh-cz-SzI" eventType="valueChanged" id="diV-8L-3Ly"/>
+                                                </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Híbrido" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J21-7E-a2W">
                                                 <rect key="frame" x="8" y="526" width="125" height="28"/>
@@ -330,6 +350,9 @@
                                                     <segment title="No"/>
                                                 </segments>
                                                 <color key="tintColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="opcionHibrido:" destination="bnh-cz-SzI" eventType="valueChanged" id="fAk-HD-bIM"/>
+                                                </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuál es la principal forma de transporte para sus actividades cotidianas? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXy-M8-ccB">
                                                 <rect key="frame" x="8" y="88" width="304" height="65"/>
@@ -574,15 +597,29 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="978"/>
+                    <connections>
+                        <outlet property="segmentAutoPropio" destination="1u3-mp-K5V" id="TVA-Pt-Q9p"/>
+                        <outlet property="segmentDiesel" destination="uJF-C9-TNr" id="iSj-gv-2wL"/>
+                        <outlet property="segmentGas" destination="UQV-Hv-Uxy" id="0GF-bi-5nS"/>
+                        <outlet property="segmentGasolina" destination="5ds-Pq-HSI" id="IVK-n1-4Gx"/>
+                        <outlet property="segmentHibrido" destination="g2v-7j-Q8f" id="tjD-3E-IOR"/>
+                        <outlet property="txtLitrosDiesel" destination="dTo-1l-WIL" id="D3M-01-RJJ"/>
+                        <outlet property="txtLitrosGas" destination="2z5-8y-tk5" id="Wx9-7a-csW"/>
+                        <outlet property="txtLitrosGasolina" destination="yDH-uB-P2m" id="8b4-2C-sVS"/>
+                        <outlet property="txtPesosDiesel" destination="Uba-71-nkV" id="9cN-zX-Xmr"/>
+                        <outlet property="txtPesosGas" destination="OI8-8X-rwq" id="SdS-O3-SpK"/>
+                        <outlet property="txtPesosGasolina" destination="wfE-GK-uJF" id="5ek-9h-AgP"/>
+                        <outlet property="txtTransporte" destination="Udn-SW-NGC" id="m4U-SF-2VJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hep-bA-8n5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2224" y="161"/>
         </scene>
-        <!--View Controller-->
+        <!--Viajes Controller-->
         <scene sceneID="yXE-qS-TgP">
             <objects>
-                <viewController storyboardIdentifier="Viajes" id="c6S-Da-t9S" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Viajes" id="c6S-Da-t9S" customClass="ViajesController" customModule="Huella_Ecolo_gica" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SOJ-gE-9SS"/>
                         <viewControllerLayoutGuide type="bottom" id="63n-ry-ubr"/>
@@ -768,15 +805,22 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="672"/>
+                    <connections>
+                        <outlet property="btnAgregar" destination="3sv-R8-ard" id="xQR-48-qiV"/>
+                        <outlet property="txtDestinoCDMX" destination="ao2-sG-Onk" id="nyg-y9-xC7"/>
+                        <outlet property="txtDestinoGdl" destination="65c-Cd-Nxr" id="evr-fT-o3j"/>
+                        <outlet property="txtViajesCDMX" destination="v1B-Ul-01d" id="l0c-aX-zOb"/>
+                        <outlet property="txtViajesGdl" destination="9cg-yr-Gkg" id="7ER-UP-9zs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1T-lt-PKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2579" y="8"/>
         </scene>
-        <!--View Controller-->
+        <!--Ingreso-->
         <scene sceneID="oHH-yN-bLu">
             <objects>
-                <viewController storyboardIdentifier="Ingreso" id="jT7-Da-q1Y" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Ingreso" id="jT7-Da-q1Y" customClass="Ingreso" customModule="Huella_Ecolo_gica" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s81-md-Vm0"/>
                         <viewControllerLayoutGuide type="bottom" id="UXQ-Jd-wf6"/>
@@ -827,6 +871,9 @@
                                                 <state key="normal" title="Terminar">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="terminarAction:" destination="jT7-Da-q1Y" eventType="touchUpInside" id="c1P-Ll-TpZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -866,6 +913,10 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="541"/>
+                    <connections>
+                        <outlet property="btnTerminar" destination="u0A-7t-afk" id="6aV-A4-rgK"/>
+                        <outlet property="pickerIngreso" destination="IyP-cD-ONX" id="F5u-04-PSu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msg-v9-yqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -21,7 +21,7 @@ class HidricaInicioLigeraController: UIViewController, ADPageControlDelegate {
         
         let pageModelInformacion: ADPageModel = ADPageModel()
         let pageInformacion: UIViewController = UIStoryboard(name: "HidricaLigera", bundle: nil).instantiateViewControllerWithIdentifier("Informacion")
-        pageModelInformacion.strPageTitle = "Informacion"
+        pageModelInformacion.strPageTitle = "Información"
         pageModelInformacion.iPageNumber = 0
         pageModelInformacion.viewController = pageInformacion
         
@@ -46,7 +46,7 @@ class HidricaInicioLigeraController: UIViewController, ADPageControlDelegate {
         pageModelLavado.bShouldLazyLoad = true
         
         let pageModelAlimentacion: ADPageModel = ADPageModel()
-        pageModelAlimentacion.strPageTitle = "Alimentacion"
+        pageModelAlimentacion.strPageTitle = "Alimentación"
         pageModelAlimentacion.iPageNumber = 5
         pageModelAlimentacion.bShouldLazyLoad = true
         

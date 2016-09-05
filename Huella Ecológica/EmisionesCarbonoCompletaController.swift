@@ -1,43 +1,52 @@
 //
-//  Combustible.swift
+//  EmisionesCarbonoCompletaController.swift
 //  Huella Ecológica
 //
-//  Created by Ricardo Rodriguez Haro on 7/30/16.
+//  Created by Ricardo Rodriguez Haro on 8/22/16.
 //  Copyright © 2016 Ricardo Rodriguez Haro. All rights reserved.
 //
 
 import UIKit
 
-class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
-
-    let pickerCombustible = UIPickerView()
+class EmisionesCarbonoCompletaController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var txtCombustible: UITextField!
+    let pickerCombustible = UIPickerView()
+    
     @IBOutlet weak var txtConsumo: UITextField!
+    let pickerConsumo = UIPickerView()
     
-    var opcionesCombustible = ["", "Gas LP (Tanque estacionario o cilindros)", "Gas Natural (Conexión a red de gas natural)", "Leña", "Carbón vegetal"]
+    @IBOutlet weak var txtConsumoPesos: UITextField!
+    @IBOutlet weak var txtCarbono: UITextField!
+    @IBOutlet weak var txtLenia: UITextField!
     
+    var opcionesCombustible = ["Gas LP (Tanque estacionario o cilindros)", "Gas Natural (Conexión a red de gas natural)", "Leña", "Carbón vegetal"]
+    
+    var opcionesUnidad = ["Consumo de Gas en pesos", "Consumo de Gas en kilogramos", "Consumo de Gas en litros"]
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.hideKeyboardWhenTappedAround()
-
         crearPickerCombustible()
+        crearPickerConsumo()
         
-        txtConsumo.delegate = self
-        txtConsumo.keyboardType = .DecimalPad
-        txtConsumo.addTarget(self, action: #selector(self.obtenerTextoConsumo(_:)), forControlEvents: UIControlEvents.EditingChanged)
+        self.hideKeyboardWhenTappedAround()
+        
+        txtConsumoPesos.delegate = self
+        txtConsumoPesos.keyboardType = .DecimalPad
+        
+        txtCarbono.delegate = self
+        txtCarbono.keyboardType = .DecimalPad
+        
+        txtLenia.delegate = self
+        txtLenia.keyboardType = .DecimalPad
     }
     
-    func obtenerTextoConsumo(textField: UITextField) {
-        if textField.text?.characters.count > 0 {
-            //DatosCarbonoLigera.combustible.consumo = Int(txtConsumo.text!)!
-        } else {
-            //DatosCarbonoLigera.combustible.consumo = 0
-        }
-    }
     
     private func crearPickerCombustible() {
+        
         pickerCombustible.tag = 0
         pickerCombustible.delegate  = self
         pickerCombustible.backgroundColor = .lightGrayColor()
@@ -51,7 +60,7 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
         
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         
-        let botonListo = UIBarButtonItem(title: "Seleccionar", style: UIBarButtonItemStyle.Done, target: self, action: #selector(CombustibleLigeraViewController.doneCombustible))
+        let botonListo = UIBarButtonItem(title: "Seleccionar", style: UIBarButtonItemStyle.Done, target: self, action: #selector(EmisionesCarbonoCompletaController.doneCombustible))
         
         toolbar.setItems([flexibleSpace, botonListo], animated: true)
         toolbar.userInteractionEnabled = true
@@ -59,19 +68,47 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
         txtCombustible.inputAccessoryView = toolbar
     }
     
-    internal func doneCombustible() {
+    func doneCombustible() {
         txtCombustible.resignFirstResponder()
-        //DatosCarbonoLigera.combustible.consumo = Int(txtCombustible.text!)!
     }
+    
+    private func crearPickerConsumo() {
+        pickerConsumo.tag = 1
+        pickerConsumo.delegate  = self
+        pickerConsumo.backgroundColor = .lightGrayColor()
+        txtConsumo.inputView = pickerConsumo
+        
+        let toolbar = UIToolbar()
+        toolbar.barStyle = UIBarStyle.Default
+        toolbar.translucent = true
+        toolbar.tintColor = UIColor(red: 83/255, green: 83/255, blue: 83/255, alpha: 1.0)
+        toolbar.sizeToFit()
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        
+        let botonListo = UIBarButtonItem(title: "Seleccionar", style: UIBarButtonItemStyle.Done, target: self, action: #selector(EmisionesCarbonoCompletaController.doneConsumo))
+        
+        toolbar.setItems([flexibleSpace, botonListo], animated: true)
+        toolbar.userInteractionEnabled = true
+        
+        txtConsumo.inputAccessoryView = toolbar
+
+    }
+    
+    func doneConsumo() {
+        txtConsumo.resignFirstResponder()
+    }
+    
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
         if pickerView.tag == 0 {
             return opcionesCombustible.count
+        } else if pickerView.tag == 1 {
+            return opcionesUnidad.count
         }
         
         return 1
@@ -81,6 +118,8 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
         
         if pickerView.tag == 0 {
             return opcionesCombustible[row]
+        } else if pickerView.tag == 1 {
+            return opcionesUnidad[row]
         }
         
         return ""
@@ -89,6 +128,10 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 0 {
             txtCombustible.text = opcionesCombustible[row]
+            //DatosCarbono.Informacion_Municipio = txtMunicipio.text!
+        } else if pickerView.tag == 1 {
+            txtConsumo.text = opcionesUnidad[row]
+            //DatosCarbono.Informacion_Sexo = txtSexo.text!
         }
     }
     
@@ -101,10 +144,12 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
         
         if pickerView.tag == 0 {
             pickerLabel.text = opcionesCombustible[row]
+        } else if pickerView.tag == 1 {
+            pickerLabel.text = opcionesUnidad[row]
         }
+        
         return pickerLabel
     }
-    
     
     func textField(textField: UITextField,shouldChangeCharactersInRange range: NSRange,replacementString string: String) -> Bool {
         
@@ -129,5 +174,6 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
             }
         }
     }
-    
+
+
 }
