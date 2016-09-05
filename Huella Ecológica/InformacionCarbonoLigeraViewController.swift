@@ -43,18 +43,18 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
     func obtenerTextoPersonas(textField: UITextField) {
         
         if textField.text?.characters.count > 0 {
-            //DatosCarbonoLigera.informacion.numeroPersonas = Int(txtPersonas.text!)!
+            DatosCarbonoLigera.informacion.numeroPersonas = Int(txtPersonas.text!)!
         } else {
-            //DatosCarbonoLigera.informacion.numeroPersonas = 0
+            DatosCarbonoLigera.informacion.numeroPersonas = 0
         }
     }
     
     func obtenerTextoEdad(textField: UITextField) {
         
         if textField.text?.characters.count > 0 {
-            //DatosCarbonoLigera.informacion.edad = Int(txtEdad.text!)!
+            DatosCarbonoLigera.informacion.edad = Int(txtEdad.text!)!
         } else {
-            //DatosCarbonoLigera.informacion.edad = 0
+            DatosCarbonoLigera.informacion.edad = 0
         }
     }
     
@@ -104,12 +104,12 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
     
     internal func doneMunicipio() {
         txtMunicipio.resignFirstResponder()
-        //DatosCarbonoLigera.informacion.municipio = txtMunicipio.text!
+        DatosCarbonoLigera.informacion.municipio = txtMunicipio.text!
     }
     
     internal func doneSexo() {
         txtSexo.resignFirstResponder()
-        //DatosCarbonoLigera.informacion.sexo = txtSexo.text!
+        DatosCarbonoLigera.informacion.sexo = txtSexo.text!
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

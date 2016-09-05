@@ -21,9 +21,34 @@ class ElectricidadLigeraViewController: UIViewController, UITextFieldDelegate {
 
         txtConsumo.delegate = self
         txtConsumo.keyboardType = .DecimalPad
+        txtConsumo.addTarget(self, action: #selector(self.obtenerTextoConsumo(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtPago.delegate = self
         txtPago.keyboardType = .DecimalPad
+        txtPago.addTarget(self, action: #selector(self.obtenerTextoPago(_:)), forControlEvents: UIControlEvents.EditingChanged)
+    }
+    
+    func obtenerTextoConsumo(textField: UITextField) {
+        if textField.text?.characters.count > 0 {
+            DatosCarbonoLigera.electricidad.consumo = Double(txtConsumo.text!)!
+        } else {
+            DatosCarbonoLigera.electricidad.consumo = 0
+        }
+    }
+    
+    func obtenerTextoPago(textField: UITextField) {
+        if textField.text?.characters.count > 0 {
+            if segmentPago.selectedSegmentIndex == 0 {
+                DatosCarbonoLigera.electricidad.pago = Double(txtPago.text!)!
+                print("Mensual")
+            } else if segmentPago.selectedSegmentIndex == 1 {
+                DatosCarbonoLigera.electricidad.pago = Double(txtPago.text!)! / 2
+                print("Bimestral")
+            }
+            
+        } else {
+            DatosCarbonoLigera.electricidad.pago = 0
+        }
     }
     
     func textField(textField: UITextField,shouldChangeCharactersInRange range: NSRange,replacementString string: String) -> Bool

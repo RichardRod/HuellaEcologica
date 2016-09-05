@@ -922,6 +922,37 @@
             </objects>
             <point key="canvasLocation" x="2937" y="-28"/>
         </scene>
+        <!--Resumen Carbono Ligera-->
+        <scene sceneID="Kzr-JQ-SFK">
+            <objects>
+                <viewController id="FBi-rc-u5q" customClass="ResumenCarbonoLigera" customModule="Huella_Ecolo_gica" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FRX-3Z-Hnh"/>
+                        <viewControllerLayoutGuide type="bottom" id="LBn-dO-vDj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VTb-2Y-D6n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EC-JJ-9dL">
+                                <rect key="frame" x="20" y="518" width="280" height="30"/>
+                                <state key="normal" title="Continuar"/>
+                                <connections>
+                                    <action selector="continuarAction:" destination="FBi-rc-u5q" eventType="touchUpInside" id="X3y-PL-IeY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kVN-xW-Gt5"/>
+                    <connections>
+                        <outlet property="btnContinuar" destination="8EC-JJ-9dL" id="akV-hH-k8o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZEO-Nu-zkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3764" y="-15"/>
+        </scene>
         <!--Informacion Carbono Ligera View Controller-->
         <scene sceneID="WOi-xE-Szt">
             <objects>
@@ -1198,6 +1229,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7We-YR-Cm1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1524" y="-67"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ctk-aL-FVS">
+            <objects>
+                <navigationController storyboardIdentifier="Resumen" automaticallyAdjustsScrollViewInsets="NO" id="y1q-mo-YRd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S8z-BI-8G5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FBi-rc-u5q" kind="relationship" relationship="rootViewController" id="V2X-bo-KGi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="742-OU-mdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3321" y="-15"/>
         </scene>
     </scenes>
 </document>

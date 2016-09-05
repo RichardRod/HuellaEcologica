@@ -16,26 +16,52 @@ class TransporteLigeraController: UIViewController, UIPickerViewDataSource, UIPi
     @IBOutlet weak var segmentAutoPropio: UISegmentedControl!
     
     @IBAction func opcionAutoPropio(sender: UISegmentedControl) {
+        
+        if segmentAutoPropio.selectedSegmentIndex == 0 {
+            DatosCarbonoLigera.transporte.tieneAuto = true
+        } else if segmentAutoPropio.selectedSegmentIndex == 1 {
+            DatosCarbonoLigera.transporte.tieneAuto = false
+        }
     }
     
     @IBOutlet weak var segmentGasolina: UISegmentedControl!
     
     @IBAction func opcionGasolina(sender: UISegmentedControl) {
+        if segmentGasolina.selectedSegmentIndex == 0 {
+            DatosCarbonoLigera.transporte.usaGasolina = true
+        } else if segmentGasolina.selectedSegmentIndex == 1 {
+            DatosCarbonoLigera.transporte.usaGasolina = false
+        }
     }
     
     @IBOutlet weak var segmentDiesel: UISegmentedControl!
     
     @IBAction func opcionDiesel(sender: AnyObject) {
+        if segmentDiesel.selectedSegmentIndex == 0 {
+            DatosCarbonoLigera.transporte.usaDiesel = true
+        } else if segmentDiesel.selectedSegmentIndex == 1 {
+            DatosCarbonoLigera.transporte.usaDiesel = false
+        }
     }
     @IBOutlet weak var segmentGas: UISegmentedControl!
     
     @IBAction func opcionGas(sender: UISegmentedControl) {
+        if segmentGas.selectedSegmentIndex == 0 {
+            DatosCarbonoLigera.transporte.usaGas = true
+        } else if segmentGas.selectedSegmentIndex == 1 {
+            DatosCarbonoLigera.transporte.usaGas = false
+        }
     }
 
     
     @IBOutlet weak var segmentHibrido: UISegmentedControl!
     
     @IBAction func opcionHibrido(sender: UISegmentedControl) {
+        if segmentHibrido.selectedSegmentIndex == 0 {
+            DatosCarbonoLigera.transporte.usaHibrido = true
+        } else if segmentHibrido.selectedSegmentIndex == 1 {
+            DatosCarbonoLigera.transporte.usaHibrido = false
+        }
     }
     
     @IBOutlet weak var txtLitrosGasolina: UITextField!
@@ -47,6 +73,12 @@ class TransporteLigeraController: UIViewController, UIPickerViewDataSource, UIPi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        segmentAutoPropio.selectedSegmentIndex = 1
+        segmentGasolina.selectedSegmentIndex = 1
+        segmentDiesel.selectedSegmentIndex = 1
+        segmentGas.selectedSegmentIndex = 1
+        segmentHibrido.selectedSegmentIndex = 1
         
         self.hideKeyboardWhenTappedAround()
         
@@ -69,6 +101,54 @@ class TransporteLigeraController: UIViewController, UIPickerViewDataSource, UIPi
         
         txtPesosGas.delegate = self
         txtPesosGas.keyboardType = .DecimalPad
+    }
+    
+    func obtenerTextoLitrosGasolina(textField: UITextField) {
+        if textField.text?.characters.count > 0 {
+            DatosCarbonoLigera.transporte.litrosGasolina = Double(txtLitrosGasolina.text!)!
+        } else {
+            DatosCarbonoLigera.transporte.litrosGasolina = 0
+        }
+    }
+    
+    func obtenerTextoLitrosDiesel(textField: UITextField) {
+        if textField.text?.characters.count > 0 {
+            DatosCarbonoLigera.transporte.litrosDiesel = Double(txtLitrosDiesel.text!)!
+        } else {
+            DatosCarbonoLigera.transporte.litrosDiesel = 0
+        }
+    }
+    
+    func obtenerTextoLitrosGas(textField: UITextField) {
+        if textField.text?.characters.count > 0 {
+            DatosCarbonoLigera.transporte.litrosGas = Double(txtLitrosGas.text!)!
+        } else {
+            DatosCarbonoLigera.transporte.litrosGas = 0
+        }
+    }
+    
+    func obtenerTextoPesosGasolina(textField: UITextField) {
+        if textField.text?.characters.count > 0 {
+            DatosCarbonoLigera.transporte.pesosGasolina = Double(txtPesosGasolina.text!)!
+        } else {
+            DatosCarbonoLigera.transporte.pesosGasolina = 0
+        }
+    }
+    
+    func obtenerTextoPesosDiesel(textField: UITextField) {
+        if textField.text?.characters.count > 0 {
+            DatosCarbonoLigera.transporte.pesosDiesel = Double(txtPesosDiesel.text!)!
+        } else {
+            DatosCarbonoLigera.transporte.pesosDiesel = 0
+        }
+    }
+    
+    func obtenerTextoPesosGas(textField: UITextField) {
+        if textField.text?.characters.count > 0 {
+            DatosCarbonoLigera.transporte.pesosGas = Double(txtPesosGas.text!)!
+        } else {
+            DatosCarbonoLigera.transporte.pesosGas = 0
+        }
     }
     
     let pickerTransporte = UIPickerView()
@@ -98,6 +178,7 @@ class TransporteLigeraController: UIViewController, UIPickerViewDataSource, UIPi
     
     func doneTransporte() {
         txtTransporte.resignFirstResponder()
+        DatosCarbonoLigera.transporte.formaTransporte = txtTransporte.text!
     }
     
     func textField(textField: UITextField,shouldChangeCharactersInRange range: NSRange,replacementString string: String) -> Bool

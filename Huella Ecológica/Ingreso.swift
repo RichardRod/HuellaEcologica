@@ -18,6 +18,9 @@ class Ingreso: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
                      "De $25,001 a $45,000", "Más de $45,001"]
     
     @IBAction func terminarAction(sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "CarbonoLigera", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("Resumen")
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

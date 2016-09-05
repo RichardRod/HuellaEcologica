@@ -31,9 +31,9 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
     
     func obtenerTextoConsumo(textField: UITextField) {
         if textField.text?.characters.count > 0 {
-            //DatosCarbonoLigera.combustible.consumo = Int(txtConsumo.text!)!
+            DatosCarbonoLigera.combustible.consumo = Double(txtConsumo.text!)!
         } else {
-            //DatosCarbonoLigera.combustible.consumo = 0
+            DatosCarbonoLigera.combustible.consumo = 0
         }
     }
     
@@ -61,7 +61,7 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
     
     internal func doneCombustible() {
         txtCombustible.resignFirstResponder()
-        //DatosCarbonoLigera.combustible.consumo = Int(txtCombustible.text!)!
+        DatosCarbonoLigera.combustible.tipoCombustible = txtCombustible.text!
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
