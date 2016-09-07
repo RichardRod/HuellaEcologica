@@ -10,11 +10,12 @@ import UIKit
 
 class ResumenCarbonoLigera: UIViewController {
     
-    
     @IBOutlet weak var btnContinuar: UIButton!
-    
-    
-    
+    @IBOutlet weak var lblCombustible: UILabel!
+    @IBOutlet weak var lblElectricidad: UILabel!
+    @IBOutlet weak var lblTransporte: UILabel!
+    @IBOutlet weak var lblViajes: UILabel!
+    @IBOutlet weak var lblIngreso: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,0 +1,112 @@
+//
+//  Cocina.swift
+//  Huella Ecologica
+//
+//  Created by Ricardo Rodriguez Haro on 6/29/16.
+//
+//
+
+import UIKit
+
+class Cocina: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+    
+    var opciones = ["", "En máquina lavavajillas", "A mano en el fregadero", "A mano con agua de cubetas porque no tenemos agua en tubería"]
+    
+    @IBOutlet weak var txtFormaLavado: UITextField!
+    @IBOutlet weak var txtVecesLavavajillas: UITextField!
+    @IBOutlet weak var txtVecesFregadero: UITextField!
+    @IBOutlet weak var ahorrador: UISegmentedControl!
+    @IBAction func opcionAhorrador(sender: UISegmentedControl) {
+    }
+    
+    @IBOutlet weak var txtCorrido: UITextField!
+    @IBOutlet weak var txtNoAgua: UITextField!
+    @IBOutlet weak var txtVecesPlatos: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.hideKeyboardWhenTappedAround()
+        
+        let picker = UIPickerView()
+        picker.delegate  = self
+        picker.backgroundColor = .lightGrayColor()
+        txtFormaLavado.inputView = picker
+        
+        let toolbar = UIToolbar()
+        toolbar.barStyle = UIBarStyle.Default
+        toolbar.translucent = true
+        toolbar.tintColor = UIColor(red: 83/255, green: 83/255, blue: 83/255, alpha: 1.0)
+        toolbar.sizeToFit()
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        
+        let botonListo = UIBarButtonItem(title: "Seleccionar", style: UIBarButtonItemStyle.Done, target: self, action: #selector(self.doneLavado))
+        
+        toolbar.setItems([flexibleSpace, botonListo], animated: true)
+        toolbar.userInteractionEnabled = true
+        
+        txtFormaLavado.inputAccessoryView = toolbar
+        
+        txtVecesLavavajillas.delegate = self
+        txtVecesLavavajillas.keyboardType = .NumberPad
+        
+        txtVecesFregadero.delegate = self
+        txtVecesFregadero.keyboardType = .NumberPad
+        
+        txtCorrido.delegate = self
+        txtCorrido.keyboardType = .NumberPad
+        
+        txtNoAgua.delegate = self
+        txtNoAgua.keyboardType = .NumberPad
+        
+        txtVecesPlatos.delegate = self
+        txtVecesPlatos.keyboardType = .NumberPad
+        
+    }
+    
+    func doneLavado() {
+        txtFormaLavado.resignFirstResponder()
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return opciones.count;
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        txtFormaLavado.text = opciones[row]
+        //txtFormaLavado.resignFirstResponder()
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        return opciones[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+        
+        let pickerLabel = UILabel()
+        pickerLabel.textColor = UIColor(red: 86.0/255, green: 116/255, blue: 131/255, alpha: 1.0)
+        pickerLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 20)
+        pickerLabel.textAlignment = NSTextAlignment.Center
+        
+        if pickerView.tag == 0 {
+            pickerLabel.text = opciones[row]
+        }
+        
+        return pickerLabel
+    }
+    
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        let invalidCharacters = NSCharacterSet(charactersInString: "0123456789").invertedSet
+        return string.rangeOfCharacterFromSet(invalidCharacters, options: [], range: string.startIndex ..< string.endIndex) == nil
+    }
+
+    
+}

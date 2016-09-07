@@ -24,6 +24,37 @@
 		8C355E891D4C4C4D000C25EF /* CarbonoCompleta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C355E881D4C4C4D000C25EF /* CarbonoCompleta.storyboard */; };
 		8C355E8B1D4C4C64000C25EF /* HidricaCompleta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C355E8A1D4C4C64000C25EF /* HidricaCompleta.storyboard */; };
 		8C444CEE1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C444CED1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift */; };
+		8C7C388B1D7F807C00E23828 /* AguaLluviasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C388A1D7F807C00E23828 /* AguaLluviasController.swift */; };
+		8C7C388E1D7F848A00E23828 /* AguaEmbotellada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C388D1D7F848A00E23828 /* AguaEmbotellada.swift */; };
+		8C7C38911D7F857F00E23828 /* Regadera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38901D7F857F00E23828 /* Regadera.swift */; };
+		8C7C38941D7F8A0F00E23828 /* Jacuzzi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38931D7F8A0F00E23828 /* Jacuzzi.swift */; };
+		8C7C38971D7F8A9C00E23828 /* Baldes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38961D7F8A9C00E23828 /* Baldes.swift */; };
+		8C7C389A1D7F8B6600E23828 /* OtrasActividades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38991D7F8B6600E23828 /* OtrasActividades.swift */; };
+		8C7C389D1D7F8D1E00E23828 /* Sanitario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C389C1D7F8D1E00E23828 /* Sanitario.swift */; };
+		8C7C38A01D7F8F5300E23828 /* LavadoRopa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C389F1D7F8F5300E23828 /* LavadoRopa.swift */; };
+		8C7C38A31D80609C00E23828 /* LimpiezaHogar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38A21D80609C00E23828 /* LimpiezaHogar.swift */; };
+		8C7C38A61D80642F00E23828 /* Cocina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38A51D80642F00E23828 /* Cocina.swift */; };
+		8C7C38A91D80665800E23828 /* LavadoAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38A81D80665800E23828 /* LavadoAuto.swift */; };
+		8C7C38AC1D806AD600E23828 /* Jardin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38AB1D806AD600E23828 /* Jardin.swift */; };
+		8C7C38AF1D80782300E23828 /* Alberca.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38AE1D80782300E23828 /* Alberca.swift */; };
+		8C7C38B21D80791D00E23828 /* Consumo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38B11D80791D00E23828 /* Consumo.swift */; };
+		8C7C38B51D807EE400E23828 /* ResumenHidricaCompleta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38B41D807EE400E23828 /* ResumenHidricaCompleta.swift */; };
+		8C7C38B81D80859E00E23828 /* DatosHidricaCompleta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38B71D80859E00E23828 /* DatosHidricaCompleta.swift */; };
+		8C7C38BA1D8085CC00E23828 /* HCInformacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38B91D8085CC00E23828 /* HCInformacion.swift */; };
+		8C7C38BC1D8085E600E23828 /* HCAguaLluvias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38BB1D8085E600E23828 /* HCAguaLluvias.swift */; };
+		8C7C38BE1D8085F900E23828 /* HCAguaEmbotellada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38BD1D8085F900E23828 /* HCAguaEmbotellada.swift */; };
+		8C7C38C01D80860B00E23828 /* HCRegadera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38BF1D80860B00E23828 /* HCRegadera.swift */; };
+		8C7C38C21D80861F00E23828 /* HCJacuzzi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38C11D80861F00E23828 /* HCJacuzzi.swift */; };
+		8C7C38C41D80863200E23828 /* HCBaldes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38C31D80863200E23828 /* HCBaldes.swift */; };
+		8C7C38C61D80864C00E23828 /* HCHiguienePersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38C51D80864C00E23828 /* HCHiguienePersonal.swift */; };
+		8C7C38C81D80865C00E23828 /* HCSanitario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38C71D80865C00E23828 /* HCSanitario.swift */; };
+		8C7C38CA1D80873400E23828 /* HCLavadoRopa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38C91D80873400E23828 /* HCLavadoRopa.swift */; };
+		8C7C38CC1D80874500E23828 /* HCLimpiezaHogar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38CB1D80874500E23828 /* HCLimpiezaHogar.swift */; };
+		8C7C38CE1D80875600E23828 /* HCCocina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38CD1D80875600E23828 /* HCCocina.swift */; };
+		8C7C38D01D80876E00E23828 /* HCLavadoAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38CF1D80876E00E23828 /* HCLavadoAuto.swift */; };
+		8C7C38D21D80878100E23828 /* HCJardines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38D11D80878100E23828 /* HCJardines.swift */; };
+		8C7C38D41D80879100E23828 /* HCAlberca.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38D31D80879100E23828 /* HCAlberca.swift */; };
+		8C7C38D61D8087AE00E23828 /* HCAlimentacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C38D51D8087AE00E23828 /* HCAlimentacion.swift */; };
 		8C812BFC1D7D454F0044C660 /* InformacionHidricaLigera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812BFB1D7D454F0044C660 /* InformacionHidricaLigera.swift */; };
 		8C812BFE1D7D47970044C660 /* RegaderaHidricaLigeraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812BFD1D7D47970044C660 /* RegaderaHidricaLigeraController.swift */; };
 		8C812C001D7D48AD0044C660 /* AseoPersonalLigeraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C812BFF1D7D48AD0044C660 /* AseoPersonalLigeraController.swift */; };
@@ -69,6 +100,7 @@
 		8CAD3CEE1D6E3F750091FDC0 /* Residuos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3CED1D6E3F750091FDC0 /* Residuos.swift */; };
 		8CAD3CF11D6E42BA0091FDC0 /* Mitigacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD3CF01D6E42BA0091FDC0 /* Mitigacion.swift */; };
 		8CFC15DD1D7D785300A99C56 /* ResumenCarbonoLigera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC15DC1D7D785300A99C56 /* ResumenCarbonoLigera.swift */; };
+		8CFC16761D7F6A1900A99C56 /* InformacionHidricaCompletaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC16751D7F6A1900A99C56 /* InformacionHidricaCompletaController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +146,37 @@
 		8C355E881D4C4C4D000C25EF /* CarbonoCompleta.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CarbonoCompleta.storyboard; sourceTree = "<group>"; };
 		8C355E8A1D4C4C64000C25EF /* HidricaCompleta.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HidricaCompleta.storyboard; sourceTree = "<group>"; };
 		8C444CED1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectricidadLigeraViewController.swift; sourceTree = "<group>"; };
+		8C7C388A1D7F807C00E23828 /* AguaLluviasController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AguaLluviasController.swift; sourceTree = "<group>"; };
+		8C7C388D1D7F848A00E23828 /* AguaEmbotellada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AguaEmbotellada.swift; sourceTree = "<group>"; };
+		8C7C38901D7F857F00E23828 /* Regadera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regadera.swift; sourceTree = "<group>"; };
+		8C7C38931D7F8A0F00E23828 /* Jacuzzi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jacuzzi.swift; sourceTree = "<group>"; };
+		8C7C38961D7F8A9C00E23828 /* Baldes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Baldes.swift; sourceTree = "<group>"; };
+		8C7C38991D7F8B6600E23828 /* OtrasActividades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtrasActividades.swift; sourceTree = "<group>"; };
+		8C7C389C1D7F8D1E00E23828 /* Sanitario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sanitario.swift; sourceTree = "<group>"; };
+		8C7C389F1D7F8F5300E23828 /* LavadoRopa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LavadoRopa.swift; sourceTree = "<group>"; };
+		8C7C38A21D80609C00E23828 /* LimpiezaHogar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimpiezaHogar.swift; sourceTree = "<group>"; };
+		8C7C38A51D80642F00E23828 /* Cocina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cocina.swift; sourceTree = "<group>"; };
+		8C7C38A81D80665800E23828 /* LavadoAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LavadoAuto.swift; sourceTree = "<group>"; };
+		8C7C38AB1D806AD600E23828 /* Jardin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jardin.swift; sourceTree = "<group>"; };
+		8C7C38AE1D80782300E23828 /* Alberca.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alberca.swift; sourceTree = "<group>"; };
+		8C7C38B11D80791D00E23828 /* Consumo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consumo.swift; sourceTree = "<group>"; };
+		8C7C38B41D807EE400E23828 /* ResumenHidricaCompleta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumenHidricaCompleta.swift; sourceTree = "<group>"; };
+		8C7C38B71D80859E00E23828 /* DatosHidricaCompleta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatosHidricaCompleta.swift; sourceTree = "<group>"; };
+		8C7C38B91D8085CC00E23828 /* HCInformacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCInformacion.swift; sourceTree = "<group>"; };
+		8C7C38BB1D8085E600E23828 /* HCAguaLluvias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCAguaLluvias.swift; sourceTree = "<group>"; };
+		8C7C38BD1D8085F900E23828 /* HCAguaEmbotellada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCAguaEmbotellada.swift; sourceTree = "<group>"; };
+		8C7C38BF1D80860B00E23828 /* HCRegadera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCRegadera.swift; sourceTree = "<group>"; };
+		8C7C38C11D80861F00E23828 /* HCJacuzzi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCJacuzzi.swift; sourceTree = "<group>"; };
+		8C7C38C31D80863200E23828 /* HCBaldes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCBaldes.swift; sourceTree = "<group>"; };
+		8C7C38C51D80864C00E23828 /* HCHiguienePersonal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCHiguienePersonal.swift; sourceTree = "<group>"; };
+		8C7C38C71D80865C00E23828 /* HCSanitario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCSanitario.swift; sourceTree = "<group>"; };
+		8C7C38C91D80873400E23828 /* HCLavadoRopa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCLavadoRopa.swift; sourceTree = "<group>"; };
+		8C7C38CB1D80874500E23828 /* HCLimpiezaHogar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCLimpiezaHogar.swift; sourceTree = "<group>"; };
+		8C7C38CD1D80875600E23828 /* HCCocina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCCocina.swift; sourceTree = "<group>"; };
+		8C7C38CF1D80876E00E23828 /* HCLavadoAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCLavadoAuto.swift; sourceTree = "<group>"; };
+		8C7C38D11D80878100E23828 /* HCJardines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCJardines.swift; sourceTree = "<group>"; };
+		8C7C38D31D80879100E23828 /* HCAlberca.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCAlberca.swift; sourceTree = "<group>"; };
+		8C7C38D51D8087AE00E23828 /* HCAlimentacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCAlimentacion.swift; sourceTree = "<group>"; };
 		8C812BFB1D7D454F0044C660 /* InformacionHidricaLigera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacionHidricaLigera.swift; sourceTree = "<group>"; };
 		8C812BFD1D7D47970044C660 /* RegaderaHidricaLigeraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegaderaHidricaLigeraController.swift; sourceTree = "<group>"; };
 		8C812BFF1D7D48AD0044C660 /* AseoPersonalLigeraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AseoPersonalLigeraController.swift; sourceTree = "<group>"; };
@@ -159,6 +222,7 @@
 		8CAD3CED1D6E3F750091FDC0 /* Residuos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Residuos.swift; sourceTree = "<group>"; };
 		8CAD3CF01D6E42BA0091FDC0 /* Mitigacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mitigacion.swift; sourceTree = "<group>"; };
 		8CFC15DC1D7D785300A99C56 /* ResumenCarbonoLigera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumenCarbonoLigera.swift; sourceTree = "<group>"; };
+		8CFC16751D7F6A1900A99C56 /* InformacionHidricaCompletaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacionHidricaCompletaController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +370,23 @@
 		8C2EE7D41D62DAB9000A7DC2 /* Hidrica */ = {
 			isa = PBXGroup;
 			children = (
+				8CFC16741D7F69FB00A99C56 /* Informacion */,
+				8C7C38891D7F806400E23828 /* AguaLluvias */,
+				8C7C388C1D7F845700E23828 /* AguaEmbotellada */,
+				8C7C388F1D7F856900E23828 /* Regadera */,
+				8C7C38921D7F89FD00E23828 /* Jacuzzi */,
+				8C7C38951D7F8A8B00E23828 /* Baldes */,
+				8C7C38981D7F8B5400E23828 /* HiguienePersonal */,
+				8C7C389B1D7F8D0C00E23828 /* Sanitario */,
+				8C7C389E1D7F8ED300E23828 /* LavadoRopa */,
+				8C7C38A11D80608800E23828 /* LimpiezaHogar */,
+				8C7C38A41D80641A00E23828 /* Cocina */,
+				8C7C38A71D80664700E23828 /* LavadoAuto */,
+				8C7C38AA1D806ABE00E23828 /* Jardines */,
+				8C7C38AD1D80780F00E23828 /* Alberca */,
+				8C7C38B01D80790100E23828 /* Alimentacion */,
+				8C7C38B31D807EC700E23828 /* Resumen */,
+				8C7C38B61D80858200E23828 /* Datos */,
 				8CAD3C6D1D66AD050091FDC0 /* HidricaCompletaController.swift */,
 			);
 			name = Hidrica;
@@ -344,6 +425,149 @@
 				8C444CED1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift */,
 			);
 			name = Electricidad;
+			sourceTree = "<group>";
+		};
+		8C7C38891D7F806400E23828 /* AguaLluvias */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C388A1D7F807C00E23828 /* AguaLluviasController.swift */,
+			);
+			name = AguaLluvias;
+			sourceTree = "<group>";
+		};
+		8C7C388C1D7F845700E23828 /* AguaEmbotellada */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C388D1D7F848A00E23828 /* AguaEmbotellada.swift */,
+			);
+			name = AguaEmbotellada;
+			sourceTree = "<group>";
+		};
+		8C7C388F1D7F856900E23828 /* Regadera */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C38901D7F857F00E23828 /* Regadera.swift */,
+			);
+			name = Regadera;
+			sourceTree = "<group>";
+		};
+		8C7C38921D7F89FD00E23828 /* Jacuzzi */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C38931D7F8A0F00E23828 /* Jacuzzi.swift */,
+			);
+			name = Jacuzzi;
+			sourceTree = "<group>";
+		};
+		8C7C38951D7F8A8B00E23828 /* Baldes */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C38961D7F8A9C00E23828 /* Baldes.swift */,
+			);
+			name = Baldes;
+			sourceTree = "<group>";
+		};
+		8C7C38981D7F8B5400E23828 /* HiguienePersonal */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C38991D7F8B6600E23828 /* OtrasActividades.swift */,
+			);
+			name = HiguienePersonal;
+			sourceTree = "<group>";
+		};
+		8C7C389B1D7F8D0C00E23828 /* Sanitario */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C389C1D7F8D1E00E23828 /* Sanitario.swift */,
+			);
+			name = Sanitario;
+			sourceTree = "<group>";
+		};
+		8C7C389E1D7F8ED300E23828 /* LavadoRopa */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C389F1D7F8F5300E23828 /* LavadoRopa.swift */,
+			);
+			name = LavadoRopa;
+			sourceTree = "<group>";
+		};
+		8C7C38A11D80608800E23828 /* LimpiezaHogar */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C38A21D80609C00E23828 /* LimpiezaHogar.swift */,
+			);
+			name = LimpiezaHogar;
+			sourceTree = "<group>";
+		};
+		8C7C38A41D80641A00E23828 /* Cocina */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C38A51D80642F00E23828 /* Cocina.swift */,
+			);
+			name = Cocina;
+			sourceTree = "<group>";
+		};
+		8C7C38A71D80664700E23828 /* LavadoAuto */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C38A81D80665800E23828 /* LavadoAuto.swift */,
+			);
+			name = LavadoAuto;
+			sourceTree = "<group>";
+		};
+		8C7C38AA1D806ABE00E23828 /* Jardines */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C38AB1D806AD600E23828 /* Jardin.swift */,
+			);
+			name = Jardines;
+			sourceTree = "<group>";
+		};
+		8C7C38AD1D80780F00E23828 /* Alberca */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C38AE1D80782300E23828 /* Alberca.swift */,
+			);
+			name = Alberca;
+			sourceTree = "<group>";
+		};
+		8C7C38B01D80790100E23828 /* Alimentacion */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C38B11D80791D00E23828 /* Consumo.swift */,
+			);
+			name = Alimentacion;
+			sourceTree = "<group>";
+		};
+		8C7C38B31D807EC700E23828 /* Resumen */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C38B41D807EE400E23828 /* ResumenHidricaCompleta.swift */,
+			);
+			name = Resumen;
+			sourceTree = "<group>";
+		};
+		8C7C38B61D80858200E23828 /* Datos */ = {
+			isa = PBXGroup;
+			children = (
+				8C7C38B71D80859E00E23828 /* DatosHidricaCompleta.swift */,
+				8C7C38B91D8085CC00E23828 /* HCInformacion.swift */,
+				8C7C38BB1D8085E600E23828 /* HCAguaLluvias.swift */,
+				8C7C38BD1D8085F900E23828 /* HCAguaEmbotellada.swift */,
+				8C7C38BF1D80860B00E23828 /* HCRegadera.swift */,
+				8C7C38C11D80861F00E23828 /* HCJacuzzi.swift */,
+				8C7C38C31D80863200E23828 /* HCBaldes.swift */,
+				8C7C38C51D80864C00E23828 /* HCHiguienePersonal.swift */,
+				8C7C38C71D80865C00E23828 /* HCSanitario.swift */,
+				8C7C38C91D80873400E23828 /* HCLavadoRopa.swift */,
+				8C7C38CB1D80874500E23828 /* HCLimpiezaHogar.swift */,
+				8C7C38CD1D80875600E23828 /* HCCocina.swift */,
+				8C7C38CF1D80876E00E23828 /* HCLavadoAuto.swift */,
+				8C7C38D11D80878100E23828 /* HCJardines.swift */,
+				8C7C38D31D80879100E23828 /* HCAlberca.swift */,
+				8C7C38D51D8087AE00E23828 /* HCAlimentacion.swift */,
+			);
+			name = Datos;
 			sourceTree = "<group>";
 		};
 		8C812BF51D7D45070044C660 /* Informacion */ = {
@@ -606,6 +830,14 @@
 			name = Resumen;
 			sourceTree = "<group>";
 		};
+		8CFC16741D7F69FB00A99C56 /* Informacion */ = {
+			isa = PBXGroup;
+			children = (
+				8CFC16751D7F6A1900A99C56 /* InformacionHidricaCompletaController.swift */,
+			);
+			name = Informacion;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -744,14 +976,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CAD3CD31D6E219C0091FDC0 /* ViajesPaisCarbonoCompletaController.swift in Sources */,
+				8C7C38B81D80859E00E23828 /* DatosHidricaCompleta.swift in Sources */,
 				8C812C061D7D4C320044C660 /* AlimentacionLigeraController.swift in Sources */,
 				8C355E7D1D4C22BC000C25EF /* ADPageControl.m in Sources */,
+				8C7C38C01D80860B00E23828 /* HCRegadera.swift in Sources */,
 				8C812C121D7D606D0044C660 /* HLSanitario.swift in Sources */,
+				8C7C38911D7F857F00E23828 /* Regadera.swift in Sources */,
 				8C812C001D7D48AD0044C660 /* AseoPersonalLigeraController.swift in Sources */,
 				8C2EE7D61D62DAE0000A7DC2 /* CarbonoCompletaController.swift in Sources */,
+				8C7C38CA1D80873400E23828 /* HCLavadoRopa.swift in Sources */,
+				8C7C38B51D807EE400E23828 /* ResumenHidricaCompleta.swift in Sources */,
 				8C444CEE1D4D4C2A00BB5E37 /* ElectricidadLigeraViewController.swift in Sources */,
 				8CAD3C851D69C5180091FDC0 /* Ingreso.swift in Sources */,
 				8CAD3CD61D6E27200091FDC0 /* TransporteCarbonoCompletaController.swift in Sources */,
+				8C7C38C21D80861F00E23828 /* HCJacuzzi.swift in Sources */,
+				8CFC16761D7F6A1900A99C56 /* InformacionHidricaCompletaController.swift in Sources */,
 				8C812C041D7D4AFE0044C660 /* LavadoRopaLigeraController.swift in Sources */,
 				8C812C091D7D4F6B0044C660 /* ResumenHidricaLigera.swift in Sources */,
 				8CAD3CD91D6E2B800091FDC0 /* ViajesFueraPaisCarbonoCompletaController.swift in Sources */,
@@ -761,40 +1000,65 @@
 				8CA456FA1D4D4586003614DE /* InformacionCarbonoLigeraViewController.swift in Sources */,
 				8C812BFC1D7D454F0044C660 /* InformacionHidricaLigera.swift in Sources */,
 				8CAD3CDC1D6E2D840091FDC0 /* ViajesAereosNacionalesCarbonoCompletaController.swift in Sources */,
+				8C7C38971D7F8A9C00E23828 /* Baldes.swift in Sources */,
+				8C7C38D01D80876E00E23828 /* HCLavadoAuto.swift in Sources */,
 				8CAD3C911D6B9F4A0091FDC0 /* AguaCarbonoCompletaController.swift in Sources */,
+				8C7C388B1D7F807C00E23828 /* AguaLluviasController.swift in Sources */,
 				8C812C1B1D7D6D290044C660 /* DatosCarbonoLigera.swift in Sources */,
 				8CFC15DD1D7D785300A99C56 /* ResumenCarbonoLigera.swift in Sources */,
+				8C7C389A1D7F8B6600E23828 /* OtrasActividades.swift in Sources */,
 				8C812C0C1D7D5F410044C660 /* HLInformacion.swift in Sources */,
+				8C7C38BE1D8085F900E23828 /* HCAguaEmbotellada.swift in Sources */,
+				8C7C38CE1D80875600E23828 /* HCCocina.swift in Sources */,
+				8C7C38A91D80665800E23828 /* LavadoAuto.swift in Sources */,
+				8C7C38A01D7F8F5300E23828 /* LavadoRopa.swift in Sources */,
 				8CAD3CE21D6E2FB80091FDC0 /* AlimentacionCarbonoCompletaController.swift in Sources */,
+				8C7C38AC1D806AD600E23828 /* Jardin.swift in Sources */,
 				8CAD3CDF1D6E2E840091FDC0 /* ViajesAereosInternacionalesCarbonoCompletaController.swift in Sources */,
 				8C0A41A01D4AB5B200AE6F7E /* CarbonoInicioLigeraController.swift in Sources */,
+				8C7C38D41D80879100E23828 /* HCAlberca.swift in Sources */,
 				8C812C181D7D621F0044C660 /* DatosHidricaLigera.swift in Sources */,
 				8C812C251D7D6D9F0044C660 /* CLViajes.swift in Sources */,
+				8C7C38C61D80864C00E23828 /* HCHiguienePersonal.swift in Sources */,
+				8C7C38C41D80863200E23828 /* HCBaldes.swift in Sources */,
 				8CA456FD1D4D4766003614DE /* CombustibleLigeraViewController.swift in Sources */,
 				8CAD3C941D6BA1230091FDC0 /* ViajesEstadoCarbonoCompletaController.swift in Sources */,
 				8CAD3C8E1D6B9D390091FDC0 /* ElectricidadCarbonoCompletaController.swift in Sources */,
 				8C812C211D7D6D7A0044C660 /* CLElectricidad.swift in Sources */,
+				8C7C38C81D80865C00E23828 /* HCSanitario.swift in Sources */,
+				8C7C38D21D80878100E23828 /* HCJardines.swift in Sources */,
 				8C812C021D7D4A2A0044C660 /* SanitarioLigeraController.swift in Sources */,
 				8C355E871D4C467B000C25EF /* HidricaInicioLigeraController.swift in Sources */,
+				8C7C38D61D8087AE00E23828 /* HCAlimentacion.swift in Sources */,
 				8CAD3C881D6B92D30091FDC0 /* InformacionCarbonoCompletaController.swift in Sources */,
 				8CAD3CF11D6E42BA0091FDC0 /* Mitigacion.swift in Sources */,
+				8C7C389D1D7F8D1E00E23828 /* Sanitario.swift in Sources */,
+				8C7C38BC1D8085E600E23828 /* HCAguaLluvias.swift in Sources */,
+				8C7C38BA1D8085CC00E23828 /* HCInformacion.swift in Sources */,
 				8CAD3C7D1D69B6FF0091FDC0 /* Extensions.swift in Sources */,
 				8C812C161D7D61900044C660 /* HLAlimentacion.swift in Sources */,
 				8CAD3CEB1D6E3DA10091FDC0 /* Carbono.swift in Sources */,
 				8C812C0E1D7D5FC00044C660 /* HLRegadera.swift in Sources */,
 				8C812C101D7D600E0044C660 /* HLAseoPersonal.swift in Sources */,
+				8C7C38941D7F8A0F00E23828 /* Jacuzzi.swift in Sources */,
+				8C7C38A61D80642F00E23828 /* Cocina.swift in Sources */,
+				8C7C38A31D80609C00E23828 /* LimpiezaHogar.swift in Sources */,
 				8CAD3C6E1D66AD050091FDC0 /* HidricaCompletaController.swift in Sources */,
 				8C0A416B1D4AAA4100AE6F7E /* ViewController.swift in Sources */,
+				8C7C38CC1D80874500E23828 /* HCLimpiezaHogar.swift in Sources */,
+				8C7C38B21D80791D00E23828 /* Consumo.swift in Sources */,
 				8C812C1F1D7D6D610044C660 /* CLComustible.swift in Sources */,
 				8C812C1D1D7D6D460044C660 /* CLInformacion.swift in Sources */,
 				8CAD3CE81D6E32EE0091FDC0 /* AguaResidual.swift in Sources */,
 				8CAD3C8B1D6B96070091FDC0 /* EmisionesCarbonoCompletaController.swift in Sources */,
 				8C812C231D7D6D8B0044C660 /* CLTransporte.swift in Sources */,
 				8CAD3C821D69BBDC0091FDC0 /* ViajesController.swift in Sources */,
+				8C7C38AF1D80782300E23828 /* Alberca.swift in Sources */,
 				8C812C141D7D61510044C660 /* HLLavadoRopa.swift in Sources */,
 				8C0A41691D4AAA4100AE6F7E /* AppDelegate.swift in Sources */,
 				8CAD3C7B1D69B2E30091FDC0 /* TransporteLigeraController.swift in Sources */,
 				8CAD3CEE1D6E3F750091FDC0 /* Residuos.swift in Sources */,
+				8C7C388E1D7F848A00E23828 /* AguaEmbotellada.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

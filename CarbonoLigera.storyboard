@@ -838,7 +838,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingreso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJi-VH-itG">
                                                 <rect key="frame" x="8" y="30" width="304" height="50"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="n6R-y1-CKW"/>
+                                                    <constraint firstAttribute="height" constant="50" id="DlN-kq-Ltn"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                                 <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -847,25 +847,18 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4e6-64-G5x">
                                                 <rect key="frame" x="8" y="88" width="304" height="120"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="120" id="G9X-EI-8SK"/>
+                                                    <constraint firstAttribute="height" constant="120" id="aVK-q2-nGw"/>
                                                 </constraints>
                                                 <string key="text">¿Cuál es el ingreso mensual de tu hogar considerando el ingreso combinado de todos los integrantes? Por favor seleccione el intervalo de ingresos que corresponda a su hogar</string>
                                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                                 <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IyP-cD-ONX">
-                                                <rect key="frame" x="8" y="216" width="304" height="150"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="46K-8k-oQu"/>
-                                                </constraints>
-                                            </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0A-7t-afk">
                                                 <rect key="frame" x="8" y="493" width="304" height="40"/>
                                                 <color key="backgroundColor" red="0.56470588239999997" green="0.5568627451" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="N2b-EC-Gm0"/>
+                                                    <constraint firstAttribute="height" constant="40" id="aSH-TP-Yoe"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                                 <state key="normal" title="Terminar">
@@ -875,52 +868,61 @@
                                                     <action selector="terminarAction:" destination="jT7-Da-q1Y" eventType="touchUpInside" id="c1P-Ll-TpZ"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pesos" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXT-At-sKB">
+                                                <rect key="frame" x="8" y="216" width="304" height="30"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="YCk-9N-oRq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="JJi-VH-itG" secondAttribute="trailing" constant="8" id="1fM-HE-Are"/>
-                                            <constraint firstAttribute="bottom" secondItem="u0A-7t-afk" secondAttribute="bottom" constant="8" id="C5S-dV-mpD"/>
-                                            <constraint firstAttribute="trailing" secondItem="4e6-64-G5x" secondAttribute="trailing" constant="8" id="K1W-kt-cKv"/>
-                                            <constraint firstAttribute="trailing" secondItem="u0A-7t-afk" secondAttribute="trailing" constant="8" id="Mmf-Xj-HiJ"/>
-                                            <constraint firstItem="IyP-cD-ONX" firstAttribute="leading" secondItem="Ia0-hm-0BO" secondAttribute="leading" constant="8" id="Mz9-54-QIV"/>
-                                            <constraint firstItem="4e6-64-G5x" firstAttribute="top" secondItem="JJi-VH-itG" secondAttribute="bottom" constant="8" id="OZH-Sw-7VS"/>
-                                            <constraint firstItem="JJi-VH-itG" firstAttribute="leading" secondItem="Ia0-hm-0BO" secondAttribute="leading" constant="8" id="TDK-ZA-5Kf"/>
-                                            <constraint firstItem="IyP-cD-ONX" firstAttribute="top" secondItem="4e6-64-G5x" secondAttribute="bottom" constant="8" id="Tz0-Kl-9My"/>
-                                            <constraint firstAttribute="trailing" secondItem="IyP-cD-ONX" secondAttribute="trailing" constant="8" id="WUM-Vp-bzH"/>
-                                            <constraint firstItem="4e6-64-G5x" firstAttribute="leading" secondItem="Ia0-hm-0BO" secondAttribute="leading" constant="8" id="bDh-q9-TiD"/>
-                                            <constraint firstItem="JJi-VH-itG" firstAttribute="top" secondItem="Ia0-hm-0BO" secondAttribute="top" constant="30" id="k9V-pJ-0Im"/>
-                                            <constraint firstItem="u0A-7t-afk" firstAttribute="leading" secondItem="Ia0-hm-0BO" secondAttribute="leading" constant="8" id="smd-yQ-8aT"/>
-                                            <constraint firstItem="u0A-7t-afk" firstAttribute="top" secondItem="IyP-cD-ONX" secondAttribute="bottom" constant="127" id="vjb-R7-ai5"/>
+                                            <constraint firstItem="iXT-At-sKB" firstAttribute="leading" secondItem="Ia0-hm-0BO" secondAttribute="leading" constant="8" id="0ye-hP-xx8"/>
+                                            <constraint firstItem="4e6-64-G5x" firstAttribute="top" secondItem="JJi-VH-itG" secondAttribute="bottom" constant="8" id="Gxp-ps-Jfi"/>
+                                            <constraint firstAttribute="trailing" secondItem="4e6-64-G5x" secondAttribute="trailing" constant="8" id="HA3-sB-j7C"/>
+                                            <constraint firstItem="JJi-VH-itG" firstAttribute="leading" secondItem="Ia0-hm-0BO" secondAttribute="leading" constant="8" id="INh-BS-Alh"/>
+                                            <constraint firstItem="u0A-7t-afk" firstAttribute="top" secondItem="iXT-At-sKB" secondAttribute="bottom" constant="247" id="K2y-1E-sIN"/>
+                                            <constraint firstItem="JJi-VH-itG" firstAttribute="top" secondItem="Ia0-hm-0BO" secondAttribute="top" constant="30" id="NEa-Vs-aKu"/>
+                                            <constraint firstAttribute="trailing" secondItem="iXT-At-sKB" secondAttribute="trailing" constant="8" id="OLL-bq-Zfc"/>
+                                            <constraint firstItem="4e6-64-G5x" firstAttribute="leading" secondItem="Ia0-hm-0BO" secondAttribute="leading" constant="8" id="cNi-gU-lqY"/>
+                                            <constraint firstAttribute="trailing" secondItem="JJi-VH-itG" secondAttribute="trailing" constant="8" id="jMh-mh-KMw"/>
+                                            <constraint firstAttribute="trailing" secondItem="u0A-7t-afk" secondAttribute="trailing" constant="8" id="ok5-LU-Kve"/>
+                                            <constraint firstItem="iXT-At-sKB" firstAttribute="top" secondItem="4e6-64-G5x" secondAttribute="bottom" constant="8" id="pg0-yP-i4c"/>
+                                            <constraint firstItem="u0A-7t-afk" firstAttribute="leading" secondItem="Ia0-hm-0BO" secondAttribute="leading" constant="8" id="toW-4G-ezw"/>
+                                            <constraint firstAttribute="bottom" secondItem="u0A-7t-afk" secondAttribute="bottom" constant="8" id="zaZ-A6-mg7"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Ia0-hm-0BO" secondAttribute="bottom" id="H1d-ki-ScX"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ia0-hm-0BO" secondAttribute="trailing" id="ICb-lP-3sb"/>
-                                    <constraint firstItem="Ia0-hm-0BO" firstAttribute="leading" secondItem="Vjs-XZ-fbQ" secondAttribute="leading" id="RNi-9p-MEz"/>
-                                    <constraint firstItem="Ia0-hm-0BO" firstAttribute="top" secondItem="Vjs-XZ-fbQ" secondAttribute="top" id="qNt-wn-6Sx"/>
+                                    <constraint firstItem="Ia0-hm-0BO" firstAttribute="leading" secondItem="Vjs-XZ-fbQ" secondAttribute="leading" id="6oO-su-TAH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ia0-hm-0BO" secondAttribute="trailing" id="luh-CD-Ksu"/>
+                                    <constraint firstItem="Ia0-hm-0BO" firstAttribute="top" secondItem="Vjs-XZ-fbQ" secondAttribute="top" id="pNW-kd-Ox9"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ia0-hm-0BO" secondAttribute="bottom" id="uaV-gU-lQx"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Vjs-XZ-fbQ" secondAttribute="trailing" id="LGN-nt-4cp"/>
-                            <constraint firstItem="UXQ-Jd-wf6" firstAttribute="top" secondItem="Vjs-XZ-fbQ" secondAttribute="bottom" id="eds-Fv-JjA"/>
-                            <constraint firstItem="Ia0-hm-0BO" firstAttribute="width" secondItem="yeR-GQ-mql" secondAttribute="width" id="wJQ-IP-ujq"/>
-                            <constraint firstItem="Vjs-XZ-fbQ" firstAttribute="top" secondItem="yeR-GQ-mql" secondAttribute="top" id="x0x-AC-J8M"/>
-                            <constraint firstItem="Vjs-XZ-fbQ" firstAttribute="leading" secondItem="yeR-GQ-mql" secondAttribute="leading" id="zwq-Ai-xRd"/>
+                            <constraint firstItem="Vjs-XZ-fbQ" firstAttribute="leading" secondItem="yeR-GQ-mql" secondAttribute="leading" id="0Q9-wI-5gF"/>
+                            <constraint firstItem="UXQ-Jd-wf6" firstAttribute="top" secondItem="Vjs-XZ-fbQ" secondAttribute="bottom" id="GsE-gR-PqU"/>
+                            <constraint firstItem="Ia0-hm-0BO" firstAttribute="width" secondItem="yeR-GQ-mql" secondAttribute="width" id="cv5-JA-gPr"/>
+                            <constraint firstItem="Vjs-XZ-fbQ" firstAttribute="top" secondItem="yeR-GQ-mql" secondAttribute="top" id="wa8-rs-DIG"/>
+                            <constraint firstAttribute="trailing" secondItem="Vjs-XZ-fbQ" secondAttribute="trailing" id="z8S-fY-Fd2"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="541"/>
                     <connections>
                         <outlet property="btnTerminar" destination="u0A-7t-afk" id="6aV-A4-rgK"/>
-                        <outlet property="pickerIngreso" destination="IyP-cD-ONX" id="F5u-04-PSu"/>
+                        <outlet property="txtIngreso" destination="iXT-At-sKB" id="6hL-ty-uFc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msg-v9-yqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2937" y="-28"/>
+            <point key="canvasLocation" x="2937" y="-28.5"/>
         </scene>
         <!--Resumen Carbono Ligera-->
         <scene sceneID="Kzr-JQ-SFK">
@@ -941,12 +943,83 @@
                                     <action selector="continuarAction:" destination="FBi-rc-u5q" eventType="touchUpInside" id="X3y-PL-IeY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resumen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJf-he-SIs">
+                                <rect key="frame" x="20" y="72" width="280" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Combustible" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrW-JJ-yti">
+                                <rect key="frame" x="20" y="110" width="150" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Electricidad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trZ-eP-xcE">
+                                <rect key="frame" x="20" y="148" width="150" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Transporte" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbN-kM-U4k">
+                                <rect key="frame" x="20" y="186" width="150" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Viajes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duc-wX-uOt">
+                                <rect key="frame" x="20" y="224" width="150" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingreso" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5b-Vm-bcK">
+                                <rect key="frame" x="20" y="262" width="150" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txA-FI-K2U">
+                                <rect key="frame" x="200" y="110" width="100" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9h-uQ-qHG">
+                                <rect key="frame" x="200" y="148" width="100" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1n-NT-HQc">
+                                <rect key="frame" x="200" y="186" width="100" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vt-Sr-n3D">
+                                <rect key="frame" x="200" y="224" width="100" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rH2-Nd-ZKn">
+                                <rect key="frame" x="200" y="262" width="100" height="30"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="kVN-xW-Gt5"/>
                     <connections>
                         <outlet property="btnContinuar" destination="8EC-JJ-9dL" id="akV-hH-k8o"/>
+                        <outlet property="lblCombustible" destination="txA-FI-K2U" id="aQo-DA-9bX"/>
+                        <outlet property="lblElectricidad" destination="q9h-uQ-qHG" id="w5Z-fd-WLK"/>
+                        <outlet property="lblIngreso" destination="rH2-Nd-ZKn" id="aBb-Ft-Lgq"/>
+                        <outlet property="lblTransporte" destination="d1n-NT-HQc" id="52M-Pi-BqG"/>
+                        <outlet property="lblViajes" destination="2Vt-Sr-n3D" id="jP3-hp-JVH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEO-Nu-zkS" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,14 +8,11 @@
 
 import UIKit
 
-class Ingreso: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class Ingreso: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var pickerIngreso: UIPickerView!
     @IBOutlet weak var btnTerminar: UIButton!
     
-    var elementos = ["Menos de $4,000", "De $4,001 a $7,000", "De $7,001, a $8,500", "De $8,501 a $10,500",
-                     "De $10,501 a $12,500", "De $12,501 a $15,000", "De $15,001 a $18,500", "De $18,501 a $25,000",
-                     "De $25,001 a $45,000", "Más de $45,001"]
+    @IBOutlet weak var txtIngreso: UITextField!
     
     @IBAction func terminarAction(sender: AnyObject) {
         let storyboard = UIStoryboard(name: "CarbonoLigera", bundle: nil)
@@ -25,34 +22,46 @@ class Ingreso: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround()
+        
         btnTerminar.layer.cornerRadius = 5
         
-        pickerIngreso.delegate = self
-        pickerIngreso.dataSource = self
+        txtIngreso.delegate = self
+        txtIngreso.keyboardType = .DecimalPad
+        txtIngreso.addTarget(self, action: #selector(self.obtenerTextoIngreso(_:)), forControlEvents: UIControlEvents.EditingChanged)
+    }
+    
+    func obtenerTextoIngreso(textField: UITextField) {
+        if textField.text?.characters.count > 0 {
+            DatosCarbonoLigera.ingreso.ingreso = Double(txtIngreso.text!)!
+        } else {
+            DatosCarbonoLigera.ingreso.ingreso = 0
+        }
+    }
+
+    
+    func textField(textField: UITextField,shouldChangeCharactersInRange range: NSRange,replacementString string: String) -> Bool {
         
+        let newCharacters = NSCharacterSet(charactersInString: string)
+        let boolIsNumber = NSCharacterSet.decimalDigitCharacterSet().isSupersetOfSet(newCharacters)
+        if boolIsNumber == true {
+            return true
+        } else {
+            if string == "." {
+                let countdots = textField.text!.componentsSeparatedByString(".").count - 1
+                if countdots == 0 {
+                    return true
+                } else {
+                    if countdots > 0 && string == "." {
+                        return false
+                    } else {
+                        return true
+                    }
+                }
+            } else {
+                return false
+            }
+        }
     }
     
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return elementos.count;
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return elementos[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
-        
-        let pickerLabel = UILabel()
-        pickerLabel.textColor = UIColor(red: 83/255, green: 83/255, blue: 83/255, alpha: 1.0)
-        pickerLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 20)
-        pickerLabel.textAlignment = NSTextAlignment.Center
-        pickerLabel.text = elementos[row]
-        
-        return pickerLabel
-    }
 }
