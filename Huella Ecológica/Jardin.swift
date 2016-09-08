@@ -22,22 +22,14 @@ class Jardin: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UI
     }
     
     @IBOutlet weak var txtMetrosCuadrados: UITextField!
-    
     @IBOutlet weak var txtRiego: UITextField!
-    
     @IBOutlet weak var txtVecesRiego: UITextField!
-    
     @IBOutlet weak var txtTiempoSistemaRiego: UITextField!
-    
     @IBOutlet weak var txtRiegoGoteo: UITextField!
-    
     @IBOutlet weak var txtTiempoSistemaGoteo: UITextField!
-    
     @IBOutlet weak var txtCubetas: UITextField!
-    
     @IBOutlet weak var txtHabitos: UITextField!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

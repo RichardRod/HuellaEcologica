@@ -46,25 +46,62 @@ class LavadoRopa: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         
         txtVecesLavadora.delegate = self
         txtVecesLavadora.keyboardType = .NumberPad
+        txtVecesLavadora.addTarget(self, action: #selector(self.obtenerTextoVecesLavadora(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtKilosLavar.delegate = self
         txtKilosLavar.keyboardType = .NumberPad
+        txtKilosLavar.addTarget(self, action: #selector(self.obtenerTextoKilosLavar(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtPersonas.delegate = self
         txtPersonas.keyboardType = .NumberPad
-        
-        txtKilosLavar.delegate = self
-        txtKilosLavar.keyboardType = .NumberPad
-        
-        txtPersonas.delegate = self
-        txtPersonas.keyboardType = .NumberPad
+        txtPersonas.addTarget(self, action: #selector(self.obtenerTextoPersonas(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtKilosSemana.delegate = self
         txtKilosSemana.keyboardType = .NumberPad
+        txtKilosSemana.addTarget(self, action: #selector(self.obtenerTextoKilosMano(_:)), forControlEvents: UIControlEvents.EditingChanged)
     }
+    
+    func obtenerTextoVecesLavadora(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.lavadoRopa.vecesLavadora = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.lavadoRopa.vecesLavadora = 0
+        }
+    }
+    
+    func obtenerTextoKilosLavar(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.lavadoRopa.kilosRopaLavanderia = Double(textField.text!)!
+        } else {
+            DatosHidricaCompleta.lavadoRopa.kilosRopaLavanderia = 0
+        }
+    }
+    
+    func obtenerTextoPersonas(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.lavadoRopa.personasRopa = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.lavadoRopa.personasRopa = 0
+        }
+    }
+    
+    func obtenerTextoKilosMano(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.lavadoRopa.kilosRopaAMano = Double(textField.text!)!
+        } else {
+            DatosHidricaCompleta.lavadoRopa.kilosRopaAMano = 0
+        }
+    }
+    
+    
     
     func doneForma() {
         txtFormaLavado.resignFirstResponder()
+        DatosHidricaCompleta.lavadoRopa.formaLavado = txtFormaLavado.text!
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -78,6 +115,7 @@ class LavadoRopa: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         txtFormaLavado.text = opciones[row]
+        DatosHidricaCompleta.lavadoRopa.formaLavado = opciones[row]
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -97,6 +135,8 @@ class LavadoRopa: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         
         return pickerLabel
     }
+    
+    
 
     
     

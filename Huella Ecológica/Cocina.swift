@@ -17,6 +17,12 @@ class Cocina: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UI
     @IBOutlet weak var txtVecesFregadero: UITextField!
     @IBOutlet weak var ahorrador: UISegmentedControl!
     @IBAction func opcionAhorrador(sender: UISegmentedControl) {
+        
+        if ahorrador.selectedSegmentIndex == 0 {
+            DatosHidricaCompleta.cocina.tieneSistemaAhorrador = true
+        } else if ahorrador.selectedSegmentIndex == 1 {
+            DatosHidricaCompleta.cocina.tieneSistemaAhorrador = false
+        }
     }
     
     @IBOutlet weak var txtCorrido: UITextField!
@@ -50,23 +56,73 @@ class Cocina: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UI
         
         txtVecesLavavajillas.delegate = self
         txtVecesLavavajillas.keyboardType = .NumberPad
+        txtVecesLavavajillas.addTarget(self, action: #selector(self.obtenerTextoVecesLavavajillas(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtVecesFregadero.delegate = self
         txtVecesFregadero.keyboardType = .NumberPad
+        txtVecesFregadero.addTarget(self, action: #selector(self.obtenerTextoVecesFregadero(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtCorrido.delegate = self
         txtCorrido.keyboardType = .NumberPad
+        txtCorrido.addTarget(self, action: #selector(self.obtenerTextoVecesCorrido(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtNoAgua.delegate = self
         txtNoAgua.keyboardType = .NumberPad
+        txtNoAgua.addTarget(self, action: #selector(self.obtenerTextoNoAgua(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtVecesPlatos.delegate = self
         txtVecesPlatos.keyboardType = .NumberPad
+        txtVecesPlatos.addTarget(self, action: #selector(self.obtenerTextoVecesPlatos(_:)), forControlEvents: UIControlEvents.EditingChanged)
+    }
+    
+    func obtenerTextoVecesLavavajillas(textField: UITextField) {
         
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.cocina.vecesLavavajillas = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.cocina.vecesLavavajillas = 0
+        }
+    }
+    
+    func obtenerTextoVecesFregadero(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.cocina.vecesMano = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.cocina.vecesMano = 0
+        }
+    }
+    
+    func obtenerTextoNoAgua(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.cocina.tiempoAguaCorriendo = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.cocina.tiempoAguaCorriendo = 0
+        }
+    }
+    
+    func obtenerTextoVecesCorrido(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.cocina.consumoAgua = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.cocina.consumoAgua = 0
+        }
+    }
+    
+    func obtenerTextoVecesPlatos(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.cocina.vecesLavarPlatosSucios = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.cocina.vecesLavarPlatosSucios = 0
+        }
     }
     
     func doneLavado() {
         txtFormaLavado.resignFirstResponder()
+        DatosHidricaCompleta.cocina.formaLavado = txtFormaLavado.text!
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -80,7 +136,7 @@ class Cocina: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UI
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         txtFormaLavado.text = opciones[row]
-        //txtFormaLavado.resignFirstResponder()
+        DatosHidricaCompleta.cocina.formaLavado = opciones[row]
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

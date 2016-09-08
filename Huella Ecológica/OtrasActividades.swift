@@ -13,13 +13,13 @@ class OtrasActividades: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lavabos: UISegmentedControl!
     
     @IBAction func opcionLavabos(sender: UISegmentedControl) {
+        
+        if lavabos.selectedSegmentIndex == 0 {
+            DatosHidricaCompleta.higuienePersonal.tieneLlaveAhorradora = true
+        } else {
+            DatosHidricaCompleta.higuienePersonal.tieneLlaveAhorradora = false
+        }
     }
-    
-    @IBOutlet weak var botesAgua: UISegmentedControl!
-    
-    @IBAction func opcionBotesAgua(sender: UISegmentedControl) {
-    }
-    
     
     @IBOutlet weak var txtManos: UITextField!
     @IBOutlet weak var txtDientes: UITextField!
@@ -47,22 +47,84 @@ class OtrasActividades: UIViewController, UITextFieldDelegate {
         
         txtLavadoManos.delegate = self
         txtLavadoManos.keyboardType = .NumberPad
+        txtLavadoManos.addTarget(self, action: #selector(self.obtenerTextoVecesManos(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtTiempoLavadoManos.delegate = self
         txtTiempoLavadoManos.keyboardType = .NumberPad
+        txtTiempoLavadoManos.addTarget(self, action: #selector(self.obtenerTextoTiempoManos(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtLavadoDientes.delegate = self
         txtLavadoDientes.keyboardType = .NumberPad
+        txtLavadoDientes.addTarget(self, action: #selector(self.obtenerTextoVecesDientes(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtTiempoLavadoDientes.delegate = self
         txtTiempoLavadoDientes.keyboardType = .NumberPad
+        txtTiempoLavadoDientes.addTarget(self, action: #selector(self.obtenerTextoTiempoDientes(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtVecesRasurado.delegate = self
         txtVecesRasurado.keyboardType = .NumberPad
+        txtVecesRasurado.addTarget(self, action: #selector(self.obtenerTextoVecesRasurado(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtDesmaquillas.delegate = self
         txtDesmaquillas.keyboardType = .NumberPad
+        txtDesmaquillas.addTarget(self, action: #selector(self.obtenerTextoTiempoRasurado(_:)), forControlEvents: UIControlEvents.EditingChanged)
     }
+    
+    func obtenerTextoVecesManos(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.higuienePersonal.vecesManos = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.higuienePersonal.vecesManos = 0
+        }
+    }
+    
+    func obtenerTextoTiempoManos(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.higuienePersonal.tiempoAguaManos = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.higuienePersonal.tiempoAguaManos = 0
+        }
+    }
+    
+    func obtenerTextoVecesDientes(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.higuienePersonal.vecesDientes = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.higuienePersonal.vecesDientes = 0
+        }
+    }
+    
+    func obtenerTextoTiempoDientes(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.higuienePersonal.tiempoAguaDientes = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.higuienePersonal.tiempoAguaDientes = 0
+        }
+    }
+    
+    func obtenerTextoVecesRasurado(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.higuienePersonal.vecesRasurado = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.higuienePersonal.vecesRasurado = 0
+        }
+    }
+    
+    func obtenerTextoTiempoRasurado(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.higuienePersonal.tiempoRasurado = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.higuienePersonal.tiempoRasurado = 0
+        }
+    }
+
+    
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         let invalidCharacters = NSCharacterSet(charactersInString: "0123456789").invertedSet

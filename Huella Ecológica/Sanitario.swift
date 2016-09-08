@@ -10,17 +10,34 @@ import UIKit
 
 class Sanitario: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
-    var opciones = ["Sanitario con sistema dual", "Sanitario convencional. Se utiliza agua para la descarga", "En nuestra casa utilizamos letrinas, no contamos con sanitario con agua"]
+    var opciones = ["", "Sanitario con sistema dual", "Sanitario convencional. Se utiliza agua para la descarga", "En nuestra casa utilizamos letrinas, no contamos con sanitario con agua"]
     
     @IBOutlet weak var pickerSanitario: UIPickerView!
     
     @IBOutlet weak var sanitarioDual: UISegmentedControl!
     
     @IBAction func opcionSanitarioDual(sender: UISegmentedControl) {
+        
+        if sanitarioDual.selectedSegmentIndex == 0 {
+            DatosHidricaCompleta.sanitario.tieneSistemaDual = true
+        } else if sanitarioDual.selectedSegmentIndex == 1 {
+            DatosHidricaCompleta.sanitario.tieneSistemaDual = false
+        }
     }
     
     @IBOutlet weak var tanque: UISegmentedControl!
-    @IBOutlet weak var opcionTanque: UISegmentedControl!
+    //@IBOutlet weak var opcionTanque: UISegmentedControl!
+    
+    @IBAction func opcionTanque(sender: UISegmentedControl) {
+        
+        if tanque.selectedSegmentIndex == 0 {
+            DatosHidricaCompleta.sanitario.tieneTanqueAhorrador = true
+        } else if tanque.selectedSegmentIndex == 1 {
+            DatosHidricaCompleta.sanitario.tieneTanqueAhorrador = false
+        }
+    }
+    
+    
     @IBOutlet weak var txtVecesDescarga: UITextField!
     
     
@@ -35,6 +52,16 @@ class Sanitario: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate,
         
         txtVecesDescarga.delegate = self
         txtVecesDescarga.keyboardType = .NumberPad
+        txtVecesDescarga.addTarget(self, action: #selector(self.obtenerTextoDescargas(_:)), forControlEvents: UIControlEvents.EditingChanged)
+    }
+    
+    func obtenerTextoDescargas(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.sanitario.vecesDescargar = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.sanitario.vecesDescargar = 0
+        }
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -63,6 +90,12 @@ class Sanitario: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate,
         }
         
         return pickerLabel
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView.tag == 0 {
+            DatosHidricaCompleta.sanitario.tipoSanitario = opciones[row]
+        }
     }
 
     

@@ -49,19 +49,61 @@ class LimpiezaHogar: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         
         txtTrapear.delegate = self
         txtTrapear.keyboardType = .NumberPad
+        txtTrapear.addTarget(self, action: #selector(self.obtenerTextoTrapear(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtAguaUtilizada.delegate = self
         txtAguaUtilizada.keyboardType = .NumberPad
+        txtAguaUtilizada.addTarget(self, action: #selector(self.obtenerTextoAguaUtilizada(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtVecesFachada.delegate = self
         txtVecesFachada.keyboardType = .NumberPad
+        txtVecesFachada.addTarget(self, action: #selector(self.obtenerTextoVecesFachada(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtManguera.delegate = self
         txtManguera.keyboardType = .NumberPad
+        txtManguera.addTarget(self, action: #selector(self.obtenerTextoManguera(_:)), forControlEvents: UIControlEvents.EditingChanged)
     }
+    
+    func obtenerTextoTrapear(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.limpiezaHogar.vecesTrapear = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.limpiezaHogar.vecesTrapear = 0
+        }
+    }
+    
+    func obtenerTextoAguaUtilizada(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.limpiezaHogar.consumoAgua = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.limpiezaHogar.consumoAgua = 0
+        }
+    }
+    
+    func obtenerTextoVecesFachada(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.limpiezaHogar.vecesLimpiar = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.limpiezaHogar.vecesLimpiar = 0
+        }
+    }
+    
+    func obtenerTextoManguera(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.limpiezaHogar.tiempoAguaCorriendo = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.limpiezaHogar.tiempoAguaCorriendo = 0
+        }
+    }
+    
     
     func doneFachada() {
         txtFachada.resignFirstResponder()
+        DatosHidricaCompleta.limpiezaHogar.formaLimpieza = txtFachada.text!
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -75,7 +117,7 @@ class LimpiezaHogar: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         txtFachada.text = opciones[row]
-        //txtFachada.resignFirstResponder()
+        DatosHidricaCompleta.limpiezaHogar.formaLimpieza = opciones[row]
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

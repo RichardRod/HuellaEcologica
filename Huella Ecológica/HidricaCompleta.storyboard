@@ -1658,6 +1658,9 @@
                                                     <segment title="No"/>
                                                 </segments>
                                                 <color key="tintColor" red="0.33725490200000002" green="0.4549019608" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="opcionTanque:" destination="cLP-aE-eQ0" eventType="valueChanged" id="O8b-fY-09e"/>
+                                                </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ¿Los sanitarios de tu casa son de tanque chico u ahorradores?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6M-F6-SoN">
                                                 <rect key="frame" x="8" y="281" width="359" height="42"/>
@@ -1754,7 +1757,6 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="467"/>
                     <connections>
-                        <outlet property="opcionTanque" destination="hjb-4a-LXd" id="smy-qn-mKE"/>
                         <outlet property="pickerSanitario" destination="gqL-0p-nkd" id="OS5-ga-ce1"/>
                         <outlet property="sanitarioDual" destination="S6X-1J-aJG" id="oyX-kM-Scc"/>
                         <outlet property="tanque" destination="hjb-4a-LXd" id="3xB-6M-LLd"/>

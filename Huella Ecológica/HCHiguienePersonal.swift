@@ -36,6 +36,7 @@ class HCHiguienePersonal {
             let auxseis = Double(vecesRasurado) * Double(tiempoRasurado) * 5.6 * 365 * 0.001
             
             totalCalculo = auxCuatro + auxCinco + auxseis
+            print("if: \(totalCalculo)")
         } else {
             let auxCuatro = Double(vecesManos) * Double(tiempoAguaManos) * 8.32 * 365 * 0.001
             let auxCinco = Double(vecesDientes) * Double(tiempoAguaDientes) * 8.32 * 365 * 0.001
@@ -43,6 +44,7 @@ class HCHiguienePersonal {
                 * 365 * 0.001
             
             totalCalculo = auxCuatro + auxCinco + auxseis
+            print("else: \(totalCalculo)")
         }
         
         return totalCalculo

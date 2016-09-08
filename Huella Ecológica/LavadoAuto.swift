@@ -24,16 +24,64 @@ class LavadoAuto: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var txtTiempo: UITextField!
     @IBOutlet weak var txtCubetas: UITextField!
     
+    let pickerUno = UIPickerView()
+    let pickerDos = UIPickerView()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.hideKeyboardWhenTappedAround()
         
-        let pickerUno = UIPickerView()
+        crearPickerUno()
+        crearPickerDos()
+        
+        txtLavadas.delegate = self
+        txtLavadas.keyboardType = .NumberPad
+        txtLavadas.addTarget(self, action: #selector(self.obtenerTextoLavadas(_:)), forControlEvents: UIControlEvents.EditingChanged)
+        
+        txtTiempo.delegate = self
+        txtTiempo.keyboardType = .NumberPad
+        txtTiempo.addTarget(self, action: #selector(self.obtenerTextoTiempo(_:)), forControlEvents: UIControlEvents.EditingChanged)
+        
+        txtCubetas.delegate = self
+        txtCubetas.keyboardType = .NumberPad
+        txtCubetas.addTarget(self, action: #selector(self.obtenerTextoCubetas(_:)), forControlEvents: UIControlEvents.EditingChanged)
+    }
+    
+    func obtenerTextoLavadas(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.lavadoAuto.vecesLavaCarro = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.lavadoAuto.vecesLavaCarro = 0
+        }
+    }
+    
+    func obtenerTextoTiempo(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.lavadoAuto.tiempoLavadoManguera = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.lavadoAuto.tiempoLavadoManguera = 0
+        }
+    }
+    
+    func obtenerTextoCubetas(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.lavadoAuto.numeroCubetas = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.lavadoAuto.numeroCubetas = 0
+        }
+    }
+    
+    
+    
+    func crearPickerUno() {
+    
         pickerUno.tag = 0
         pickerUno.delegate  = self
-        pickerUno.dataSource = self
         pickerUno.backgroundColor = .lightGrayColor()
         txtComoLavas.inputView = pickerUno
         
@@ -51,9 +99,9 @@ class LavadoAuto: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         toolbar.userInteractionEnabled = true
         
         txtComoLavas.inputAccessoryView = toolbar
-
-        
-        let pickerDos = UIPickerView()
+    }
+    
+    func crearPickerDos() {
         pickerDos.tag = 1
         pickerDos.delegate  = self
         pickerDos.dataSource = self
@@ -74,23 +122,16 @@ class LavadoAuto: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         toolbarDos.userInteractionEnabled = true
         
         txtManguera.inputAccessoryView = toolbarDos
-        
-        txtLavadas.delegate = self
-        txtLavadas.keyboardType = .NumberPad
-        
-        txtTiempo.delegate = self
-        txtTiempo.keyboardType = .NumberPad
-        
-        txtCubetas.delegate = self
-        txtCubetas.keyboardType = .NumberPad
     }
     
     func doneComoLavas() {
         txtComoLavas.resignFirstResponder()
+        DatosHidricaCompleta.lavadoAuto.formaLavadoAuto = txtComoLavas.text!
     }
     
     func doneManguera() {
         txtManguera.resignFirstResponder()
+        DatosHidricaCompleta.lavadoAuto.tipoManguera = txtManguera.text!
     }
   
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -98,27 +139,16 @@ class LavadoAuto: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
         if pickerView.tag == 0 {
-            opcionesLavar.count
+            return opcionesLavar.count
         } else if pickerView.tag == 1 {
-            opcionesManguera.count
+            return opcionesManguera.count
         }
+        
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 0 {
-            txtComoLavas.text = opcionesLavar[row]
-            //txtComoLavas.resignFirstResponder()
-        } else if pickerView.tag == 1 {
-            txtManguera.text = opcionesManguera[row]
-            //txtManguera.resignFirstResponder()
-        }
-    }
-    
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
         if pickerView.tag == 0 {
             return opcionesLavar[row]
         } else if pickerView.tag == 1 {
@@ -129,10 +159,21 @@ class LavadoAuto: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         
     }
     
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView.tag == 0 {
+            txtComoLavas.text = opcionesLavar[row]
+            DatosHidricaCompleta.lavadoAuto.formaLavadoAuto = opcionesLavar[row]
+            
+        } else if pickerView.tag == 1 {
+            txtManguera.text = opcionesManguera[row]
+            DatosHidricaCompleta.lavadoAuto.tipoManguera = opcionesManguera[row]
+        }
+    }
+    
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
         
         let pickerLabel = UILabel()
-        pickerLabel.textColor = UIColor(red: 86.0/255, green: 116/255, blue: 131/255, alpha: 1.0)
+        pickerLabel.textColor = UIColor(red: 83/255, green: 83/255, blue: 83/255, alpha: 1.0)
         pickerLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 20)
         pickerLabel.textAlignment = NSTextAlignment.Center
         

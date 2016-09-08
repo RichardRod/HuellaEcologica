@@ -53,6 +53,24 @@ class ResumenHidricaCompleta: UIViewController {
         
         //higuiene
         lblHiguienePersonal.text = String(DatosHidricaCompleta.higuienePersonal.total())
+        
+        //sanitario
+        lblSanitario.text = String(DatosHidricaCompleta.sanitario.total())
+        
+        //lavado ropa
+        lblLavadoRopa.text = String(DatosHidricaCompleta.lavadoRopa.total())
+        
+        //limpieza hogar
+        lblLimpiezaHogar.text = String(DatosHidricaCompleta.limpiezaHogar.total())
+        
+        //cocina
+        lblCocina.text = String(DatosHidricaCompleta.cocina.total())
+        
+        //lavado auto
+        lblLavadoAuto.text = String(DatosHidricaCompleta.lavadoAuto.total())
+        
+        //jardines
+        lblJardines.text = String(DatosHidricaCompleta.jardines.total())
     }
     
     
