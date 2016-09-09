@@ -30,9 +30,20 @@ class DatosHidricaCompleta {
     
     internal static func totalGeneral() -> Double {
         
-        
-        
+        total = DatosHidricaCompleta.aguaLluvias.total()
+        total += DatosHidricaCompleta.aguaEmbotellada.total()
+        total += DatosHidricaCompleta.regadera.total()
+        total += DatosHidricaCompleta.jacuzzi.total()
+        total += DatosHidricaCompleta.baldes.total()
+        total += DatosHidricaCompleta.higuienePersonal.total()
+        total += DatosHidricaCompleta.sanitario.total()
+        total += DatosHidricaCompleta.lavadoRopa.total()
+        total += DatosHidricaCompleta.limpiezaHogar.total()
+        total += DatosHidricaCompleta.cocina.total()
+        total += DatosHidricaCompleta.lavadoAuto.total()
+        total += DatosHidricaCompleta.jardines.total()
+        total += DatosHidricaCompleta.alberca.total()
+        total += DatosHidricaCompleta.alimentacion.total()
         
         return total
-    }
-}
+    }}

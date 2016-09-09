@@ -26,25 +26,37 @@ class HCHiguienePersonal {
     
     internal func total() -> Double {
         
-        _ = Double(aguaManos) * 365.0 * 0.001
-        _ = Double(aguaDientes) * 365.0 * 0.001
-        _ = Double(aguaRasurado) * 365.0 * 0.001
+        let auxUno = Double(aguaManos) * 365.0 * 0.001
+        let auxDos = Double(aguaDientes) * 365.0 * 0.001
+        let auxTres = Double(aguaRasurado) * 365.0 * 0.001
         
-        if tieneLlaveAhorradora == true {
-            let auxCuatro = Double(vecesManos) * Double(tiempoAguaManos) * 5.6 * 365 * 0.001
-            let auxCinco = Double(vecesDientes) * Double(tiempoAguaDientes) * 5.6 * 365 * 0.001
-            let auxseis = Double(vecesRasurado) * Double(tiempoRasurado) * 5.6 * 365 * 0.001
-            
-            totalCalculo = auxCuatro + auxCinco + auxseis
-            print("if: \(totalCalculo)")
+        if auxUno != 0 && auxDos != 0 && auxTres != 0 {
+            totalCalculo = auxUno + auxDos + auxTres
         } else {
-            let auxCuatro = Double(vecesManos) * Double(tiempoAguaManos) * 8.32 * 365 * 0.001
-            let auxCinco = Double(vecesDientes) * Double(tiempoAguaDientes) * 8.32 * 365 * 0.001
-            let auxseis = Double(vecesRasurado) * Double(tiempoRasurado) * 8.32
-                * 365 * 0.001
+        
+            if tieneLlaveAhorradora == true {
+                let auxCuatro = Double(vecesManos) * Double(tiempoAguaManos) * 5.6 * 365.0 * 0.001
+                let auxCinco = Double(vecesDientes) * Double(tiempoAguaDientes) * 5.6 * 365.0 * 0.001
+                let auxseis = Double(vecesRasurado) * Double(tiempoRasurado) * 5.6 * 365.0 * 0.001
             
-            totalCalculo = auxCuatro + auxCinco + auxseis
-            print("else: \(totalCalculo)")
+                totalCalculo = auxCuatro + auxCinco + auxseis
+                print("if: \(totalCalculo)")
+            } else {
+                print("Calculo Manos: \(vecesManos) \(tiempoAguaManos)")
+                print("Calculo Dientes: \(vecesDientes) \(tiempoAguaDientes)")
+                print("Calculo Rasurado: \(vecesRasurado) \(tiempoRasurado)")
+                let auxCuatro = Double(vecesManos) * Double(tiempoAguaManos) * 8.32 * 365.0 * 0.001
+                let auxCinco = Double(vecesDientes) * Double(tiempoAguaDientes) * 8.32 * 365.0 * 0.001
+                let auxseis = Double(vecesRasurado) * Double(tiempoRasurado) * 8.32
+                    * 52.0 * 0.001
+            
+                totalCalculo = auxCuatro + auxCinco + auxseis
+                print("else: \(totalCalculo)")
+                print(auxCuatro)
+                print(auxCinco)
+                print(auxseis)
+            }
+            
         }
         
         return totalCalculo

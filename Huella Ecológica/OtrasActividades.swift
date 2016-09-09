@@ -71,7 +71,7 @@ class OtrasActividades: UIViewController, UITextFieldDelegate {
     }
     
     func obtenerTextoVecesManos(textField: UITextField) {
-        
+        print("Cuajo: \(textField.text!)")
         if textField.text?.characters.count > 0 {
             DatosHidricaCompleta.higuienePersonal.vecesManos = Int(textField.text!)!
         } else {
@@ -80,7 +80,7 @@ class OtrasActividades: UIViewController, UITextFieldDelegate {
     }
     
     func obtenerTextoTiempoManos(textField: UITextField) {
-        
+        print("Cuajo: \(textField.text!)")
         if textField.text?.characters.count > 0 {
             DatosHidricaCompleta.higuienePersonal.tiempoAguaManos = Int(textField.text!)!
         } else {
@@ -89,7 +89,7 @@ class OtrasActividades: UIViewController, UITextFieldDelegate {
     }
     
     func obtenerTextoVecesDientes(textField: UITextField) {
-        
+        print("Cuajo: \(textField.text!)")
         if textField.text?.characters.count > 0 {
             DatosHidricaCompleta.higuienePersonal.vecesDientes = Int(textField.text!)!
         } else {
@@ -98,7 +98,7 @@ class OtrasActividades: UIViewController, UITextFieldDelegate {
     }
     
     func obtenerTextoTiempoDientes(textField: UITextField) {
-        
+        print("Cuajo: \(textField.text!)")
         if textField.text?.characters.count > 0 {
             DatosHidricaCompleta.higuienePersonal.tiempoAguaDientes = Int(textField.text!)!
         } else {
@@ -107,7 +107,7 @@ class OtrasActividades: UIViewController, UITextFieldDelegate {
     }
     
     func obtenerTextoVecesRasurado(textField: UITextField) {
-        
+        print("Cuajo: \(textField.text!)")
         if textField.text?.characters.count > 0 {
             DatosHidricaCompleta.higuienePersonal.vecesRasurado = Int(textField.text!)!
         } else {
@@ -116,7 +116,7 @@ class OtrasActividades: UIViewController, UITextFieldDelegate {
     }
     
     func obtenerTextoTiempoRasurado(textField: UITextField) {
-        
+        print("Cuajo: \(textField.text!)")
         if textField.text?.characters.count > 0 {
             DatosHidricaCompleta.higuienePersonal.tiempoRasurado = Int(textField.text!)!
         } else {

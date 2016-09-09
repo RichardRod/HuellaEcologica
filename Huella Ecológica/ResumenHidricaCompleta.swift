@@ -10,6 +10,7 @@ import UIKit
 
 class ResumenHidricaCompleta: UIViewController {
     
+    @IBOutlet weak var imageViewLeon: UIImageView!
     @IBOutlet weak var btnContinuar: UIButton!
     @IBOutlet weak var lblAguaLluvias: UILabel!
     @IBOutlet weak var lblAguaEmbotellada: UILabel!
@@ -71,6 +72,32 @@ class ResumenHidricaCompleta: UIViewController {
         
         //jardines
         lblJardines.text = String(DatosHidricaCompleta.jardines.total())
+        
+        //alberca
+        lblAlberca.text = String(DatosHidricaCompleta.alberca.total())
+        
+        //alimentacion
+        lblAlimentacion.text = String(DatosHidricaCompleta.alimentacion.total())
+        
+        //total
+        lblTotal.text = String(DatosHidricaCompleta.totalGeneral())
+        
+        //establecer leon
+        var leon: String = ""
+        
+        if DatosHidricaCompleta.totalGeneral() > (2021) {
+            //negativo
+            leon = "Triste.png"
+        } else if DatosHidricaCompleta.totalGeneral() == 2021 {
+            //neutral
+            leon = "Neutral.png"
+        } else if DatosHidricaCompleta.totalGeneral() < 2021 {
+            //positivo
+            leon = "Feliz.png"
+        }
+        
+        let imagen = UIImage(named: leon)
+        imageViewLeon.image = imagen
     }
     
     

@@ -40,22 +40,84 @@ class Jardin: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UI
         
         txtMetrosCuadrados.delegate = self
         txtMetrosCuadrados.keyboardType = .NumberPad
+        txtMetrosCuadrados.addTarget(self, action: #selector(self.Uno_obtenerTextoMetrosCuadrados(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtVecesRiego.delegate = self
         txtVecesRiego.keyboardType = .NumberPad
+        txtVecesRiego.addTarget(self, action: #selector(self.Dos_obtenerTextoVecesRiego(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtTiempoSistemaRiego.delegate = self
         txtTiempoSistemaRiego.keyboardType = .NumberPad
+        txtTiempoSistemaGoteo.addTarget(self, action: #selector(self.Tres_obtenerTextoTiempoSistemaRiego(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtRiegoGoteo.delegate = self
         txtRiegoGoteo.keyboardType = .NumberPad
+        txtRiegoGoteo.addTarget(self, action: #selector(self.Cuatro_obtenerTextoPuntosSistemaGoteo(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtTiempoSistemaGoteo.delegate = self
         txtTiempoSistemaGoteo.keyboardType = .NumberPad
+        txtTiempoSistemaGoteo.addTarget(self, action: #selector(self.Cinco_obtenerTextoTiempoSistemaGoteo(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtCubetas.delegate = self
         txtCubetas.keyboardType = .NumberPad
+        txtCubetas.addTarget(self, action: #selector(self.Seis_obtenerTextoCubetas(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
+    }
+    
+    func Uno_obtenerTextoMetrosCuadrados(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.jardines.metrosJardin = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.jardines.metrosJardin = 0
+        }
+    }
+    
+    func Dos_obtenerTextoVecesRiego(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.jardines.vecesRegado = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.jardines.vecesRegado = 0
+        }
+    }
+    
+    func Tres_obtenerTextoTiempoSistemaRiego(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.jardines.tiempoCorreAgua = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.jardines.tiempoCorreAgua = 0
+        }
+    }
+    
+    
+    
+    func Cuatro_obtenerTextoPuntosSistemaGoteo(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.jardines.puntosGoteo = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.jardines.puntosGoteo = 0
+        }
+    }
+    
+    func Cinco_obtenerTextoTiempoSistemaGoteo(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.jardines.tiempoSistemaGoteo = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.jardines.tiempoSistemaGoteo = 0
+        }
+    }
+    
+    func Seis_obtenerTextoCubetas(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosHidricaCompleta.jardines.numeroCubetas = Int(textField.text!)!
+        } else {
+            DatosHidricaCompleta.jardines.numeroCubetas = 0
+        }
     }
     
     func crearPickerUno() {
@@ -106,6 +168,7 @@ class Jardin: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UI
     
     func doneUno() {
         txtRiego.resignFirstResponder()
+        DatosHidricaCompleta.jardines.formaRegado = txtRiego.text!
     }
     
     func doneDos() {
@@ -129,7 +192,7 @@ class Jardin: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UI
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 0 {
             txtRiego.text = opcionRiego[row]
-            //txtRiego.resignFirstResponder()
+            DatosHidricaCompleta.jardines.formaRegado = opcionRiego[row]
             
         } else if pickerView.tag == 1 {
             txtHabitos.text = opcionHabitos[row]

@@ -1226,6 +1226,15 @@
                                                 <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione opcion" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XDJ-70-7pd">
+                                                <rect key="frame" x="8" y="377" width="304" height="30"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="owK-Eh-t3q"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emisiones Directas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csA-6N-kYZ">
                                                 <rect key="frame" x="8" y="30" width="304" height="50"/>
                                                 <constraints>
@@ -1245,10 +1254,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Consumo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4BF-xn-uJC">
-                                                <rect key="frame" x="8" y="377" width="304" height="30"/>
+                                                <rect key="frame" x="8" y="415" width="304" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="EFd-LI-24U"/>
+                                                    <constraint firstAttribute="height" constant="30" id="FHU-lZ-32I"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -1256,21 +1265,24 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="4BF-xn-uJC" secondAttribute="trailing" constant="8" id="3bI-Ef-acm"/>
                                             <constraint firstItem="8aW-kI-AL5" firstAttribute="top" secondItem="csA-6N-kYZ" secondAttribute="bottom" constant="3" id="40x-Bw-vuh"/>
+                                            <constraint firstItem="4BF-xn-uJC" firstAttribute="top" secondItem="XDJ-70-7pd" secondAttribute="bottom" constant="8" id="8sf-E7-zzf"/>
                                             <constraint firstItem="8aW-kI-AL5" firstAttribute="leading" secondItem="Stm-xd-1Yb" secondAttribute="leading" constant="8" id="ATC-oI-l5J"/>
+                                            <constraint firstAttribute="trailing" secondItem="XDJ-70-7pd" secondAttribute="trailing" constant="8" id="ATR-Um-ibV"/>
                                             <constraint firstItem="KE8-ib-B1O" firstAttribute="leading" secondItem="Stm-xd-1Yb" secondAttribute="leading" constant="8" id="H7s-IO-x92"/>
+                                            <constraint firstItem="XDJ-70-7pd" firstAttribute="top" secondItem="F9z-eW-FAd" secondAttribute="bottom" constant="8" id="HNB-Hc-Zpe"/>
                                             <constraint firstItem="F9z-eW-FAd" firstAttribute="top" secondItem="KE8-ib-B1O" secondAttribute="bottom" constant="8" id="Ity-y2-zLt"/>
+                                            <constraint firstItem="4BF-xn-uJC" firstAttribute="leading" secondItem="Stm-xd-1Yb" secondAttribute="leading" constant="8" id="KDK-bp-HwK"/>
+                                            <constraint firstAttribute="bottom" secondItem="4BF-xn-uJC" secondAttribute="bottom" constant="77" id="M16-hr-H9R"/>
                                             <constraint firstAttribute="trailing" secondItem="F9z-eW-FAd" secondAttribute="trailing" constant="8" id="MeP-Yl-VpP"/>
                                             <constraint firstAttribute="trailing" secondItem="8aW-kI-AL5" secondAttribute="trailing" constant="8" id="NC3-cw-IgX"/>
-                                            <constraint firstItem="4BF-xn-uJC" firstAttribute="leading" secondItem="Stm-xd-1Yb" secondAttribute="leading" constant="8" id="RTo-E6-Dc1"/>
                                             <constraint firstItem="F9z-eW-FAd" firstAttribute="leading" secondItem="Stm-xd-1Yb" secondAttribute="leading" constant="8" id="RaZ-hO-821"/>
-                                            <constraint firstAttribute="bottom" secondItem="4BF-xn-uJC" secondAttribute="bottom" constant="115" id="bBr-PT-k6k"/>
-                                            <constraint firstItem="4BF-xn-uJC" firstAttribute="top" secondItem="F9z-eW-FAd" secondAttribute="bottom" constant="8" id="dLY-Ne-jcL"/>
                                             <constraint firstAttribute="trailing" secondItem="KE8-ib-B1O" secondAttribute="trailing" constant="8" id="iDf-Ik-P0j"/>
                                             <constraint firstItem="csA-6N-kYZ" firstAttribute="leading" secondItem="Stm-xd-1Yb" secondAttribute="leading" constant="8" id="icm-h1-usp"/>
+                                            <constraint firstItem="XDJ-70-7pd" firstAttribute="leading" secondItem="Stm-xd-1Yb" secondAttribute="leading" constant="8" id="lCk-85-fmL"/>
                                             <constraint firstAttribute="trailing" secondItem="csA-6N-kYZ" secondAttribute="trailing" constant="8" id="mPH-9j-4BT"/>
                                             <constraint firstItem="csA-6N-kYZ" firstAttribute="top" secondItem="Stm-xd-1Yb" secondAttribute="top" constant="30" id="tC5-Ma-zLg"/>
+                                            <constraint firstAttribute="trailing" secondItem="4BF-xn-uJC" secondAttribute="trailing" constant="8" id="xg0-Ma-mfG"/>
                                             <constraint firstItem="KE8-ib-B1O" firstAttribute="top" secondItem="8aW-kI-AL5" secondAttribute="bottom" constant="8" id="xxU-5d-0OT"/>
                                         </constraints>
                                     </view>
@@ -1297,6 +1309,7 @@
                     <connections>
                         <outlet property="txtCombustible" destination="KE8-ib-B1O" id="XL9-C7-o4i"/>
                         <outlet property="txtConsumo" destination="4BF-xn-uJC" id="pE8-gf-icq"/>
+                        <outlet property="txtTipoConsumo" destination="XDJ-70-7pd" id="UeU-QO-6ef"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7We-YR-Cm1" userLabel="First Responder" sceneMemberID="firstResponder"/>

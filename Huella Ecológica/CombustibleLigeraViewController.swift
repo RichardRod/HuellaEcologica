@@ -11,11 +11,14 @@ import UIKit
 class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
     let pickerCombustible = UIPickerView()
+    let pickerConsumo = UIPickerView()
     
+    @IBOutlet weak var txtTipoConsumo: UITextField!
     @IBOutlet weak var txtCombustible: UITextField!
     @IBOutlet weak var txtConsumo: UITextField!
     
     var opcionesCombustible = ["", "Gas LP (Tanque estacionario o cilindros)", "Gas Natural (Conexión a red de gas natural)", "Leña", "Carbón vegetal"]
+    var opcionesConsumo = ["", "Consumo en pesos", "Consumo en Kilogramos", "Consumo en litros"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,7 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
         self.hideKeyboardWhenTappedAround()
 
         crearPickerCombustible()
+        crearPickerConsumo()
         
         txtConsumo.delegate = self
         txtConsumo.keyboardType = .DecimalPad
@@ -64,6 +68,33 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
         DatosCarbonoLigera.combustible.tipoCombustible = txtCombustible.text!
     }
     
+    private func crearPickerConsumo() {
+        pickerConsumo.tag = 1
+        pickerConsumo.delegate  = self
+        pickerConsumo.backgroundColor = .lightGrayColor()
+        txtTipoConsumo.inputView = pickerConsumo
+        
+        let toolbar = UIToolbar()
+        toolbar.barStyle = UIBarStyle.Default
+        toolbar.translucent = true
+        toolbar.tintColor = UIColor(red: 83/255, green: 83/255, blue: 83/255, alpha: 1.0)
+        toolbar.sizeToFit()
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        
+        let botonListo = UIBarButtonItem(title: "Seleccionar", style: UIBarButtonItemStyle.Done, target: self, action: #selector(CombustibleLigeraViewController.doneConsumo))
+        
+        toolbar.setItems([flexibleSpace, botonListo], animated: true)
+        toolbar.userInteractionEnabled = true
+        
+        txtTipoConsumo.inputAccessoryView = toolbar
+    }
+    
+    func doneConsumo() {
+        txtTipoConsumo.resignFirstResponder()
+        DatosCarbonoLigera.combustible.tipoConsumo = txtTipoConsumo.text!
+    }
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -72,6 +103,8 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
         
         if pickerView.tag == 0 {
             return opcionesCombustible.count
+        } else if pickerView.tag == 1 {
+            return opcionesConsumo.count
         }
         
         return 1
@@ -81,6 +114,8 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
         
         if pickerView.tag == 0 {
             return opcionesCombustible[row]
+        } else if pickerView.tag == 1 {
+            return opcionesConsumo[row]
         }
         
         return ""
@@ -89,6 +124,16 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 0 {
             txtCombustible.text = opcionesCombustible[row]
+            DatosCarbonoLigera.combustible.tipoCombustible = opcionesCombustible[row]
+            
+            if row == 3 || row == 4 {
+                txtTipoConsumo.hidden = true
+            } else {
+                txtTipoConsumo.hidden = false
+            }
+        } else if pickerView.tag == 1 {
+            txtTipoConsumo.text = opcionesConsumo[row]
+            DatosCarbonoLigera.combustible.tipoConsumo = opcionesConsumo[row]
         }
     }
     
@@ -101,6 +146,8 @@ class CombustibleLigeraViewController: UIViewController, UIPickerViewDataSource,
         
         if pickerView.tag == 0 {
             pickerLabel.text = opcionesCombustible[row]
+        } else if pickerView.tag == 1 {
+            pickerLabel.text = opcionesConsumo[row]
         }
         return pickerLabel
     }

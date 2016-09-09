@@ -21,8 +21,34 @@ class ResumenCarbonoLigera: UIViewController {
         super.viewDidLoad()
         btnContinuar.layer.cornerRadius = 5
         
-        print(DatosCarbonoLigera.combustible.tipoCombustible)
+        cargarResultados()
+        
+        //http://www.ioscreator.com/tutorials/add-rows-table-view-tutorial-ios8-swift
+        
+        
     }
+    
+    func cargarResultados() {
+        
+        print("Personas: \(DatosCarbonoLigera.informacion.numeroPersonas)")
+        
+        //combustible
+        lblCombustible.text = String(DatosCarbonoLigera.combustible.totalCombustible())
+        
+        //electricidad
+        lblElectricidad.text = String(DatosCarbonoLigera.electricidad.total())
+        
+        //transporte
+        lblTransporte.text = String(DatosCarbonoLigera.transporte.total())
+        
+        //viajes
+        lblViajes.text = String(DatosCarbonoLigera.viajes.total())
+        
+        //ingreso
+        lblIngreso.text = String(DatosCarbonoLigera.ingreso.total())
+    }
+    
+    
     @IBAction func continuarAction(sender: AnyObject) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("InitialView")

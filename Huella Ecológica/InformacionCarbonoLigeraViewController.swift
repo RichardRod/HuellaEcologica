@@ -130,8 +130,10 @@ class InformacionCarbonoLigeraViewController: UIViewController, UIPickerViewData
         
         if pickerView.tag == 0 {
             return opcionesMunicipio[row]
+            DatosCarbonoLigera.informacion.municipio = opcionesMunicipio[row]
         } else if pickerView.tag == 1 {
             return opcionesSexo[row]
+            DatosCarbonoLigera.informacion.sexo = opcionesSexo[row]
         }
         
         return ""

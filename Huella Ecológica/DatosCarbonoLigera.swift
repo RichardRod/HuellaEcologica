@@ -20,7 +20,7 @@ class DatosCarbonoLigera {
     
     internal static func totalGeneral() -> Double {
         
-        total = DatosCarbonoLigera.combustible.total()
+        total = DatosCarbonoLigera.combustible.totalCombustible()
         total += DatosCarbonoLigera.electricidad.total()
         total += DatosCarbonoLigera.transporte.total()
         total += DatosCarbonoLigera.viajes.total()
