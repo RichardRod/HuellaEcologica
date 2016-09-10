@@ -28,10 +28,20 @@ class AguaCarbonoCompletaController: UIViewController, UIPickerViewDataSource, U
         
         txtConsumo.delegate = self
         txtConsumo.keyboardType = .DecimalPad
+        txtConsumo.addTarget(self, action: #selector(self.obtenerTextoConsumo(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         pickerFuente.layer.cornerRadius = 5
         pickerFuente.delegate = self
         pickerFuente.dataSource = self
+    }
+    
+    func obtenerTextoConsumo(textField: UITextField) {
+        
+        if textField.text?.characters.count > 0 {
+            DatosCarbonoCompleta.agua.consumoAgua = Int(textField.text!)!
+        } else {
+            DatosCarbonoCompleta.agua.consumoAgua = 0
+        }
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -44,6 +54,10 @@ class AguaCarbonoCompletaController: UIViewController, UIPickerViewDataSource, U
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return elementos[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        DatosCarbonoCompleta.agua.fuenteAbastecimiento = elementos[row]
     }
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {

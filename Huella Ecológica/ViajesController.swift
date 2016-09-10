@@ -8,12 +8,16 @@
 
 import UIKit
 
-class ViajesController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+class ViajesController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UITableViewDataSource {
     
-    var destinosGuadalajara = ["Atlanta (Georgia)", "Chicago (Illinois)", "Dallas (Texas)", "Denver (Colorado)", "Fort Lauderdale (Florida)", "Fresno (California)", "Houston (Texas)", "Las Vegas (Nevada)", "Los Ángeles (California)", "Nueva York (Nueva York)", "Oakland (California)", "Ontario (California)", "Orlando (Florida)", "Phoenix (Arizona)", "Portland (Oregón)", "Reno (Nevada)", "Sacramento (California)", "Salt Lake City (Utah)", "San Antonio (Texas)", "San Diego (California)", "San Francisco (California)", "San José (California)", "Ciudad de Guatemala", "San José", "Ciudad de Panamá"]
+    var viajes = [String]()
+    var nuevoViaje: String = ""
     
-    var destinosMexico = ["Montreal (Quebec)", "Toronto (Ontario)", "Vancouver (Columbia Británica)", "Atlanta (Georgia)", "Boston (Massachusetts)", "Charlotte (Carolina del Norte)", "Chicago (Illinois)", "Dallas (Texas)", "Denver (Colorado)", "Detroit (Míchigan)", "Fort Lauderdale (Florida)", "Houston (Texas)", "Las Vegas (Nevada)", "Los Ángeles (California)", "McAllen (Texas)", "Miami (Florida)", "Newark (Nueva Jersey)", "Nueva York (Nueva York)", "Oakland (California)", "Ontario (California)", "Orange County (California)", "Orlando (Florida)", "Phoenix (Arizona)", "Sacramento (California)", "Salt Lake City (Utah)", "San Antonio (Texas)", "San Diego (California)", "San Francisco (California)", "Washington D. C.", "San José (Costa Rica)", "La Habana", "Varadero", "San Salvador", "Ciudad de Guatemala", "San Pedro Sula", "Managua", "Panamá", "Santo Domingo", "Sudamérica", "Buenos Aires", "São Paulo", "Santiago de Chile", "Bogotá", "Medellín", "Quito", "Lima", "Caracas", "Shanghái", "Tokio", "Fráncfort", "Múnich", "Madrid", "París", "Roma", "Ámsterdam", "Londres", "Egipto", "Atlanta-Cairo", "Atlanta-Marruecos", "Atlanta-Nairobi", "Atlanta-Ghana", "Atlanta-Johannesburgo", "Guadalajara-LA", "LA-Hawaii", "LA-Melbourne", "LA-Bangkok", "Amsterdam-Nva Dehli", "Gdl- Nva Dehli", "LAXBangkok", "Tokio- Bangkok", "Francia -Moscow", "LAX-Melbourne", "LAX- Auckland(NZ)", "LAX-Hawaii"]
+    var destinosGuadalajara = ["", "Atlanta (Georgia)", "Chicago (Illinois)", "Dallas (Texas)", "Denver (Colorado)", "Fort Lauderdale (Florida)", "Fresno (California)", "Houston (Texas)", "Las Vegas (Nevada)", "Los Ángeles (California)", "Nueva York (Nueva York)", "Oakland (California)", "Ontario (California)", "Orlando (Florida)", "Phoenix (Arizona)", "Portland (Oregón)", "Reno (Nevada)", "Sacramento (California)", "Salt Lake City (Utah)", "San Antonio (Texas)", "San Diego (California)", "San Francisco (California)", "San José (California)", "Ciudad de Guatemala", "San José", "Ciudad de Panamá"]
     
+    var destinosMexico = ["", "Montreal (Quebec)", "Toronto (Ontario)", "Vancouver (Columbia Británica)", "Atlanta (Georgia)", "Boston (Massachusetts)", "Charlotte (Carolina del Norte)", "Chicago (Illinois)", "Dallas (Texas)", "Denver (Colorado)", "Detroit (Míchigan)", "Fort Lauderdale (Florida)", "Houston (Texas)", "Las Vegas (Nevada)", "Los Ángeles (California)", "McAllen (Texas)", "Miami (Florida)", "Newark (Nueva Jersey)", "Nueva York (Nueva York)", "Oakland (California)", "Ontario (California)", "Orange County (California)", "Orlando (Florida)", "Phoenix (Arizona)", "Sacramento (California)", "Salt Lake City (Utah)", "San Antonio (Texas)", "San Diego (California)", "San Francisco (California)", "Washington D. C.", "San José (Costa Rica)", "La Habana", "Varadero", "San Salvador", "Ciudad de Guatemala", "San Pedro Sula", "Managua", "Panamá", "Santo Domingo", "Sudamérica", "Buenos Aires", "São Paulo", "Santiago de Chile", "Bogotá", "Medellín", "Quito", "Lima", "Caracas", "Shanghái", "Tokio", "Fráncfort", "Múnich", "Madrid", "París", "Roma", "Ámsterdam", "Londres", "Egipto", "Atlanta-Cairo", "Atlanta-Marruecos", "Atlanta-Nairobi", "Atlanta-Ghana", "Atlanta-Johannesburgo", "Guadalajara-LA", "LA-Hawaii", "LA-Melbourne", "LA-Bangkok", "Amsterdam-Nva Dehli", "Gdl- Nva Dehli", "LAXBangkok", "Tokio- Bangkok", "Francia -Moscow", "LAX-Melbourne", "LAX- Auckland(NZ)", "LAX-Hawaii"]
+    
+    @IBOutlet weak var tabla: UITableView!
     @IBOutlet weak var txtDestinoGdl: UITextField!
     let pickerGuadalajara = UIPickerView()
     @IBOutlet weak var txtViajesGdl: UITextField!
@@ -27,6 +31,8 @@ class ViajesController: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tabla.dataSource = self
         
         self.hideKeyboardWhenTappedAround()
         
@@ -146,5 +152,48 @@ class ViajesController: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         let invalidCharacters = NSCharacterSet(charactersInString: "0123456789").invertedSet
         return string.rangeOfCharacterFromSet(invalidCharacters, options: [], range: string.startIndex ..< string.endIndex) == nil
+    }
+    
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viajes.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("viajeCell", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = viajes[indexPath.row]
+        return cell
+    }
+    
+    @IBAction func agregarAction(sender: AnyObject) {
+        
+        if txtViajesGdl.text == "" || txtDestinoGdl.text == "" || txtViajesCDMX.text == "" || txtDestinoCDMX.text == "" {
+            
+            let alertController = UIAlertController(title: "Mensaje", message: "Ingresa destino y veces.", preferredStyle: UIAlertControllerStyle.Alert)
+            let okAction = UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.Default) { (result : UIAlertAction) -> Void in
+                print("OK")
+            }
+            
+            alertController.addAction(okAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+        } else {
+            DatosCarbonoLigera.viajes.vecesGDL = Int(txtViajesGdl.text!)!
+            DatosCarbonoLigera.viajes.agregarDistanciaGDL(txtDestinoGdl.text!)
+            DatosCarbonoLigera.viajes.totalMagicoGDL()
+            
+            DatosCarbonoLigera.viajes.vecesCDMX = Int(txtViajesCDMX.text!)!
+            DatosCarbonoLigera.viajes.agregarDistanciaCDMX(txtDestinoCDMX.text!)
+            DatosCarbonoLigera.viajes.totalMagicoCDMX()
+            
+            viajes.append("GDL: \(txtDestinoGdl.text!): \(txtViajesGdl.text!) - CDMX: \(txtDestinoCDMX.text!): \(txtViajesCDMX.text!)")
+            tabla.reloadData()
+        }
+        
     }
 }

@@ -13,6 +13,7 @@ class DatosCarbonoLigera {
     internal static var combustible = CLComustible()
     internal static var electricidad = CLElectricidad()
     internal static var transporte = CLTransporte()
+    internal static var viajesNacionales = CLViajesNacionales()
     internal static var viajes = CLViajes()
     internal static var ingreso = CLIngreso()
     

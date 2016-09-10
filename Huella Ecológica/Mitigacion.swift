@@ -43,6 +43,11 @@ class Mitigacion: UIViewController {
     
     
     
+    @IBAction func finalizarAction(sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "CarbonoCompleta", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("Resumen")
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
     
     
     override func viewDidLoad() {

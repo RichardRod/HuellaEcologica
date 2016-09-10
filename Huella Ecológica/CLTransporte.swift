@@ -22,9 +22,25 @@ class CLTransporte {
     internal var pesosDiesel: Double = 0.0
     internal var pesosGas: Double = 0.0
     
+    private var totalGeneral = 0.0
     
     func total() -> Double {
         
-        return 0.0
+        
+        
+        let auxGasolinaLitros = litrosGasolina * 0.68 * 49.5 * 0.0693 * 52.0
+        let auxGasolinaPesos = (pesosGasolina / 13.57) * 49.5 * 0.0693 * 52.0 * 0.68
+        
+        let auxDieselLitros = litrosDiesel * 0.68 * 49.5 * 0.0741 * 52.0
+        let auxDieselPesos = (pesosDiesel / 13.77) * 49.5 * 0.0741 * 52.0 * 0.68
+        
+        let auxGasLitros = litrosGas * 0.68 * 49.5 * 0.0631 * 52.0
+        let auxGasPesos = (pesosDiesel / 14.65) * 49.5 * 0.0631 * 52.0 * 0.68
+        
+        totalGeneral = (auxGasolinaLitros + auxGasolinaPesos + auxDieselLitros + auxDieselPesos + auxGasLitros + auxGasPesos)
+        
+        print("llamado papu: \(auxGasolinaLitros)")
+        
+        return totalGeneral
     }
 }

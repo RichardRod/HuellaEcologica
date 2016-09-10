@@ -17,6 +17,7 @@ class ResumenCarbonoLigera: UIViewController {
     @IBOutlet weak var lblViajes: UILabel!
     @IBOutlet weak var lblIngreso: UILabel!
     
+    @IBOutlet weak var lblViajesNacionales: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         btnContinuar.layer.cornerRadius = 5
@@ -40,6 +41,9 @@ class ResumenCarbonoLigera: UIViewController {
         
         //transporte
         lblTransporte.text = String(DatosCarbonoLigera.transporte.total())
+        
+        //viajes nacionales
+        lblViajesNacionales.text = String(DatosCarbonoLigera.viajesNacionales.total())
         
         //viajes
         lblViajes.text = String(DatosCarbonoLigera.viajes.total())

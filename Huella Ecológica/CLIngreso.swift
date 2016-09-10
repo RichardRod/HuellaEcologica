@@ -15,28 +15,27 @@ class CLIngreso {
     func total() -> Double {
         
         if ingreso <= 4000 {
-            return 0.42
+            return 0.42 * 1000
         } else if ingreso > 4000 && ingreso <= 7000 {
-            return 0.58
+            return 0.58 * 1000
         } else if ingreso > 7000 && ingreso <= 8500 {
-            return 0.78
+            return 0.78 * 1000
         } else if ingreso > 8500 && ingreso <= 10500 {
-            return 0.95
+            return 0.95 * 1000
         } else if ingreso > 10500 && ingreso <= 12500 {
-            return 1.15
+            return 1.15 * 1000
         } else if ingreso > 12500 && ingreso <= 15000 {
-            return 1.45
+            return 1.45 * 1000
         } else if ingreso > 15000 && ingreso <= 18500 {
-            return 1.82
+            return 1.82 * 1000
         } else if ingreso > 18500 && ingreso <= 25000 {
-            return 2.36
+            return 2.36 * 1000
         } else if ingreso > 25000 && ingreso <= 45000 {
-            return 3.58
+            return 3.58 * 1000
         } else if ingreso > 45000{
-            return 8.76
+            return 8.76 * 1000
         } else {
             return 0
         }
-        
     }
 }

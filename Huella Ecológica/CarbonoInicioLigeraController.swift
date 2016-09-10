@@ -41,20 +41,25 @@ class CarbonoInicioLigeraController: UIViewController, ADPageControlDelegate {
         pageModelTransporte.iPageNumber = 3
         pageModelTransporte.bShouldLazyLoad = true
         
+        let pageModelViajesNacionales: ADPageModel = ADPageModel()
+        pageModelViajesNacionales.strPageTitle = "Viajes nacionales"
+        pageModelViajesNacionales.iPageNumber = 4
+        pageModelViajesNacionales.bShouldLazyLoad = true
+        
         let pageModelViajes: ADPageModel = ADPageModel()
-        pageModelViajes.strPageTitle = "Viajes"
-        pageModelViajes.iPageNumber = 4
+        pageModelViajes.strPageTitle = "Viajes internacionales"
+        pageModelViajes.iPageNumber = 5
         pageModelViajes.bShouldLazyLoad = true
         
         let pageModelIngreso: ADPageModel = ADPageModel()
         pageModelIngreso.strPageTitle = "Ingreso"
-        pageModelIngreso.iPageNumber = 5
+        pageModelIngreso.iPageNumber = 6
         pageModelIngreso.bShouldLazyLoad = true
     
         //initialize page control
         pageControl = ADPageControl()
         pageControl.delegateADPageControl = self
-        self.pageControl.arrPageModel = [pageModelInformacion, pageModelCombustible, pageModelElectricidad, pageModelTransporte, pageModelViajes, pageModelIngreso]
+        self.pageControl.arrPageModel = [pageModelInformacion, pageModelCombustible, pageModelElectricidad, pageModelTransporte, pageModelViajesNacionales, pageModelViajes, pageModelIngreso]
         
         //customize parameters
         pageControl.iFirstVisiblePageNumber = 0
@@ -109,15 +114,21 @@ class CarbonoInicioLigeraController: UIViewController, ADPageControlDelegate {
             
         } else if pageModel.iPageNumber == 4 {
             
-            let page4: UIViewController = UIStoryboard(name: "CarbonoLigera", bundle: nil).instantiateViewControllerWithIdentifier("Viajes")
+            let page4: UIViewController = UIStoryboard(name: "CarbonoLigera", bundle: nil).instantiateViewControllerWithIdentifier("ViajesNacionales")
             
             return page4
             
         } else if pageModel.iPageNumber == 5 {
             
-            let page5: UIViewController = UIStoryboard(name: "CarbonoLigera", bundle: nil).instantiateViewControllerWithIdentifier("Ingreso")
+            let page5: UIViewController = UIStoryboard(name: "CarbonoLigera", bundle: nil).instantiateViewControllerWithIdentifier("Viajes")
             
             return page5
+            
+        } else if pageModel.iPageNumber == 6 {
+            
+            let page6: UIViewController = UIStoryboard(name: "CarbonoLigera", bundle: nil).instantiateViewControllerWithIdentifier("Ingreso")
+            
+            return page6
         }
 
         return nil

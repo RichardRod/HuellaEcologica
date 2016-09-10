@@ -74,7 +74,6 @@ class TransporteLigeraController: UIViewController, UIPickerViewDataSource, UIPi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        segmentAutoPropio.selectedSegmentIndex = 1
         segmentGasolina.selectedSegmentIndex = 1
         segmentDiesel.selectedSegmentIndex = 1
         segmentGas.selectedSegmentIndex = 1
@@ -86,21 +85,27 @@ class TransporteLigeraController: UIViewController, UIPickerViewDataSource, UIPi
         
         txtLitrosGasolina.delegate = self
         txtLitrosGasolina.keyboardType = .DecimalPad
+        txtLitrosGasolina.addTarget(self, action: #selector(self.obtenerTextoLitrosGasolina(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtLitrosDiesel.delegate = self
         txtLitrosDiesel.keyboardType = .DecimalPad
+        txtLitrosDiesel.addTarget(self, action: #selector(self.obtenerTextoLitrosDiesel(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtLitrosGas.delegate = self
         txtLitrosGas.keyboardType = .DecimalPad
+        txtLitrosGas.addTarget(self, action: #selector(self.obtenerTextoLitrosGas(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtPesosGasolina.delegate = self
         txtPesosGasolina.keyboardType = .DecimalPad
+        txtPesosGasolina.addTarget(self, action: #selector(self.obtenerTextoPesosGasolina(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtPesosDiesel.delegate = self
         txtPesosDiesel.keyboardType = .DecimalPad
+        txtPesosDiesel.addTarget(self, action: #selector(self.obtenerTextoPesosDiesel(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         txtPesosGas.delegate = self
         txtPesosGas.keyboardType = .DecimalPad
+        txtPesosGas.addTarget(self, action: #selector(self.obtenerTextoPesosGas(_:)), forControlEvents: UIControlEvents.EditingChanged)
     }
     
     func obtenerTextoLitrosGasolina(textField: UITextField) {
